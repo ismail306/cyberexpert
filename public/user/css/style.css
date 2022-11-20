@@ -3353,3 +3353,10 @@ label {
   font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+.img-fluid {
+    max-width: 100% !important;
+    height: 200px !important;
+}
