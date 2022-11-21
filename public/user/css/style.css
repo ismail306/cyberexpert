@@ -56,21 +56,19 @@ h1 {
 h2 {
   font-size: 28px;
   line-height: 36px;
-  text-transform: uppercase;
   letter-spacing: -1px;
 }
 
 h3 {
   font-size: 24px;
   margin-bottom: 20px;
-  text-transform: uppercase;
   letter-spacing: -0.5px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 18px !important;
   line-height: 28px;
-  text-transform: uppercase;
+
   letter-spacing: -0.2px;
 }
 
@@ -133,7 +131,6 @@ a:hover {
 a.read-more {
   color: #ffb600;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 a.read-more:hover {
@@ -142,7 +139,7 @@ a.read-more:hover {
 
 section,
 .section-padding {
-  padding: 70px 0;
+  padding: 25px 0;
   position: relative;
 }
 
@@ -1690,7 +1687,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .service-box-title {
-  font-size: 16px;
+  font-size: 22px;
   margin: 0 0 10px;
 }
 .service-box-title a {
