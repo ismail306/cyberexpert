@@ -1,25 +1,10 @@
 <x-users.layouts.master>
-    <div id="banner-area" class="banner-area" style="background-image: url(user/images/banner/banner1.jpg)">
+    <div id="banner-area" class="banner-area" style="background-image: url(user/images/news/banner.jpg)">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="banner-heading">
-                            <h1 class="banner-title">News</h1>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item">
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="#">News</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
-                                        News left sidebar
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
+
                     </div>
                     <!-- Col end -->
                 </div>
@@ -41,7 +26,7 @@
                             <ul class="list-unstyled">
                                 <li class="d-flex align-items-center">
                                     <div class="posts-thumb">
-                                        <a href="#"><img loading="lazy" alt="img" src="user/images/news/news1.jpg" /></a>
+                                        <a href="#"><img loading="lazy" alt="img" src="user/images/news/android.jpg" /></a>
                                     </div>
                                     <div class="post-info">
                                         <h4 class="entry-title">
@@ -55,7 +40,7 @@
 
                                 <li class="d-flex align-items-center">
                                     <div class="posts-thumb">
-                                        <a href="#"><img loading="lazy" alt="img" src="user/images/news/news2.jpg" /></a>
+                                        <a href="#"><img loading="lazy" alt="img" src="user/images/news/android.jpg" /></a>
                                     </div>
                                     <div class="post-info">
                                         <h4 class="entry-title">
@@ -70,7 +55,7 @@
 
                                 <li class="d-flex align-items-center">
                                     <div class="posts-thumb">
-                                        <a href="#"><img loading="lazy" alt="img" src="user/images/news/news3.jpg" /></a>
+                                        <a href="#"><img loading="lazy" alt="img" src="user/images/news/android.jpg" /></a>
                                     </div>
                                     <div class="post-info">
                                         <h4 class="entry-title">
@@ -86,45 +71,8 @@
                         </div>
                         <!-- Recent post end -->
 
-                        <div class="widget">
-                            <h3 class="widget-title">Categories</h3>
-                            <ul class="arrow nav nav-tabs">
-                                <li><a href="#">Construction</a></li>
-                                <li><a href="#">Commercial</a></li>
-                                <li><a href="#">Building</a></li>
-                                <li><a href="#">Safety</a></li>
-                                <li><a href="#">Structure</a></li>
-                            </ul>
-                        </div>
-                        <!-- Categories end -->
 
-                        <div class="widget">
-                            <h3 class="widget-title">Archives</h3>
-                            <ul class="arrow nav nav-tabs">
-                                <li><a href="#">Feburay 2016</a></li>
-                                <li><a href="#">January 2016</a></li>
-                                <li><a href="#">December 2015</a></li>
-                                <li><a href="#">November 2015</a></li>
-                                <li><a href="#">October 2015</a></li>
-                            </ul>
-                        </div>
-                        <!-- Archives end -->
 
-                        <div class="widget widget-tags">
-                            <h3 class="widget-title">Tags</h3>
-
-                            <ul class="list-unstyled">
-                                <li><a href="#">Construction</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Project</a></li>
-                                <li><a href="#">Building</a></li>
-                                <li><a href="#">Finance</a></li>
-                                <li><a href="#">Safety</a></li>
-                                <li><a href="#">Contracting</a></li>
-                                <li><a href="#">Planning</a></li>
-                            </ul>
-                        </div>
-                        <!-- Tags end -->
                     </div>
                     <!-- Sidebar end -->
                 </div>

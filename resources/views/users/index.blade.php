@@ -317,7 +317,7 @@
                     <div class="latest-post">
                         <div class="latest-post-media">
                             <a href="news-single.html" class="latest-post-img">
-                                <img loading="lazy" class="" src="user/images/news/news2.jpg" alt="img" height="150px" width="250px" />
+                                <img loading="lazy" class="" src="user/images/news/android.jpg" alt="img" height="150px" width="250px" />
                             </a>
                         </div>
                         <div class="post-body">
@@ -341,7 +341,7 @@
                     <div class="latest-post">
                         <div class="latest-post-media">
                             <a href="news-single.html" class="latest-post-img">
-                                <img loading="lazy" class="" src="user/images/news/news2.jpg" alt="img" height="150px" width="250px" />
+                                <img loading="lazy" class="" src="user/images/news/android.jpg" alt="img" height="150px" width="250px" />
                             </a>
                         </div>
                         <div class="post-body">

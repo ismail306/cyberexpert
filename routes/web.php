@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('users/index');
 });
 Route::get('/news', function () {
-    return view('users/news-left-sidebar');
-});
+    return view('users/news');
+})->name('news');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
