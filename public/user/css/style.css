@@ -24,6 +24,11 @@ FACEBOOK: https://www.facebook.com/themefisher
 body {
   background: #fff;
   color: #555;
+  margin-top:20px;
+  background:#f3f3f3;
+  border: 0;
+
+  padding: 0;
 }
 
 body,
@@ -92,11 +97,7 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-body {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
+
 
 .body-inner {
   position: relative;
@@ -1967,8 +1968,15 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .general-btn .btn-primary:hover {
-  background: #000;
+  background: rgb(3, 29, 32);
 }
+.newsbtn{
+  background: rgb(20, 34, 35);
+}
+.newsbtn:hover{
+  background: rgb(7, 233, 108) !important;
+}
+
 
 /* Project owl */
 .owl-theme.project-slide {
@@ -3360,10 +3368,7 @@ label {
 
 
 
-body{
-  margin-top:20px;
-  background:#f3f3f3;
-}
+
 
 .card.user-card {
   border-top: none;
@@ -3548,6 +3553,7 @@ body{
   text-align: left;
   background-color: #e2e8f0;
 }
+
 .inner-wrapper {
   position: relative;
   height: calc(100vh - 3.5rem);

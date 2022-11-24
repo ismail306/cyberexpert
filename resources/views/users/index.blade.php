@@ -136,10 +136,6 @@
                 <!-- 3rd post col end -->
             </div>
             <!--/ Content row end -->
-
-            <div class="general-btn text-center mt-4">
-                <a class="btn btn-primary" href="news-left-sidebar.html">See All Posts</a>
-            </div>
         </div>
         <!--/ Container end -->
     </section>
@@ -385,7 +381,7 @@
             <!--/ Content row end -->
 
             <div class="general-btn text-center mt-4">
-                <a class="btn btn-primary" href="news-left-sidebar.html">See All Posts</a>
+                <a class="btn btn-primary newsbtn" href="news-left-sidebar.html">See All Posts</a>
             </div>
         </div>
         <!--/ Container end -->
