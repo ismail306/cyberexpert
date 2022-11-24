@@ -15,10 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('users/index');
-});
+})->name('cyberexpert');
 Route::get('/news', function () {
     return view('users/news');
 })->name('news');
+
+Route::get('/specialist', function () {
+    return view('securityspecialist/specialist');
+})->name('specialist');
+
+Route::get('/questionanswer', function () {
+    return view('users/questionanswer');
+})->name('questionanswer');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

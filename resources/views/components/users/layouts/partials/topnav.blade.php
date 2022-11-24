@@ -22,7 +22,7 @@
                                 <ul class="nav navbar-nav mr-auto">
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Home</a>
+                                        <a class="nav-link" href="{{route('cyberexpert')}}">Home</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
 
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Hire Specialist</a>
+                                        <a class="nav-link" href="{{route('specialist')}}">Hire Specialist</a>
                                     </li>
 
 
@@ -53,7 +53,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Q/A</a>
+                                        <a class="nav-link" href="{{route('questionanswer')}}">Q/A</a>
                                     </li>
 
                                     <li class="nav-item">
