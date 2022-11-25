@@ -28,6 +28,18 @@ Route::get('/questionanswer', function () {
     return view('users/questionanswer');
 })->name('questionanswer');
 
+Route::get('/xss', function () {
+    return view('users/xss');
+})->name('xss');
+
+Route::get('/sql', function () {
+    return view('users/sql');
+})->name('sql');
+
+Route::get('/brokenauthentication', function () {
+    return view('users/brokauth');
+})->name('brokenauthentication');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

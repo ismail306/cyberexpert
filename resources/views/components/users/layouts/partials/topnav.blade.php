@@ -30,13 +30,13 @@
                                             <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
-                                                <a href="#">XSS</a>
+                                                <a href="{{route('xss')}}">XSS</a>
                                             </li>
                                             <li>
-                                                <a href="#">SQL Injection</a>
+                                                <a href="{{route('sql')}}">SQL Injection</a>
                                             </li>
                                             <li>
-                                                <a href="#">Broken Authentication</a>
+                                                <a href="{{route('brokenauthentication')}}">Broken Authentication</a>
                                             </li>
 
                                         </ul>

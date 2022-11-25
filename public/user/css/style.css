@@ -3442,8 +3442,8 @@ label {
   font-weight: 600;
 }
 
-.m-b-10 {
-  margin-bottom: 10px;
+.m-b-5 {
+  margin-bottom: 5px;
 }
 
 .m-t-25 {
@@ -3452,6 +3452,9 @@ label {
 
 .m-t-15 {
   margin-top: 15px;
+}
+.m-t-5 {
+  margin-top: 5px;
 }
 
 .card .card-block p {
