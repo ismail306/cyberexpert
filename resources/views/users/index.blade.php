@@ -381,7 +381,7 @@
             <!--/ Content row end -->
 
             <div class="general-btn text-center mt-4">
-                <a class="btn btn-primary newsbtn" href="news-left-sidebar.html">See All Posts</a>
+                <a class="btn btn-primary newsbtn" href="news-left-sidebar.html">See All News</a>
             </div>
         </div>
         <!--/ Container end -->
@@ -395,7 +395,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 ts-facts">
                         <div class="ts-facts-img">
-                            <img loading="lazy" src="user/images/icon-image/fact1.png" alt="facts-img" />
+                            <img loading="lazy" src="user/images/icon-image/learner.svg" alt="facts-img" />
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num">
@@ -410,7 +410,7 @@
 
                     <div class="col-md-4 col-sm-6 ts-facts mt-5 mt-sm-0">
                         <div class="ts-facts-img">
-                            <img loading="lazy" src="user/images/icon-image/fact2.png" alt="facts-img" />
+                            <img loading="lazy" src="user/images/icon-image/specialist.svg" alt="facts-img" />
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num">
@@ -425,7 +425,7 @@
 
                     <div class="col-md-4 col-sm-6 ts-facts mt-5 mt-md-0">
                         <div class="ts-facts-img">
-                            <img loading="lazy" src="user/images/icon-image/fact3.png" alt="facts-img" />
+                            <img loading="lazy" src="user/images/icon-image/blog.svg" alt="facts-img" />
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num">
