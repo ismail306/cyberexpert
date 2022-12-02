@@ -55,6 +55,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('questionanswer')}}">Q/A</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('blog')}}">Blog</a>
+                                    </li>
 
                                     <li class="nav-item">
                                         <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#login">Sign In</a>
@@ -63,6 +66,21 @@
                                     <li class="nav-item">
                                         <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#signup">Sign Up</a>
                                     </li>
+
+                                    <!-- <li>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-angle-down"></i>
+                                            </button>
+                                            <div class="dropdown-menu" style="left: -100%;">
+                                                <a class="dropdown-item" href="#">Profile</a>
+
+                                                <a class="dropdown-item" onclick="event.preventDefault();document.querySelector('#logout').submit();">Logout</a>
+                                            </div>
+                                        </div>
+
+                                    </li> -->
+
 
                                 </ul>
                             </div>

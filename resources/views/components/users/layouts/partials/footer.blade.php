@@ -71,8 +71,8 @@
                                     new Date().getFullYear()
                                 );
                             </script>
-                            , Designed &amp; Developed by
-                            <a href="https://themefisher.com">Themefisher</a>
+                            All Rights Reserved by
+                            <a href="#">Cyberexpert</a>
                         </span>
                     </div>
                 </div>

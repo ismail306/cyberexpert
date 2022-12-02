@@ -29,16 +29,34 @@ Route::get('/questionanswer', function () {
 })->name('questionanswer');
 
 Route::get('/xss', function () {
-    return view('users/xss');
+    return view('users/learnethicalhacking/xss');
 })->name('xss');
 
+
+
 Route::get('/sql', function () {
-    return view('users/sql');
+    return view('users/learnethicalhacking/sql');
 })->name('sql');
 
 Route::get('/brokenauthentication', function () {
-    return view('users/brokauth');
+    return view('users/learnethicalhacking/brokauth');
 })->name('brokenauthentication');
+
+Route::get('/profile', function () {
+    return view('users/profile');
+})->name('profile');
+
+
+
+Route::get('/blog', function () {
+    return view('users/blog');
+})->name('blog');
+
+Route::get('/contact', function () {
+    return view('users/contact');
+})->name('contact');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

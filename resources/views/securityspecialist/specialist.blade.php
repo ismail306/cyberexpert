@@ -37,24 +37,17 @@
                         </ul>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
                             <div class="row">
-                                <div class="col-4">
-                                    <i class="fab fa-facebook"></i>
+
+                                <div class="col-8 ">
+                                    <i class="fa fa-phone"> 01929074663</i>
 
                                 </div>
-                                <div class="col-4">
 
-                                    <i class="fab fa-linkedin"></i>
-
-                                </div>
                                 <div class="col-4">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fa fa-paper-plane"></i>
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 ">
-                            <i class="fa fa-phone"> 01929074663</i>
-
                         </div>
 
                     </div>
@@ -84,24 +77,17 @@
                         </ul>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
                             <div class="row">
-                                <div class="col-4">
-                                    <i class="fab fa-facebook"></i>
+
+                                <div class="col-8 ">
+                                    <i class="fa fa-phone"> 01929074663</i>
 
                                 </div>
-                                <div class="col-4">
 
-                                    <i class="fab fa-linkedin"></i>
-
-                                </div>
                                 <div class="col-4">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fa fa-paper-plane"></i>
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 ">
-                            <i class="fa fa-phone"> 01929074663</i>
-
                         </div>
 
                     </div>
@@ -131,25 +117,19 @@
                         </ul>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
                             <div class="row">
-                                <div class="col-4">
-                                    <i class="fab fa-facebook"></i>
+
+                                <div class="col-8 ">
+                                    <i class="fa fa-phone"> 01929074663</i>
 
                                 </div>
-                                <div class="col-4">
 
-                                    <i class="fab fa-linkedin"></i>
-
-                                </div>
                                 <div class="col-4">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fa fa-paper-plane"></i>
 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 ">
-                            <i class="fa fa-phone"> 01929074663</i>
 
-                        </div>
 
                     </div>
                 </div>

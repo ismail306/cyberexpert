@@ -41,11 +41,20 @@
                                             lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
                                         </p>
                                         <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
+
+
                                     </div>
-                                    <div class="text-muted small text-center align-self-center">
-                                        <span class="d-none d-sm-inline-block"><i class="far fa-eye"></i> 19</span>
+
+                                </div>
+
+                                <div class=" small text-center ">
+                                    <a type="button" class="btn btn-outline-dark" href="#">
                                         <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </div>
+                                    </a>
+                                    <a type="button" class="btn btn-outline-dark" href="#">
+                                        Answer
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -159,12 +168,7 @@
                         </div>
 
                     </div>
-                    <!-- /Forum List -->
 
-
-                    <!-- /Forum Detail -->
-
-                    <!-- /Inner main body -->
                 </div>
                 <!-- /Inner main -->
             </div>

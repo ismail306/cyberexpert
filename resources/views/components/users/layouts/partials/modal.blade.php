@@ -40,7 +40,9 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                    <button type="button" class="btn btn-dark btn-block mb-4 gradient-custom-4 ">Sign in</button>
+
 
                     <!-- Register buttons -->
                     <div class="text-center">
@@ -65,8 +67,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-design btn-primary">Close</button>
+                <button type="button" class="btn btn-design btn-primary">Save changes</button>
             </div>
         </div>
     </div>
@@ -111,14 +113,14 @@
                         </div>
 
                         <div class="form-check d-flex justify-content-center mb-5">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                            <input class="form-check-input checkposition me-2" type="checkbox" value="" id="form2Example3cg" />
                             <label class="form-check-label" for="form2Example3g">
                                 I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
                             </label>
                         </div>
 
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                            <button type="button" class="btn btn-design btn-dark btn-block btn-lg gradient-custom-4 ">Register</button>
                         </div>
 
                         <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
@@ -129,8 +131,10 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-design btn-primary">Close</button>
+                    <button type="button" class="btn btn-design btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>

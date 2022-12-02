@@ -28,6 +28,7 @@ body {
   background:#f3f3f3;
   border: 0;
 
+
   padding: 0;
 }
 
@@ -1978,6 +1979,17 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 
+.btn-design{
+  border: 1px solid rgb(246, 246, 246) !important;
+  background: rgb(35 40 45) !important;
+
+}
+.btn-design:hover{
+  background: rgb(3, 3, 3) !important;
+
+}
+
+
 /* Project owl */
 .owl-theme.project-slide {
   margin-top: 60px;
@@ -3667,3 +3679,41 @@ body{
   min-height: 1px;
   padding: 1rem;
 }
+.checkposition {
+  position:relative !important;
+
+}
+
+
+
+/* For contact */
+.form-box {
+  max-width: 600px;
+  margin: auto;
+  padding: 50px;
+  background: #c3c0d053;
+  border: 10px solid #f2f2f2;
+}
+
+
+
+
+.form-message{
+
+
+  box-shadow: none;
+  border: 1px solid #131212;
+  padding: 5px 20px;
+  height: 100px;
+  background: none;
+  color: #959595;
+  font-size: 14px;
+  border-radius: 0;
+}
+/* End */
+
+
+
+
+
+

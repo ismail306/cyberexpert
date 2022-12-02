@@ -44,10 +44,13 @@
 </head>
 
 <body>
+
     <x-users.layouts.partials.modal />
     <x-users.layouts.partials.topnav />
 
-
+    <br>
+    <br>
+    <br>
 
     <div>
         {{ $slot }}
