@@ -3563,7 +3563,7 @@ label {
 
 
 body{
-  margin-top:20px;
+  margin-top:70px;
   color: #1a202c;
   text-align: left;
   background-color: #e2e8f0;
@@ -3711,6 +3711,30 @@ body{
   border-radius: 0;
 }
 /* End */
+.borderlist{
+  border: 2px solid rgb(8, 8, 8);
+  padding: 5px;
+  margin-bottom: 2px;
+
+
+
+  background-color: #1a202c;
+  color: #fff;
+}
+.borderlist:hover{
+  background-color: rgb(238, 240, 245);
+  color: #060606;
+}
+.xssmenu{
+  font-size: 12px;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 2px;
+  background-color: #1a202c;
+
+
+}
+
 
 
 

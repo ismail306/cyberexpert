@@ -1,4 +1,23 @@
-<x-users.learnethicalhacking.layouts.master>
+<x-users.layouts.master>
+
+    <div class="row">
+        <div class="col-md-4">
+            <x-users.layouts.partials.sidebar />
 
 
-</x-users.learnethicalhacking.layouts.master>
+
+        </div>
+        <div class="col-md-8 card">
+            <h1>Vulnerability: Reflected Cross Site Scripting (XSS)</h1>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+</x-users.layouts.master>

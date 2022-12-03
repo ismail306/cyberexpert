@@ -34,9 +34,26 @@ Route::get('/xss', function () {
 
 
 
+
+
+Route::get('/reflectedxss', function () {
+    return view('users/learnethicalhacking/reflectedXSS');
+})->name('reflectedxss');
+
+Route::get('/storedxss', function () {
+    return view('users/learnethicalhacking/storedxss');
+})->name('storedxss');
+
+Route::get('/dombasedxss', function () {
+    return view('users/learnethicalhacking/dombasedxss');
+})->name('dombasedxss');
+
 Route::get('/sql', function () {
     return view('users/learnethicalhacking/sql');
 })->name('sql');
+
+
+
 
 Route::get('/brokenauthentication', function () {
     return view('users/learnethicalhacking/brokauth');
@@ -45,6 +62,8 @@ Route::get('/brokenauthentication', function () {
 Route::get('/profile', function () {
     return view('users/profile');
 })->name('profile');
+
+
 
 
 

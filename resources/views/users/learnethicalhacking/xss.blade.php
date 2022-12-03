@@ -1,22 +1,14 @@
-<x-users.learnethicalhacking.layouts.master>
+<x-users.layouts.master>
 
     <div class="container">
-        <br>
-        <br>
-        <br>
+
 
         <div class="row">
             <div class="col-md-4">
+                <x-users.layouts.partials.sidebar />
 
 
-                <div class="card" style="width: 18rem;">
-                    <!-- <x-users.learnethicalhacking.layouts.partials.sidebar /> -->
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Reflected XSS</li>
-                        <li class="list-group-item">Stored XSS </li>
-                        <li class="list-group-item">OM Based XSS </li>
-                    </ul>
-                </div>
+
             </div>
             <div class="col-md-8 card">
                 <h1>Types of XSS</h1>
@@ -58,4 +50,4 @@
 
     </div>
 
-</x-users.learnethicalhacking.layouts.master>
+</x-users.layouts.master>
