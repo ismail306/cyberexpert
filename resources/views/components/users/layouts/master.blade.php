@@ -54,6 +54,7 @@
     </div>
 
     <x-users.layouts.partials.footer />
+    <x-users.layouts.partials.scripts />
 
 
 </body>

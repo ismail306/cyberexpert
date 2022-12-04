@@ -10,7 +10,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-dark p-0">
                             <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                                <a class="d-block" href="index.html">
+                                <a class="d-block" href="{{route('cyberexpert')}}">
                                     <img loading="lazy" src="user/images/logo.png" alt="Cybere3xpert" />
                                 </a>
                             </div>
