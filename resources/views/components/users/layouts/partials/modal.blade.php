@@ -68,7 +68,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-design btn-primary">Close</button>
-                <button type="button" class="btn btn-design btn-primary">Save changes</button>
+
             </div>
         </div>
     </div>
@@ -133,7 +133,50 @@
             <div class="modal-footer">
                 <div class="modal-footer">
                     <button type="button" class="btn btn-design btn-primary">Close</button>
-                    <button type="button" class="btn btn-design btn-primary">Save changes</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-box">
+                    <h1>Contact With Specialist</h1>
+
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" id="name" type="text" name="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" id="email" type="email" name="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Descrive your Problem</label>
+                            <br>
+                            <textarea class="form-message" id="message" name="Message"></textarea>
+                        </div>
+                        <input class="btn btn-primary btn-design" type="submit" value="Send" />
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-design btn-primary">Close</button>
+
                 </div>
             </div>
         </div>

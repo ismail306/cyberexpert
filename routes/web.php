@@ -71,9 +71,7 @@ Route::get('/blog', function () {
     return view('users/blog');
 })->name('blog');
 
-Route::get('/contact', function () {
-    return view('users/contact');
-})->name('contact');
+
 
 
 

@@ -344,7 +344,7 @@ a:focus {
 /* Input form */
 .form-control {
   box-shadow: none;
-  border: 1px solid #dadada;
+  border: 1px solid #121111;
   padding: 5px 20px;
   height: 44px;
   background: none;
@@ -852,9 +852,12 @@ ul.top-info-box > li.nav-search i {
 /* Main navigation */
 .navbar-toggler {
   float: left;
+
+  background: #0b5685 !important;
   margin-top: 10px;
   padding: 12px;
 }
+
 
 .navbar {
   border-radius: 0;
@@ -876,6 +879,7 @@ ul.top-info-box > li.nav-search i {
 .navbar-dark .navbar-toggler-icon,
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
 }
 
 ul.navbar-nav > li:hover > a,
@@ -3705,6 +3709,7 @@ body{
   border: 1px solid #131212;
   padding: 5px 20px;
   height: 100px;
+  width: 100%;
   background: none;
   color: #959595;
   font-size: 14px;
@@ -3743,6 +3748,11 @@ body{
   margin-bottom: 10px;
   padding: 10px;
 
+}
+.h-3{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
