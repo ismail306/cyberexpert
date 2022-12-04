@@ -150,16 +150,17 @@
             </div>
             <div class="modal-body">
 
-                <div class="form-box">
-                    <h1>Contact With Specialist</h1>
+                <div class="contact-box ">
+
+                    <h2 class="text-uppercase text-center mb-5">Contact With Specialist</h2>
 
                     <form action="#" method="post">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Email</label>
                             <input class="form-control" id="name" type="text" name="Name">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Subject</label>
                             <input class="form-control" id="email" type="email" name="Email">
                         </div>
                         <div class="form-group">
@@ -167,7 +168,8 @@
                             <br>
                             <textarea class="form-message" id="message" name="Message"></textarea>
                         </div>
-                        <input class="btn btn-primary btn-design" type="submit" value="Send" />
+
+                        <button class="btn btn-primary btn-design" type="button"><i class="fa fa-paper-plane"></i> Send</button>
 
                     </form>
                 </div>
