@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                            <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                            <div class="logo col-lg-2 text-center text-lg-left mb-2 mb-md-5 mb-lg-0">
                                 <a class="d-block" href="{{route('cyberexpert')}}">
                                     <img loading="lazy" src="user/images/logo.png" alt="Cybere3xpert" />
                                 </a>
@@ -66,21 +66,23 @@
                                     <li class="nav-item">
                                         <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#signup">Sign Up</a>
                                     </li>
+                                    <li class="nav-item dropdown">
 
-                                    <!-- <li>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-angle-down"></i>
-                                            </button>
-                                            <div class="dropdown-menu" style="left: -100%;">
-                                                <a class="dropdown-item" href="#">Profile</a>
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> <span id="search"><i class="fa fa-user"></i></span>
+                                            <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <a href="#">Profile</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Setting</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Log out</a>
+                                            </li>
 
-                                                <a class="dropdown-item" onclick="event.preventDefault();document.querySelector('#logout').submit();">Logout</a>
-                                            </div>
-                                        </div>
-
-                                    </li> -->
-
+                                        </ul>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -89,18 +91,9 @@
                     <!--/ Col end -->
                 </div>
                 <!--/ Row end -->
-                <div class="nav-search">
-                    <span id="search"><i class="fa fa-search"></i></span>
-                </div>
 
-                <!-- Search end -->
-                <div class="search-block" style="display: none">
-                    <label for="search-field" class="w-100 mb-0">
-                        <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter" />
-                    </label>
-                    <span class="search-close">&times;</span>
-                </div>
-                <!-- Site search end -->
+
+
             </div>
             <!--/ Container end -->
         </div>

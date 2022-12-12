@@ -80,3 +80,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+route::fallback(function () {
+    return view('users/404');
+});
