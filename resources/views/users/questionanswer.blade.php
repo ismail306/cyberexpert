@@ -17,160 +17,110 @@
 
                     <!-- Forum List -->
                     <div class="inner-main-body p-2 p-sm-3 collapse forum-content show">
+                        @if(Auth::user())
+
+                        <div class="card mb-2">
+                            <form action="{{ route('question.store') }}" method="POST">
+                                @csrf
+                                <input type="text" hidden name="user_pk" value="{{Auth::user()->id}}">
+                                <div class="form-group">
+                                    <label for="question">
+                                        <h2>What Is Your Question ?</h2>
+                                    </label>
+                                    <br>
+                                    <textarea name="question" class="form-question" rows="2" id="question"></textarea>
+                                    <br>
+                                    <button type="submit" class="btn btn-dark">Post</button>
+                                </div>
+
+                            </form>
+                        </div>
+                        @endif
+
+                        @foreach ($questions as $question)
                         <div class="card mb-2">
                             <div class="card-body p-2 p-sm-3">
                                 <div class="media forum-item">
                                     <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
+
+
                                     <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
+                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->question}}</a></h6>
+                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->id}}</a></h6>
+
                                         <p class="text-secondary">
                                             lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
                                         </p>
                                         <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
                                     </div>
+
+
                                 </div>
-                                <div class=" small text-center ">
-                                    <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
-                                        Answer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-body p-2 p-sm-3">
-                                <div class="media forum-item">
-                                    <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                                    <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                        <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                        </p>
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
+
+                                <div class="modal fade" id="answer-{{$question->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="contact-box ">
+
+                                                    <h2 class="text-uppercase text-center mb-5">Answer this Question</h2>
+                                                    @if(Auth::user())
+
+                                                    <form action="{{ route('answer.store') }}" method="POST">
+                                                        @csrf
+
+                                                        <input type="text" name="user_pk" value="{{Auth::user()->id}}">
+                                                        <input type="text" name="question_pk" value="{{$question->id}}">
+
+
+                                                        <div class="form-group">
+                                                            <label for="message">Descrive your Problem</label>
+                                                            <br>
+                                                            <textarea class="form-message" id="message" name="answer"></textarea>
+                                                        </div>
+
+                                                        <button class="btn btn-primary btn-design" type="submit"><i class="fa fa-reply"></i> </button>
+
+                                                    </form>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-design btn-primary" data-dismiss="modal">Close</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+
+
+
                                 <div class=" small text-center ">
+
                                     <a type="button" class="btn btn-outline-dark" href="#">
                                         <span><i class="far fa-comment ml-2"></i> 3</span>
                                     </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
+                                    <a type="submit" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer-{{$question->id }}">{{$question->id}}
                                         Answer
                                     </a>
                                 </div>
+
+
+
                             </div>
                         </div>
-                        <div class="card mb-2">
-                            <div class="card-body p-2 p-sm-3">
-                                <div class="media forum-item">
-                                    <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                                    <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                        <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                        </p>
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
-                                    </div>
-                                </div>
-                                <div class=" small text-center ">
-                                    <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
-                                        Answer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-body p-2 p-sm-3">
-                                <div class="media forum-item">
-                                    <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                                    <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                        <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                        </p>
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
-                                    </div>
-                                </div>
-                                <div class=" small text-center ">
-                                    <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
-                                        Answer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-body p-2 p-sm-3">
-                                <div class="media forum-item">
-                                    <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                                    <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                        <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                        </p>
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
-                                    </div>
-                                </div>
-                                <div class=" small text-center ">
-                                    <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
-                                        Answer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-body p-2 p-sm-3">
-                                <div class="media forum-item">
-                                    <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                                    <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                        <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                        </p>
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
-                                    </div>
-                                </div>
-                                <div class=" small text-center ">
-                                    <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
-                                        Answer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-body p-2 p-sm-3">
-                                <div class="media forum-item">
-                                    <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                                    <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                        <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                        </p>
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
-                                    </div>
-                                </div>
-                                <div class=" small text-center ">
-                                    <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                                    </a>
-                                    <a type="button" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer">
-                                        Answer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
 
