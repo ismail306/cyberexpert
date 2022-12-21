@@ -59,17 +59,15 @@
                                         <a class="nav-link" href="{{route('blog')}}">Blog</a>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#login">Sign In</a>
-                                    </li>
+                                    @if(Auth::user())
 
-                                    <li class="nav-item">
-                                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#signup">Sign Up</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
 
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> <span id="search"><i class="fa fa-user"></i></span>
+                                    <li class="nav-item dropdown topnav-right">
+
+                                        <a href="#" class="nav-link dropdown-toggle topnav-right" data-toggle="dropdown"> <span id="search"><i class="fa fa-user"></i></span>
                                             <i class="fa fa-angle-down"></i></a>
+
+
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
                                                 <a href="#">Profile</a>
@@ -78,11 +76,28 @@
                                                 <a href="#">Setting</a>
                                             </li>
                                             <li>
-                                                <a href="#">Log out</a>
+                                                <form method="POST" action="{{route('logout')}}">
+                                                    @csrf
+                                                    <button type="submit" class="logout-btn ">Logout</button>
+                                                </form>
                                             </li>
 
                                         </ul>
                                     </li>
+
+
+                                    @else
+
+                                    <li class="nav-item">
+                                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#login">Sign In</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#signup">Sign Up</a>
+                                    </li>
+
+                                    @endif
+
 
                                 </ul>
                             </div>

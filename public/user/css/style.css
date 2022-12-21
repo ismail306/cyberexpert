@@ -352,6 +352,20 @@ a:focus {
   font-size: 14px;
   border-radius: 0;
 }
+.form-question {
+  box-shadow: none;
+  border: 1px solid #121111;
+
+  width: 50% !important;
+
+  background: none;
+  color: #959595;
+  font-size: 14px;
+  border-radius: 0;
+}
+.form-group{
+  padding-left: 15px;
+}
 
 .form-control:focus {
   box-shadow: none;
@@ -1094,6 +1108,22 @@ ul.navbar-nav > li > a {
 .search-area {
   min-height: 70px;
   padding-right: 0;
+}
+.logout-btn{
+  display: inline-block;
+    font-weight: bold;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 0%;
+}
+.logout-btn:hover {
+  color: #ff0320;
+}
+.topnav-right {
+  float: right;
 }
 
 .nav-search {
