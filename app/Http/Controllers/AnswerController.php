@@ -11,9 +11,10 @@ class AnswerController extends Controller
 
     public function index()
     {
+
+
         return view('users.questionanswer');
     }
-
 
 
     public function store(Request $request)
@@ -28,7 +29,7 @@ class AnswerController extends Controller
         $answer = new answer([
             'answer' => $request->get('answer'),
             'user_pk' => $request->get('user_pk'),
-            'question_pk' => $request->get('question_pk'),
+            'question_id' => $request->get('question_id'),
         ]);
         $answer->save();
         return redirect()->Route('questionanswer');

@@ -27,13 +27,21 @@ Route::get('/specialist', function () {
 })->name('specialist');
 
 
-Route::get('/questionanswer', [QuestionController::class, 'question'])->name('questionanswer');
+
 
 Route::get('/create_quesion', [QuestionController::class, 'index'])->name('question.create');
 Route::post('/create_quesion', [QuestionController::class, 'store'])->name('question.store');
+Route::get('/questionanswer', [QuestionController::class, 'question'])->name('questionanswer');
+
+
 
 Route::get('/create_answer', [AnswerController::class, 'index'])->name('answer.create');
 Route::post('/create_answer', [AnswerController::class, 'store'])->name('answer.store');
+
+
+
+
+
 
 
 

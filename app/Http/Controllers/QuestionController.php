@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\question;
+use App\Models\answer;
 
 use Illuminate\Http\Request;
 
@@ -13,8 +14,10 @@ class QuestionController extends Controller
     public function question()
     {
         $questions = question::all();
-        View()->share('questions', $questions);
+        $answers = answer::all();
 
+        View()->share('questions', $questions);
+        View()->share('answers', $answers);
 
         return view('users.questionanswer');
     }
@@ -40,6 +43,7 @@ class QuestionController extends Controller
             'question' => $request->get('question'),
             'user_pk' => $request->get('user_pk'),
         ]);
+
         $question->save();
         return redirect()->back();
     }

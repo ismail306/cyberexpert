@@ -37,6 +37,7 @@
                         </div>
                         @endif
 
+
                         @foreach ($questions as $question)
                         <div class="card mb-2">
                             <div class="card-body p-2 p-sm-3">
@@ -48,9 +49,13 @@
                                         <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->question}}</a></h6>
                                         <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->id}}</a></h6>
 
+                                        @foreach($question->answers as $answer)
                                         <p class="text-secondary">
-                                            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                                            {{$answer->answer}}
                                         </p>
+                                        @endforeach
+
+
                                         <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
                                     </div>
 
@@ -77,7 +82,7 @@
                                                         @csrf
 
                                                         <input type="text" name="user_pk" value="{{Auth::user()->id}}">
-                                                        <input type="text" name="question_pk" value="{{$question->id}}">
+                                                        <input type="text" name="question_id" value="{{$question->id}}">
 
 
                                                         <div class="form-group">
@@ -109,9 +114,9 @@
                                 <div class=" small text-center ">
 
                                     <a type="button" class="btn btn-outline-dark" href="#">
-                                        <span><i class="far fa-comment ml-2"></i> 3</span>
+                                        <span><i class="far fa-comment ml-2"></i> {{$question->answers->count()}}</span>
                                     </a>
-                                    <a type="submit" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer-{{$question->id }}">{{$question->id}}
+                                    <a type="submit" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer-{{$question->id }}">
                                         Answer
                                     </a>
                                 </div>

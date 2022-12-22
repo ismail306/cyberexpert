@@ -18,10 +18,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('answer');
             $table->unsignedBigInteger('user_pk');
-            $table->unsignedBigInteger('question_pk');
+            $table->unsignedBigInteger('question_id');
 
             $table->foreign('user_pk')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('question_pk')->references('id')->on('questions')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
         });
     }
 
