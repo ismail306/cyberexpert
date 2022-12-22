@@ -53,10 +53,6 @@ Route::get('/xss', function () {
     return view('users/learnethicalhacking/xss');
 })->name('xss');
 
-
-
-
-
 Route::get('/reflectedxss', function () {
     return view('users/learnethicalhacking/reflectedXSS');
 })->name('reflectedxss');
@@ -73,9 +69,6 @@ Route::get('/sql', function () {
     return view('users/learnethicalhacking/sql');
 })->name('sql');
 
-
-
-
 Route::get('/brokenauthentication', function () {
     return view('users/learnethicalhacking/brokauth');
 })->name('brokenauthentication');
@@ -85,17 +78,19 @@ Route::get('/profile', function () {
 })->name('profile');
 
 
+
+
 Route::get('/blog', function () {
     return view('users/blog');
 })->name('blog');
 
 
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
 
 require __DIR__ . '/auth.php';
 route::fallback(function () {
