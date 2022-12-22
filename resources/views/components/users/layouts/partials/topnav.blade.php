@@ -70,7 +70,7 @@
 
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
-                                                <a href="#">Profile</a>
+                                                <a href="{{route('user.profile')}}">Profile</a>
                                             </li>
                                             <li>
                                                 <a href="#">Setting</a>

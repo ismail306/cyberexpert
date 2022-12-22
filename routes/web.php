@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,7 @@ Route::get('/questionanswer', [QuestionController::class, 'question'])->name('qu
 Route::get('/create_answer', [AnswerController::class, 'index'])->name('answer.create');
 Route::post('/create_answer', [AnswerController::class, 'store'])->name('answer.store');
 
-
-
-
+Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
 
 
 
@@ -72,12 +71,6 @@ Route::get('/sql', function () {
 Route::get('/brokenauthentication', function () {
     return view('users/learnethicalhacking/brokauth');
 })->name('brokenauthentication');
-
-Route::get('/profile', function () {
-    return view('users/profile');
-})->name('profile');
-
-
 
 
 Route::get('/blog', function () {
