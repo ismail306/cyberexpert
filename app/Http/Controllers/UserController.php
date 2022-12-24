@@ -11,4 +11,9 @@ class UserController extends Controller
     {
         return view('users/profile');
     }
+
+    public function setting()
+    {
+        return view('users/setting');
+    }
 }

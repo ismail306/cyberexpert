@@ -40,6 +40,8 @@ Route::get('/create_answer', [AnswerController::class, 'index'])->name('answer.c
 Route::post('/create_answer', [AnswerController::class, 'store'])->name('answer.store');
 
 Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
+Route::get('/profile_setting', [UserController::class, 'setting'])->name('user.profileSetting');
+
 
 
 
