@@ -12,12 +12,15 @@ class blog extends Model
 
     protected $fillable = [
         'owner',
-        'main_image',
+        'category',
+        'image',
         'title',
-        'introduction',
         'description',
-        'secondary_image',
-        'video_link',
         'reading_time',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
 }

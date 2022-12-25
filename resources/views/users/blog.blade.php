@@ -27,10 +27,10 @@
                                                 <a href="#!">news</a>
                                             </li>
                                         </ul>
-                                        <h2 class="h1"><a class="post-title" href="article.html">Is it Ethical to Travel Now?
+                                        <h2 class="m-4 h1"><a class="post-title" href="article.html">Is it Ethical to Travel Now?
                                                 With that Freedom Comes Responsibility.</a></h2>
-                                        <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                        <p class="m-4 card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</p>
+                                        <div class=" m-4 content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
                                         </div>
                                     </div>
                                 </article>
@@ -123,10 +123,10 @@
                                             <li> <a href="#!">travel</a>
                                             </li>
                                         </ul>
-                                        <h2><a class="post-title" href="article.html">An
+                                        <h2 class="m-4"><a class="post-title" href="article.html">An
                                                 Experiential Guide to Explore This Kingdom</a></h2>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                        <p class="card-text m-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
+                                        <div class="content m-4"> <a class="read-more-btn" href="article.html">Read Full Article</a>
                                         </div>
                                     </div>
                                 </article>
@@ -241,7 +241,7 @@
                                                 <a href="#!">tips</a>
                                             </li>
                                         </ul>
-                                        <h2><a class="post-title" href="article.html">An Experiential
+                                        <h2 class="m-4"><a class="post-title" href="article.html">An Experiential
                                                 Guide to Explore This Kingdom</a></h2>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
                                         <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
