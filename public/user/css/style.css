@@ -3797,6 +3797,20 @@ body{
   margin-bottom: 10px;
 }
 
+/* For blog btn */
+
+.cteate-blog-btn{
+  color: #0b5685;
+  border: 1px solid #0b5685;
+
+
+}
+.cteate-blog-btn:hover {
+  color: #fff;
+  background-color: #0b5685;
+  border-color: #0b5685;
+}
+
 
 
 

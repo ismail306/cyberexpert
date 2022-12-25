@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,9 +76,14 @@ Route::get('/brokenauthentication', function () {
 })->name('brokenauthentication');
 
 
-Route::get('/blog', function () {
-    return view('users/blog');
-})->name('blog');
+
+
+
+//blog Route
+
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog_create', [BlogController::class, 'create'])->name('blog.create');
+
 
 
 Route::get('/dashboard', function () {
