@@ -11,12 +11,11 @@ class blog extends Model
     protected $table = 'blogs';
 
     protected $fillable = [
-        'owner',
+        'user_id',
         'category',
         'image',
         'title',
         'description',
-        'reading_time',
     ];
 
     public function user()

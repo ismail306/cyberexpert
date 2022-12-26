@@ -17,4 +17,16 @@ class BlogController extends Controller
     {
         return view('users/createblog');
     }
+
+    public function store(Request $request)
+    {
+        $blog = new blog();
+        $blog->title = $request->title;
+        $blog->description = $request->description;
+        $blog->image = $request->image;
+        $blog->category = $request->category;
+        $blog->user_id = $request->user_id;
+        $blog->save();
+        return redirect()->route('blog.index');
+    }
 }

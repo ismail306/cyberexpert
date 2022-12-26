@@ -9,6 +9,7 @@
 
                 <form class="mt-4" action="#" method="POST" enctype="multipart/form-data">
                     @csrf
+                    <input type="text" name="user_id" value="{{Auth::user()->id}}">
                     <div class="form-group">
                         <label for="category">Category</label>
                         <input type="text" name="category" class="form-control form-control-lg" id="category" aria-describedby="emailHelp" maxlength="15" value="{{ old('category') }}" placeholder="Enter the category of your article here ...">

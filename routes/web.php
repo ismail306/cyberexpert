@@ -83,6 +83,8 @@ Route::get('/brokenauthentication', function () {
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog_create', [BlogController::class, 'create'])->name('blog.create');
+Route::post('/blog_create', [BlogController::class, 'store'])->name('blog.store');
+
 
 
 
