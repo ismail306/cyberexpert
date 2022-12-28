@@ -47,16 +47,16 @@
 
                                     <div class="media-body">
                                         <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->question}}</a></h6>
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->id}}</a></h6>
+
 
                                         @foreach($question->answers as $answer)
-                                        <p class="text-secondary">
+                                        <p class="text-dark">
                                             {{$answer->answer}}
                                         </p>
                                         @endforeach
 
 
-                                        <p class="text-muted"><a href="#">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
+                                        <p><a class="text-info" href="#">drewdan</a> replied <span class="text-dark font-weight-bold">13 minutes ago</span></p>
                                     </div>
 
 
@@ -81,8 +81,8 @@
                                                     <form action="{{ route('answer.store') }}" method="POST">
                                                         @csrf
 
-                                                        <input type="text" name="user_pk" value="{{Auth::user()->id}}">
-                                                        <input type="text" name="question_id" value="{{$question->id}}">
+                                                        <input type="text" hidden name="user_pk" value="{{Auth::user()->id}}">
+                                                        <input type="text" hidden name="question_id" value="{{$question->id}}">
 
 
                                                         <div class="form-group">
