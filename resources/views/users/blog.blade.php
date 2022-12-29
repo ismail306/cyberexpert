@@ -18,7 +18,9 @@
                                             <div class="post-info"> <span class="text-uppercase">04 Jun 2021</span>
                                                 <span class="text-uppercase">3 minutes read</span>
                                             </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/post-1.jpg" alt="Post Thumbnail" class="w-100">
+
+
+                                            <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$lastBlog->image }}" alt="Latest Blog" class="w-100">
                                         </div>
                                     </a>
                                     <div class="card-body px-0 pb-1">
@@ -173,7 +175,7 @@
                                         <h2><a class="post-title" href="article.html">Alaska
                                                 Cruises Will Restart as Biden Signs New Tourism Law</a></h2>
                                         <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                        <div class="content"> <a class="read-more-btn text-info" href="article.html">Read Full Article</a>
                                         </div>
                                     </div>
                                 </article>
@@ -244,7 +246,7 @@
                                         <h2 class="m-4"><a class="post-title" href="article.html">An Experiential
                                                 Guide to Explore This Kingdom</a></h2>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                        <div class="content"> <a class="read-more-btn text-info" href="article.html">Read Full Article</a>
                                         </div>
                                     </div>
                                 </article>

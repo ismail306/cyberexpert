@@ -12,6 +12,10 @@ class BlogController extends Controller
 
     public function index()
     {
+        $blogs = blog::all();
+        $lastBlog = blog::orderBy('id', 'desc')->first();
+        View()->share('blogs', $blogs);
+        View()->share('lastBlog', $lastBlog);
         return view('users/blog');
     }
 
@@ -19,6 +23,9 @@ class BlogController extends Controller
     {
         return view('users/createblog');
     }
+
+
+
 
     public function store(Request $request)
     {
@@ -31,7 +38,7 @@ class BlogController extends Controller
         $filename =  date('Y-m-d') . '_' . time() . $originalname;
         $image = $request->file('image');
         $image_resize = Image::make($image->getRealPath());
-        $image_resize->resize(720, 1500);
+        $image_resize->resize(1365, 720);
         $image_resize->save(storage_path('/app/public/images/blog_images/' . $filename));
 
         $blog->image = $filename;
@@ -42,5 +49,11 @@ class BlogController extends Controller
         $blog->save();
         return redirect()->route('blog')
             ->withMessage('Blog Successfully Created');
+    }
+
+    public function show($id)
+    {
+        $blog = blog::find($id);
+        return view('users/blogdetail', compact('blog'));
     }
 }
