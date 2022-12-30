@@ -161,57 +161,122 @@
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
                             <img loading="lazy" src="user/images/icon-image/question.svg" alt="Question-icon" />
-                            <br>
-                            <img loading="lazy" src="user/images/icon-image/reply.svg" alt="Question-icon" />
+
+                            <img class="mt-2" loading="lazy" src="user/images/icon-image/reply.svg" alt="replay-icon" />
                         </div>
                         <div class="ts-service-box-info">
                             <h4 class="service-box-title">
-                                <a href="#">Home Construction</a>
+                                <a href="#">What is Ethical Hacking?</a>
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Integer adipiscing erat
+                                Ethical Hacking is a method of identifying weaknesses in computer systems and computer networks to develop countermeasures that protect the weaknesses.
+                                <a class="text-info read-more" data-toggle="collapse" href="#Collapse" role="button" aria-expanded="false" aria-controls="Collapse">Read more...</a>
+
+
                             </p>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="collapse " id="Collapse">
+                                        <div>
+                                            An Ethical hacker must get written permission from the owner of the computer system, protect the privacy of the organization been hacked, transparently report all the identified weaknesses in the computer system to the organization, and inform hardware and software vendors of the identified weaknesses.
+                                            <h6 class="mt-3">Here are some examples of common cyber attacks and types of data breaches:</h6>
+
+                                            <ul style="list-style-type:disc">
+                                                <li>Identity theft, fraud, extortion</li>
+                                                <li>Malware, phishing, spamming, spoofing, spyware, trojans and viruses</li>
+                                                <li>Stolen hardware, such as laptops or mobile devices</li>
+                                                <li>Denial-of-service and distributed denial-of-service attacks</li>
+                                                <li>Password sniffing</li>
+                                                <li>Website defacement</li>
+                                                <li>Private and public Web browser exploits</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <!-- Service 1 end -->
+                    <!-- Q1 End -->
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
                             <img loading="lazy" src="user/images/icon-image/question.svg" alt="Question-icon" />
-                            <br>
-                            <img loading="lazy" src="user/images/icon-image/reply.svg" alt="Question-icon" />
+
+                            <img class="mt-2" loading="lazy" src="user/images/icon-image/reply.svg" alt="Question-icon" />
                         </div>
                         <div class="ts-service-box-info">
                             <h4 class="service-box-title">
-                                <a href="#">Home Construction</a>
+                                <a href="#">What is a cyber attack?</a>
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Integer adipiscing erat
+                                A cyber attack is any attempt to gain unauthorized access to a computer, computing system or computer network with the intent to cause damage. Cyber attacks aim to disable, disrupt, destroy or control computer systems or to alter, block, delete, manipulate or steal the data held within these systems.
+                                <a class="text-info read-more" data-toggle="collapse" href="#Collapse2" role="button" aria-expanded="false" aria-controls="Collapse">Read more...</a>
+
+
                             </p>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="collapse " id="Collapse2">
+                                        <div>
+                                            <p>Any individual or group can launch a cyber attack from anywhere by using one or more various attack strategies.
+
+                                                People who carry out cyber attacks are generally regarded as cybercriminals. Often referred to as bad actors, threat actors and hackers, they include individuals who act alone, drawing on their computer skills to design and execute malicious attacks. They can also belong to a criminal syndicate, working with other threat actors to find weaknesses or problems in the computer systems -- called vulnerabilities -- that they can exploit for criminal gain.
+
+                                                Government-sponsored groups of computer experts also launch cyber attacks. They're identified as nation-state attackers, and they have been accused of attacking the information technology (IT) infrastructure of other governments, as well as nongovernment entities, such as businesses, nonprofits and utilities.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
+                    <!-- Q2 End -->
+
 
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
                             <img loading="lazy" src="user/images/icon-image/question.svg" alt="Question-icon" />
-                            <br>
-                            <img loading="lazy" src="user/images/icon-image/reply.svg" alt="Question-icon" />
+
+                            <img class="mt-2" loading="lazy" src="user/images/icon-image/reply.svg" alt="Question-icon" />
                         </div>
                         <div class="ts-service-box-info">
                             <h4 class="service-box-title">
-                                <a href="#">Home Construction</a>
+                                <a href="#">How to protect my devices from cyber attacks?</a>
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Integer adipiscing erat
+                                These days your personal and workplace devices (mobile phone, tablets and laptops) store information of value to you, including your financial records, photos, medical records, personal documents and emails. Unfortunately,
+                                <a class="text-info read-more" data-toggle="collapse" href="#Collapse3" role="button" aria-expanded="false" aria-controls="Collapse">Read more...</a>
+
+
                             </p>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="collapse " id="Collapse3">
+                                        <div>
+                                            <p> this information is of value to cyber criminals too. If your device is compromised or stolen it could lead to identity theft, bank fraud and /or fraudulent purchases to name a few problems.</p>
+
+                                            <h6 class="mt-3">Secure your devices - the basic to-dos</h6>
+
+                                            <ul style="list-style-type:disc">
+                                                <li>Set a password / passcode / pin / biometric that must be entered to unlock your device and ensure automatic lock is enabled</li>
+                                                <li>Set your device so that a password is required before an application can be installed, this will prevent unauthorised applications from being installed onto your device</li>
+                                                <li>Never auto connect to join a hotspot</li>
+                                                <li>Use legitimate software and install applications from official sites only</li>
+                                                <li>Enable remote wiping</li>
+
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-
-
-
-                    <!-- Service 3 end -->
+                    <!-- Q3 End -->
                 </div>
                 <!-- Col end -->
 
