@@ -36,7 +36,9 @@
                             </form>
                         </div>
                         @else
-                        <h4>If you want to ask question please log in first</h4>
+                        <h4>If you want to ask any question please <a href="#" class="text-info" data-toggle="modal" data-target="#login"> Sign In </a> first.</h4>
+
+
                         @endif
 
 
@@ -48,40 +50,40 @@
 
 
                                     <div class="media-body">
-                                        <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{$question->question}}</a></h6>
+                                        <h6>{{$question->question}}</h6>
 
 
                                         @foreach($question->answers as $answer)
                                         <p class="text-dark">
                                             {{$answer->answer}}
+                                            <br>
+                                            <b> {{$answer->created_at->diffForHumans();}}</b>
+
                                         </p>
 
 
                                         <div class="row"> @if(Auth::id() == $answer->user_pk)
-                                            <a href="#" class="btn btn-success">Update</a>
+
+                                            <button type="button" class="btn btn-outline-success">Update</button>
+
 
                                             <form action="{{ route('answer.delete', $answer->id) }}" method="GET" class="d-inline-block">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Delete</button>
+
+                                                <button type="submit" class="btn btn-outline-danger ml-2">Delete</button>
                                             </form>
                                             @endif
                                         </div>
 
-
-
-
-
                                         @endforeach
-
-
-                                        <p><a class="text-info" href="#">drewdan</a> replied <span class="text-dark font-weight-bold">13 minutes ago</span></p>
                                     </div>
 
 
                                 </div>
+                                <!-- Answer modal Start -->
 
-                                <div class="modal fade" id="answer-{{$question->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal fade" id="answer-{{$question->id , $question->question }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -104,8 +106,9 @@
                                                         <input type="text" hidden name="question_id" value="{{$question->id}}">
 
 
-                                                        <div class="form-group">
-                                                            <label for="message">Descrive your Problem</label>
+
+                                                        <div class="form-group text-dark">
+                                                            <label class="text-dark" for="message">{{$question->question}}</label>
                                                             <br>
                                                             <textarea class="form-message" id="message" name="answer"></textarea>
                                                         </div>
@@ -126,6 +129,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Modal End -->
+
 
 
 
@@ -135,7 +140,7 @@
                                     <a type="button" class="btn btn-outline-dark" href="#">
                                         <span><i class="far fa-comment ml-2"></i> {{$question->answers->count()}}</span>
                                     </a>
-                                    <a type="submit" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer-{{$question->id }}">
+                                    <a type="submit" class="btn btn-outline-dark" href="#" data-toggle="modal" data-target="#answer-{{$question->id, $question->question }}  ">
                                         Answer
                                     </a>
                                 </div>
