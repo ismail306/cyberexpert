@@ -692,7 +692,7 @@ ul.top-info li p.info-text {
 
 }
 .navbar-collapse {
-  padding-left: 10%;
+  padding-left: 15%;
 }
 
 @media (max-width: 991px) {
@@ -750,7 +750,7 @@ ul.navbar-nav > li > a {
 /*-- Logo --*/
 .logo img {
 
-height: 90px;
+height: 60px;
   padding-left: 30px;
   padding-bottom: 20px;
 
@@ -977,12 +977,12 @@ ul.navbar-nav > li > a {
   font-family: "Montserrat", sans-serif;
   color: #fff !important;
   text-rendering: optimizeLegibility;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   text-transform: uppercase;
   letter-spacing: -0.2px;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
-  line-height: 40px;
+  line-height: 20px;
   padding: 30px 0;
   transition: 350ms;
 }
@@ -1253,7 +1253,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 /*-- Main slide --*/
 .banner-carousel .banner-carousel-item {
-  height: 700px;
+  height: 550px;
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
@@ -3027,13 +3027,20 @@ label {
   color: #7c7c7c;
 }
 
-.pagination > .active > a,
-.pagination > .active > a:hover,
-.pagination > li > a:hover {
+.pagination > .active > a
+ {
   color: #fff;
-  background: #ffb600;
+  background: #0b5685;
   border: 1px solid transparent;
 }
+.pagination > li > a:hover{
+  color: #fff;
+  background: #37c8fc;
+  border: 1px solid transparent;
+
+}
+
+
 
 /* News Single
 ================================================== */
@@ -3601,7 +3608,7 @@ label {
 
 
 body{
-  margin-top:100px;
+  margin-top:60px;
   color: #1a202c;
   text-align: left;
   background-color: #e2e8f0;

@@ -35,6 +35,8 @@
 
                             </form>
                         </div>
+                        @else
+                        <h4>If you want to ask question please log in first</h4>
                         @endif
 
 
@@ -53,6 +55,23 @@
                                         <p class="text-dark">
                                             {{$answer->answer}}
                                         </p>
+
+
+                                        <div class="row"> @if(Auth::id() == $answer->user_pk)
+                                            <a href="#" class="btn btn-success">Update</a>
+
+                                            <form action="{{ route('answer.delete', $answer->id) }}" method="GET" class="d-inline-block">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                            @endif
+                                        </div>
+
+
+
+
+
                                         @endforeach
 
 

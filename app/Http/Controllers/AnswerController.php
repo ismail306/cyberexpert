@@ -34,4 +34,11 @@ class AnswerController extends Controller
         $answer->save();
         return redirect()->Route('questionanswer');
     }
+
+    public function delete($id)
+    {
+        $answer = answer::find($id);
+        $answer->delete();
+        return redirect()->Route('questionanswer');
+    }
 }

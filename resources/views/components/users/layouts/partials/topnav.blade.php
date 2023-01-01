@@ -20,7 +20,7 @@
                         </div>
 
                         <div id="navbar-collapse" class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav mr-auto">
+                            <ul class="nav navbar-nav mr-10">
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('cyberexpert')}}">Home</a>
@@ -64,9 +64,11 @@
                                 @if(Auth::user())
 
 
+
                                 <li class="nav-item dropdown ">
 
-                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false"> <i class="fas fa-user mx-1"></i> </a>
+                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false"> <i class="fas fa-user mx-1"></i>
+                                        {{(Auth::user()->name);}}</a>
 
 
 
@@ -91,7 +93,7 @@
                                 @else
                                 <li class="nav-item dropdown ">
 
-                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false"> <i class="fas fa-user mx-1"></i> </a>
+                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false"> <i class="fas fa-user mx-1"></i> User </a>
 
 
                                     <ul class="dropdown-menu" role="menu">

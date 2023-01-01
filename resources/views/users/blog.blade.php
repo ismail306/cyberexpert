@@ -23,11 +23,8 @@
                                         </div>
                                     </a>
                                     <div class="card-body px-0 pb-1">
-                                        <ul class="post-meta mb-2">
-                                            <li> <a href="#!">{{$lastBlog->category}}</a>
-                                            </li>
-                                        </ul>
-                                        <h2 class="m-4 h1"><a class="post-title" href="article.html">{{$lastBlog->title}}</a></h2>
+                                        <button type="button" class="btn btn-success ml-4">{{$lastBlog->category}}</button>
+                                        <h3 class="m-4"><a class="post-title" href="article.html">{{$lastBlog->title}}</a></h3>
                                         <div>
                                             @php
                                             // Limit the description to 30 words
@@ -136,21 +133,19 @@
                                         </div>
                                     </a>
                                     <div class="card-body px-0 pb-0">
-                                        <ul class="post-meta mb-2">
-                                            <li> {{$blog->category}}
-                                            </li>
-                                        </ul>
-                                        <h2 class="m-4"><a class="post-title" href="article.html">{{$blog->title}}</a></h2>
+                                        <button type="button" class="btn btn-success ml-4">{{$blog->category}}</button>
+
+                                        <h4 class="px-4"><a class="post-title" href="article.html">{{$blog->title}}</a></h4>
                                         <div>
                                             @php
                                             // Limit the description to 30 words
                                             $limitedDescription = str_limit($blog->description, 200);
                                             @endphp
 
-                                            <div class="description m-4">
+                                            <div class="description px-4">
                                                 {{ $limitedDescription }}
                                                 @if (strlen($blog->description) > 200)
-                                                <a href="article.html" class="see-more">See more</a>
+                                                <a href="article.html" class="see-more text-info">See more</a>
                                                 <div class="full-description" style="display: none;">
                                                     {{ $blog->description }}
                                                 </div>
@@ -158,8 +153,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="content m-4"> <a class="read-more-btn" href="article.html">Read Full Article</a>
-                                        </div>
+
                                     </div>
                                 </article>
                             </div>

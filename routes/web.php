@@ -39,6 +39,8 @@ Route::get('/questionanswer', [QuestionController::class, 'question'])->name('qu
 
 Route::get('/create_answer', [AnswerController::class, 'index'])->name('answer.create');
 Route::post('/create_answer', [AnswerController::class, 'store'])->name('answer.store');
+Route::get('/delete_answer/{id}', [AnswerController::class, 'delete'])->name('answer.delete');
+
 
 Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
 Route::get('/profile_setting', [UserController::class, 'setting'])->name('user.profileSetting');
