@@ -96,11 +96,11 @@
 
                                     <ul class="dropdown-menu" role="menu">
                                         <li class="nav-item">
-                                            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#login">Sign In</a>
+                                            <a href="#" class="btn" data-toggle="modal" data-target="#login">Sign In</a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#signup">Sign Up</a>
+                                            <a href="#" class="btn" data-toggle="modal" data-target="#signup">Sign Up</a>
                                         </li>
 
                                     </ul>

@@ -15,8 +15,7 @@
                                 <article class="card article-card">
                                     <a href="article.html">
                                         <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">04 Jun 2021</span>
-                                                <span class="text-uppercase">3 minutes read</span>
+                                            <div class="post-info"> <span class="text-uppercase">{{$lastBlog->created_at}}</span>
                                             </div>
 
 
@@ -25,15 +24,28 @@
                                     </a>
                                     <div class="card-body px-0 pb-1">
                                         <ul class="post-meta mb-2">
-                                            <li> <a href="#!">travel</a>
-                                                <a href="#!">news</a>
+                                            <li> <a href="#!">{{$lastBlog->category}}</a>
                                             </li>
                                         </ul>
-                                        <h2 class="m-4 h1"><a class="post-title" href="article.html">Is it Ethical to Travel Now?
-                                                With that Freedom Comes Responsibility.</a></h2>
-                                        <p class="m-4 card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</p>
-                                        <div class=" m-4 content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                        <h2 class="m-4 h1"><a class="post-title" href="article.html">{{$lastBlog->title}}</a></h2>
+                                        <div>
+                                            @php
+                                            // Limit the description to 30 words
+                                            $limitedDescription = str_limit($lastBlog->description, 300);
+                                            @endphp
+
+                                            <div class="description m-4">
+                                                {{ $limitedDescription }}
+                                                @if (strlen($lastBlog->description) > 300)
+                                                <a href="article.html" class="see-more">See more</a>
+                                                <div class="full-description" style="display: none;">
+                                                    {{ $lastBlog->description }}
+                                                </div>
+                                                @endif
+                                            </div>
+
                                         </div>
+
                                     </div>
                                 </article>
                             </div>
@@ -110,147 +122,51 @@
                     <div class="col-lg-12 mb-8 mb-lg-0">
                         <div class="row">
 
+                            @foreach($blogs as $blog)
+
+
+                            @if($blog->id != $lastBlog->id)
                             <div class="col-md-4 mb-4">
                                 <article class="card article-card article-card-sm h-100">
                                     <a href="article.html">
                                         <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">03 Jun 2021</span>
-                                                <span class="text-uppercase">2 minutes read</span>
+                                            <div class="post-info"> <span class="text-uppercase">{{$blog->created_at}}</span>
                                             </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/post-2.jpg" alt="Post Thumbnail" class="w-100">
+                                            <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$blog->image }}" alt="Post Thumbnail" class="w-100">
                                         </div>
                                     </a>
                                     <div class="card-body px-0 pb-0">
                                         <ul class="post-meta mb-2">
-                                            <li> <a href="#!">travel</a>
+                                            <li> {{$blog->category}}
                                             </li>
                                         </ul>
-                                        <h2 class="m-4"><a class="post-title" href="article.html">An
-                                                Experiential Guide to Explore This Kingdom</a></h2>
-                                        <p class="card-text m-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
+                                        <h2 class="m-4"><a class="post-title" href="article.html">{{$blog->title}}</a></h2>
+                                        <div>
+                                            @php
+                                            // Limit the description to 30 words
+                                            $limitedDescription = str_limit($blog->description, 200);
+                                            @endphp
+
+                                            <div class="description m-4">
+                                                {{ $limitedDescription }}
+                                                @if (strlen($blog->description) > 200)
+                                                <a href="article.html" class="see-more">See more</a>
+                                                <div class="full-description" style="display: none;">
+                                                    {{ $blog->description }}
+                                                </div>
+                                                @endif
+                                            </div>
+
+                                        </div>
                                         <div class="content m-4"> <a class="read-more-btn" href="article.html">Read Full Article</a>
                                         </div>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <article class="card article-card article-card-sm h-100">
-                                    <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">02 Jun 2021</span>
-                                                <span class="text-uppercase">2 minutes read</span>
-                                            </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/ls-2.jpg" alt="Post Thumbnail" class="w-100">
-                                        </div>
-                                    </a>
-                                    <div class="card-body px-0 pb-0">
-                                        <ul class="post-meta mb-2">
-                                            <li> <a href="#!">lifestyle</a>
-                                            </li>
-                                        </ul>
-                                        <h2><a class="post-title" href="article.html">What
-                                                to Do in Houston: Ideas for Your Visit</a></h2>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <article class="card article-card article-card-sm h-100">
-                                    <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">01 Jun 2021</span>
-                                                <span class="text-uppercase">3 minutes read</span>
-                                            </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/cr-1.jpg" alt="Post Thumbnail" class="w-100">
-                                        </div>
-                                    </a>
-                                    <div class="card-body px-0 pb-0">
-                                        <ul class="post-meta mb-2">
-                                            <li> <a href="#!">cruises</a>
-                                                <a href="#!">news</a>
-                                            </li>
-                                        </ul>
-                                        <h2><a class="post-title" href="article.html">Alaska
-                                                Cruises Will Restart as Biden Signs New Tourism Law</a></h2>
-                                        <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
-                                        <div class="content"> <a class="read-more-btn text-info" href="article.html">Read Full Article</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <article class="card article-card article-card-sm h-100">
-                                    <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">30 May 2021</span>
-                                                <span class="text-uppercase">3 minutes read</span>
-                                            </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/cr-2.jpg" alt="Post Thumbnail" class="w-100">
-                                        </div>
-                                    </a>
-                                    <div class="card-body px-0 pb-0">
-                                        <ul class="post-meta mb-2">
-                                            <li> <a href="#!">cruises</a>
-                                                <a href="#!">news</a>
-                                            </li>
-                                        </ul>
-                                        <h2><a class="post-title" href="article.html">U.S.
-                                                Travel Association Calls on CDC to Remove Cruise Restrictions</a></h2>
-                                        <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <article class="card article-card article-card-sm h-100">
-                                    <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">29 May 2021</span>
-                                                <span class="text-uppercase">3 minutes read</span>
-                                            </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/post-4.jpg" alt="Post Thumbnail" class="w-100">
-                                        </div>
-                                    </a>
-                                    <div class="card-body px-0 pb-0">
-                                        <ul class="post-meta mb-2">
-                                            <li> <a href="#!">destination</a>
-                                            </li>
-                                        </ul>
-                                        <h2><a class="post-title" href="article.html">Top 7 Reasons to
-                                                Visit Denver This Summer</a></h2>
-                                        <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
-                                        <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <article class="card article-card article-card-sm h-100">
-                                    <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">28 May 2021</span>
-                                                <span class="text-uppercase">2 minutes read</span>
-                                            </div>
-                                            <img loading="lazy" decoding="async" src="/user/images/blog/post/post-8.jpg" alt="Post Thumbnail" class="w-100">
-                                        </div>
-                                    </a>
-                                    <div class="card-body px-0 pb-0">
-                                        <ul class="post-meta mb-2">
-                                            <li> <a href="#!">news</a>
-                                                <a href="#!">tips</a>
-                                            </li>
-                                        </ul>
-                                        <h2 class="m-4"><a class="post-title" href="article.html">An Experiential
-                                                Guide to Explore This Kingdom</a></h2>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
-                                        <div class="content"> <a class="read-more-btn text-info" href="article.html">Read Full Article</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            @endif
+                            @endforeach
+
+
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-12">
@@ -293,5 +209,15 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function toggleDescription() {
+            // Get the full description element
+            var fullDescriptionElement = document.querySelector('.full-description');
+            // Toggle the display of the full description
+            fullDescriptionElement.style.display = fullDescriptionElement.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
 
 </x-users.layouts.master>

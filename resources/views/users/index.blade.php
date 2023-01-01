@@ -166,7 +166,7 @@
                         </div>
                         <div class="ts-service-box-info">
                             <h4 class="service-box-title">
-                                <a href="#">What is Ethical Hacking?</a>
+                                What is Ethical Hacking?
                             </h4>
                             <p>
                                 Ethical Hacking is a method of identifying weaknesses in computer systems and computer networks to develop countermeasures that protect the weaknesses.
@@ -207,7 +207,7 @@
                         </div>
                         <div class="ts-service-box-info">
                             <h4 class="service-box-title">
-                                <a href="#">What is a cyber attack?</a>
+                                What is a cyber attack?
                             </h4>
                             <p>
                                 A cyber attack is any attempt to gain unauthorized access to a computer, computing system or computer network with the intent to cause damage. Cyber attacks aim to disable, disrupt, destroy or control computer systems or to alter, block, delete, manipulate or steal the data held within these systems.
@@ -243,7 +243,7 @@
                         </div>
                         <div class="ts-service-box-info">
                             <h4 class="service-box-title">
-                                <a href="#">How to protect my devices from cyber attacks?</a>
+                                How to protect my devices from cyber attacks?
                             </h4>
                             <p>
                                 These days your personal and workplace devices (mobile phone, tablets and laptops) store information of value to you, including your financial records, photos, medical records, personal documents and emails. Unfortunately,
