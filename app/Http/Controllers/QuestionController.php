@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\question;
 use App\Models\answer;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
@@ -15,9 +16,11 @@ class QuestionController extends Controller
     {
         $questions = question::all();
         $answers = answer::all();
+        $users = User::all();
 
         View()->share('questions', $questions);
         View()->share('answers', $answers);
+        View()->share('users', $users);
 
         return view('users.questionanswer');
     }

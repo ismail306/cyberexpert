@@ -11,8 +11,6 @@ class AnswerController extends Controller
 
     public function index()
     {
-
-
         return view('users.questionanswer');
     }
 
@@ -40,5 +38,11 @@ class AnswerController extends Controller
         $answer = answer::find($id);
         $answer->delete();
         return redirect()->Route('questionanswer');
+    }
+
+    public function edit($id)
+    {
+        $answer = answer::find($id);
+        return view('users.editanswer', compact('answer'));
     }
 }

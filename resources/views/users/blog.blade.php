@@ -15,7 +15,7 @@
                                 <article class="card article-card">
                                     <a href="article.html">
                                         <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">{{$lastBlog->created_at}}</span>
+                                            <div class="post-info"> <span class="text-uppercase">{{$lastBlog->created_at->format('m/d/Y')}}</span>
                                             </div>
 
 
@@ -34,7 +34,7 @@
                                             <div class="description m-4">
                                                 {{ $limitedDescription }}
                                                 @if (strlen($lastBlog->description) > 300)
-                                                <a href="article.html" class="see-more">See more</a>
+                                                <a href="article.html" class="see-more text-info">See more</a>
                                                 <div class="full-description" style="display: none;">
                                                     {{ $lastBlog->description }}
                                                 </div>
@@ -127,7 +127,7 @@
                                 <article class="card article-card article-card-sm h-100">
                                     <a href="article.html">
                                         <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">{{$blog->created_at}}</span>
+                                            <div class="post-info"> <span class="text-uppercase">{{$blog->created_at->format('m/d/Y')}}</span>
                                             </div>
                                             <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$blog->image }}" alt="Post Thumbnail" class="w-100">
                                         </div>
