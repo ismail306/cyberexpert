@@ -1,5 +1,6 @@
 <x-users.layouts.master>
     <main>
+        @if(Auth::user())
         <section class="section">
             <div class="container">
 
@@ -63,6 +64,16 @@
 
             </div>
         </section>
+        @else
+        <section class="section">
+            <div class="container">
+                <h1>Oops! You are not logged in.</h1>
+                <hr>
+                <p class="lead">Please login to publish a blog.</p>
+                <a href="#" class="btn btn-secondary btn-design" data-toggle="modal" data-target="#login">Login</a>
+            </div>
+
+            @endif
 
     </main>
 

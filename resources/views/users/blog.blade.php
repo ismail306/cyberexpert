@@ -9,6 +9,7 @@
                     <div class="col-8">
                         <h2 class="section-title">Latest Articles</h2>
                     </div>
+                    @if($lastBlog != null)
                     <div class="col-lg-8 mb-5 mb-lg-0">
                         <div class="row">
                             <div class="col-12 mb-4">
@@ -50,6 +51,8 @@
 
                         </div>
                     </div>
+                    @endif
+
                     <div class="col-lg-4">
                         <div class="widget-blocks">
                             <div class="row">

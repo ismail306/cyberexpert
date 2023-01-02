@@ -40,9 +40,11 @@ class AnswerController extends Controller
         return redirect()->Route('questionanswer');
     }
 
-    public function edit($id)
+    public function update(Request $request, $id)
     {
         $answer = answer::find($id);
-        return view('users.editanswer', compact('answer'));
+        $answer->answer = $request->get('answer');
+        $answer->save();
+        return redirect()->Route('questionanswer');
     }
 }
