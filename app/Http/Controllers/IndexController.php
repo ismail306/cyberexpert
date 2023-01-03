@@ -12,9 +12,10 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $blogscount = blog::count();
+
+        $blogs = blog::orderBy('created_at', 'desc')->get();
         $usercount = User::count();
-        View()->share('blogscount', $blogscount);
+        View()->share('blogs', $blogs);
         View()->share('usercount', $usercount);
 
         return view('users.index');

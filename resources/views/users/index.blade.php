@@ -280,57 +280,53 @@
                 </div>
                 <!-- Col end -->
 
+                <!-- Blog -->
+
 
                 <div class="col-lg-6 mt-6 mt-lg-0 mb-4 mb-lg-0">
                     <h3 class="service-box-title">Blog</h3>
                     <br>
+                    <?php $count = 0; ?>
+                    @foreach ($blogs as $blog)
+                    <?php
+                    $count++;
+                    if ($count > 3) {
+                        break;
+                    }
 
-                    <div class="ts-service-box d-flex">
+                    ?>
+
+
+                    <div class="ts-service-box d-flex ">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="user/images/blog/Penetration-Testing-Tools.png" alt="service-icon" width="90" height="60" />
+                            <img loading="lazy" src="/storage/images/blog_images/{{$blog->image }}" alt="service-icon" width="90" height="60" />
                         </div>
                         <div class="ts-service-box-info">
                             <h3 class="service-box-title">
-                                <a href="#">penTesting</a>
+                                {{$blog->title}}
                             </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Integer adipiscing erat
-                            </p>
+                            @php
+                            // Limit the description to 30 words
+                            $limitedDescription = str_limit($blog->description, 150);
+                            @endphp
+                            <div class="description pr-2">
+                                {{ $limitedDescription }}
+                                @if (strlen($blog->description) > 150)
+                                <a href="article.html" class="see-more text-info">See more</a>
+                                <div class="full-description" style="display: none;">
+                                    {{ $blog->description }}
+                                </div>
+                                @endif
+                            </div>
                         </div>
-                    </div>
-                    <!-- Service 4 end -->
 
-                    <div class="ts-service-box d-flex">
-                        <div class="ts-service-box-img">
-                            <img loading="lazy" src="user/images/blog/sec.jpg" alt="service-icon" width="90" height="60" />
-                        </div>
-                        <div class="ts-service-box-info">
-                            <h3 class="service-box-title">
-                                <a href="#">Security Threats to Mobile Devices</a>
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Integer adipiscing erat
-                            </p>
-                        </div>
                     </div>
-                    <!-- Service 5 end -->
+                    @endforeach
 
-                    <div class="ts-service-box d-flex">
-                        <div class="ts-service-box-img">
-                            <img loading="lazy" src="user/images/blog/social-engineering.jpg" alt="service-icon" width="90" height="60" />
-                        </div>
-                        <div class="ts-service-box-info">
-                            <h3 class="service-box-title">
-                                <a href="#">Social-engineering</a>
-                            </h3>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Abero fugiat recusandae repudiandae incidunt suscipit ea. Facilis quo est eligendi! Optio a velit doloribus!
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Service 6 end -->
+
+                    <!-- Blog end -->
+
+
                 </div>
                 <!-- Col end -->
             </div>
@@ -494,7 +490,7 @@
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num">
-                                <span class="counterUp" data-count="{{$blogscount}}">0</span>
+                                <span class="counterUp" data-count="{{$blogs->count()}}">0</span>
                             </h2>
                             <h3 class="ts-facts-title">
                                 Blog
@@ -660,5 +656,14 @@
 
     </div>
     <!-- Body inner end -->
+
+    <script>
+        function toggleDescription() {
+            // Get the full description element
+            var fullDescriptionElement = document.querySelector('.full-description');
+            // Toggle the display of the full description
+            fullDescriptionElement.style.display = fullDescriptionElement.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 
 </x-users.layouts.master>
