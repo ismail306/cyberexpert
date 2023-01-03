@@ -494,7 +494,7 @@
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num">
-
+                                <span class="counterUp" data-count="{{$blogscount}}">0</span>
                             </h2>
                             <h3 class="ts-facts-title">
                                 Blog
