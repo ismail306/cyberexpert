@@ -2498,7 +2498,7 @@ img.testimonial-thumb {
 .copyright {
   background: #23282d;
   color: #fff;
-  padding: 25px 0;
+  padding: 5px 0;
   position: relative;
   z-index: 1;
   font-weight: 600;
@@ -2898,6 +2898,9 @@ img.testimonial-thumb {
 .map {
   height: 450px;
   z-index: 1;
+}
+.mapbg {
+  background-color: #121015 ;
 }
 
 .contact-info-box {
@@ -3816,6 +3819,11 @@ body{
   color: #fff;
   background-color: #0b5685;
   border-color: #0b5685;
+}
+.facts-bg{
+  background-color: #030303;
+  color: #fff;
+
 }
 
 
