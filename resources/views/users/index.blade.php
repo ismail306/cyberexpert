@@ -290,7 +290,7 @@
                     @foreach ($blogs as $blog)
                     <?php
                     $count++;
-                    if ($count > 3) {
+                    if ($count > 4) {
                         break;
                     }
 
@@ -303,7 +303,7 @@
                         </div>
                         <div class="ts-service-box-info">
                             <h3 class="service-box-title">
-                                {{$blog->title}}
+                                {{$blog->title}}</a>
                             </h3>
                             @php
                             // Limit the description to 30 words
