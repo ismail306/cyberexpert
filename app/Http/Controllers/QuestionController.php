@@ -14,7 +14,8 @@ class QuestionController extends Controller
 
     public function question()
     {
-        $questions = question::all();
+
+        $questions = question::orderBy('created_at', 'desc')->get();
         $answers = answer::all();
         $users = User::all();
 

@@ -235,3 +235,54 @@
     <!-- Modal End -->
 
 </div>
+
+
+<!-- update modal Start -->
+
+<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="contact-box ">
+
+                    <h2 class="text-uppercase text-center mb-5">Update this Answer</h2>
+                    @if(Auth::user())
+
+                    <form action="{{ route('answer.edit')}}" method="POST">
+                        @csrf
+
+
+                        <input type="text" hidden id="answer_id_value" name="id">
+
+
+                        <div class="form-group text-dark">
+                            <label class="text-dark" for="message"></label>
+                            <br>
+                            <textarea class="form-message" id="answer_value" name="answer"></textarea>
+                        </div>
+
+                        <button class="btn btn-primary btn-design" type="submit">Update </button>
+
+                    </form>
+                    @endif
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-design btn-primary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update Modal End -->

@@ -5,6 +5,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,9 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-Route::get('/', function () {
-    return view('users/index');
-})->name('cyberexpert');
+Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
+
+
 Route::get('/news', function () {
     return view('users/news');
 })->name('news');
@@ -40,7 +41,7 @@ Route::get('/questionanswer', [QuestionController::class, 'question'])->name('qu
 Route::get('/create_answer', [AnswerController::class, 'index'])->name('answer.create');
 Route::post('/create_answer', [AnswerController::class, 'store'])->name('answer.store');
 Route::get('/delete_answer/{id}', [AnswerController::class, 'delete'])->name('answer.delete');
-Route::post('/edit_answer/{id}', [AnswerController::class, 'update'])->name('answer.edit');
+Route::post('/edit_answer', [AnswerController::class, 'update'])->name('answer.edit');
 
 
 Route::get('/profile', [UserController::class, 'index'])->name('user.profile');

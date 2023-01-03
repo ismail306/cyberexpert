@@ -40,10 +40,10 @@ class AnswerController extends Controller
         return redirect()->Route('questionanswer');
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $answer = answer::find($id);
-        $answer->answer = $request->get('answer');
+        $answer = answer::find($request->id);
+        $answer->answer = $request->answer;
         $answer->save();
         return redirect()->Route('questionanswer');
     }
