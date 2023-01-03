@@ -464,7 +464,7 @@
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num">
-                                <span class="counterUp" data-count="1789">0</span>
+                                <span class="counterUp" data-count="{{$usercount}}">0</span>
                             </h2>
                             <h3 class="ts-facts-title">
                                 Learners
