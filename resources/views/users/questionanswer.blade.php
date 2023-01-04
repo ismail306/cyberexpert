@@ -123,7 +123,6 @@
 
                         @if(Auth::id() == $question->user_pk)
 
-
                         <form action="{{ route('question.delete', $question->id) }}" method="GET" class="d-inline-block">
                             @csrf
                             @method('DELETE')
