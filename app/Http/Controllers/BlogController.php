@@ -13,7 +13,7 @@ class BlogController extends Controller
     public function index()
     {
 
-        $blogs = blog::orderBy('created_at', 'desc')->get();
+        $blogs = blog::orderBy('created_at', 'desc')->paginate(3);
         $lastBlog = blog::orderBy('id', 'desc')->first();
         View()->share('blogs', $blogs);
         View()->share('lastBlog', $lastBlog);

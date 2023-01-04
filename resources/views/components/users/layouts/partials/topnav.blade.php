@@ -54,7 +54,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('questionanswer')}}">Q/A</a>
+                                    <a class="nav-link" href="{{route('questionanswer')}}">Q&A</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('blog')}}">Blog</a>

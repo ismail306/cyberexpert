@@ -51,4 +51,11 @@ class QuestionController extends Controller
         $question->save();
         return redirect()->back();
     }
+
+    public function delete($id)
+    {
+        $question = question::find($id);
+        $question->delete();
+        return redirect()->Route('questionanswer');
+    }
 }

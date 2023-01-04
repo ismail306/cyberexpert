@@ -2413,7 +2413,7 @@ img.testimonial-thumb {
 /*- Footer common */
 .footer {
   background-color: #0d0d0d;
-  color: #999;
+  color: #fff;
 }
 
 .footer-main {
@@ -2478,12 +2478,12 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li a,
 .footer-widget ul.list-arrow li:before {
-  color: #747474;
+  color: #ffffff;
 }
 
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-  color: #ffb600;
+  color: #37c8fc;
 }
 
 .working-hours {

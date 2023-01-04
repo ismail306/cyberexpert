@@ -22,7 +22,7 @@
                         <input type="text" hidden name="user_pk" value="{{Auth::user()->id}}">
                         <div class="form-group">
                             <label for="question">
-                                <h2>What Is Your Question ?</h2>
+                                <h2>What do you waant to know ?</h2>
                             </label>
                             <br>
                             <textarea name="question" class="form-question" rows="2" id="question"></textarea>
@@ -107,6 +107,7 @@
 
                         <div class=" small text-center ">
 
+
                             <a type="button" class="btn btn-outline-dark" href="#">
                                 <span><i class="far fa-comment ml-2"></i> {{$question->answers->count()}}</span>
                             </a>
@@ -118,7 +119,24 @@
 
 
                     </div>
+                    <div class="text-center mb-3">
+
+                        @if(Auth::id() == $question->user_pk)
+
+
+                        <form action="{{ route('question.delete', $question->id) }}" method="GET" class="d-inline-block">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="btn btn-outline-danger ">Delete Question</button>
+                        </form>
+                        @endif
+
+                    </div>
                 </div>
+
+
+
                 @endforeach
 
             </div>

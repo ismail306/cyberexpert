@@ -35,6 +35,8 @@ Route::get('/specialist', function () {
 Route::get('/create_quesion', [QuestionController::class, 'index'])->name('question.create');
 Route::post('/create_quesion', [QuestionController::class, 'store'])->name('question.store');
 Route::get('/questionanswer', [QuestionController::class, 'question'])->name('questionanswer');
+Route::get('/delete_question/{id}', [QuestionController::class, 'delete'])->name('question.delete');
+
 
 
 
