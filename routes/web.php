@@ -94,7 +94,11 @@ Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
 
 
 
+//admin Route
 
+Route::get('/ismail', function () {
+    return view('admin/dashboard');
+})->name('ismail');
 
 
 
