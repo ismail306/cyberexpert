@@ -1,8 +1,7 @@
-<div class="footer">
-    <div class="copyright">
-        <p>
-            Copyright &copy; Designed & Developed by
-            <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018
-        </p>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="footer">
+            <p>2023 © Admin Panel. - <a href="https://github.com/ismail306">Ismail Hossain</a></p>
+        </div>
     </div>
 </div>

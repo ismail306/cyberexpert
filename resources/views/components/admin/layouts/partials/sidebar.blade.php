@@ -1,44 +1,25 @@
-<div class="nk-sidebar">
-    <div class="nk-nav-scroll">
-        <ul class="metismenu" id="menu">
-
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
-                </a>
-            </li>
+<div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+    <div class="nano">
+        <div class="nano-content">
+            <ul>
+                <div class="logo"><a href="#">
+                        <span>Cyberexpert Admin</span>
+                    </a></div>
 
 
-            <li class="mega-menu mega-menu-sm">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-user menu-icon"></i><span class="nav-text">Users</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Certified Users</a></li>
-                    <li><a href="#">Normal Users</a></li>
-                </ul>
-            </li>
+                <li class="label">Options</li>
 
+                <li><a href="#"><i class="fa fa-users"></i> Users</a></li>
+                <!-- blog-->
+                <li><a href="#"> <i class="fa fa-file"></i> Blog</a></li>
+                <li><a href="#"><i class="fa fa-solid fa-question"></i> Question</a></li>
+                <!-- reply -->
+                <li><a href="#"><i class="fa fa-solid fa-reply"></i> Reply</a></li>
+                <!-- News -->
+                <li><a href="#"><i class="fas fa-solid fa-newspaper"></i> News</a></li>
 
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-question menu-icon"></i><span class="nav-text">Question</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-comment menu-icon"></i><span class="nav-text">Answer</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-pencil menu-icon"></i><span class="nav-text">Blog</span>
-                </a>
-            </li>
-
-
-        </ul>
+                <li><a><i class="ti-close"></i> Logout</a></li>
+            </ul>
+        </div>
     </div>
 </div>
