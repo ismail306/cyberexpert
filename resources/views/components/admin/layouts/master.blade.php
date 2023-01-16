@@ -14,11 +14,7 @@
   </title>
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="16x16" href="admin/images/favicon.png" />
-  <!-- Pignose Calender -->
-  <link href="./admin/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet" />
-  <!-- Chartist -->
-  <link rel="stylesheet" href="./admin/plugins/chartist/css/chartist.min.css" />
-  <link rel="stylesheet" href="./admin/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css" />
+
   <!-- Custom Stylesheet -->
   <link href="admin/css/style.css" rel="stylesheet" />
 </head>
@@ -91,4 +87,4 @@
 
 </body>
 
-</html
+</html>
