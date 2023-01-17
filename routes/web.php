@@ -99,6 +99,8 @@ Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/superadmin', [AdminController::class, 'index'])->name('admin_dashboard');
 //user_delete
 Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete'])->name('super.user_delete');
+//change_role
+Route::patch('/superadmin/change_role', [AdminController::class, 'change_role'])->name('super.change_role');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

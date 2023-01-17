@@ -108,13 +108,15 @@
 
                                             <tbody>
                                                 @foreach ($users as $user)
-                                                <div class="modal fade" id="cng" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal fade" id="role{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
-                                                        <form action="#" method="post">
+                                                        <form action="{{route('super.change_role')}}" method="post">
                                                             @method('PATCH')
                                                             @csrf
+                                                            <input type="text" name="id" hidden value="{{$user->id}}">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
+
                                                                     <h5 class="modal-title" id="exampleModalLongTitle">
                                                                         Change Users Role</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -125,15 +127,14 @@
                                                                     <p>Name: {{$user->name}} </p>
                                                                     <p>Email: {{$user->email}}</p>
 
-                                                                    <input type="text" name="username" hidden value="">
-
                                                                     <div class="form-group">
                                                                         <label for="exampleFormControlSelect1">Select
                                                                             Role:</label>
                                                                         <select class="form-control" id="exampleFormControlSelect1" name="role">
-                                                                            <option value="0">Normal User</option>
-                                                                            <option value="1">Verified User</option>
-                                                                            <option value="2">Admin User</option>
+                                                                            <option value="user">Normal User</option>
+                                                                            <option value="admin">admin</option>
+                                                                            <option value="certified">Certified User</option>
+                                                                            <option value="banned">Banned User</option>
                                                                         </select>
                                                                     </div>
                                                                 </div>
@@ -163,7 +164,7 @@
                                                                     <p>Name: {{$user->name}} </p>
                                                                     <p>Email: {{$user->email}}</p>
                                                                     <p class="text-danger">Deleteing this user?</p>
-                                                                    <input type="text" name="username" hidden value="">
+
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -192,7 +193,7 @@
                                                         @endif
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#cng">Change Role</a>
+                                                        <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#role{{$user->id}}">Change Role</a>
                                                         <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#{{$user->id}}">Delete</a>
                                                     </td>
                                                 </tr>
