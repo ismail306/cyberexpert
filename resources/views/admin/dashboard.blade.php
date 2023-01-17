@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Users</div>
-                                        <div class="stat-digit">100</div>
+                                        <div class="stat-digit">{{$total_users}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Blogs</div>
-                                        <div class="stat-digit">100</div>
+                                        <div class="stat-digit">{{$total_blogs}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Questions</div>
-                                        <div class="stat-digit">200</div>
+                                        <div class="stat-digit">{{$total_questions}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                     <div class="stat-content dib">
                                         <div class="stat-text">Total Answers</div>
 
-                                        <div class="stat-digit">200</div>
+                                        <div class="stat-digit">{{$total_answers}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -99,15 +99,15 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">PK</th>
-                                                    <th scope="col">Username</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Status</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
 
+                                            <tbody>
+                                                @foreach ($users as $user)
                                                 <div class="modal fade" id="cng" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                                         <form action="#" method="post">
@@ -122,8 +122,8 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <p>Username: </p>
-                                                                    <p>Email: {</p>
+                                                                    <p>Name: {{$user->name}} </p>
+                                                                    <p>Email: {{$user->email}}</p>
 
                                                                     <input type="text" name="username" hidden value="">
 
@@ -146,9 +146,9 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <div class="modal fade" id="dlt" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal fade" id="{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
-                                                        <form action="#" method="POST">
+                                                        <form action="{{route('super.user_delete', $user->id)}}" method="GET">
                                                             @method('DELETE')
                                                             @csrf
                                                             <div class="modal-content">
@@ -160,8 +160,8 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <p>Username: </p>
-                                                                    <p>Email: </p>
+                                                                    <p>Name: {{$user->name}} </p>
+                                                                    <p>Email: {{$user->email}}</p>
                                                                     <p class="text-danger">Deleteing this user?</p>
                                                                     <input type="text" name="username" hidden value="">
                                                                 </div>
@@ -175,28 +175,30 @@
                                                     </div>
                                                 </div>
                                                 <tr>
-                                                    <th scope="row">13</th>
-                                                    <td>ismail</td>
-                                                    <td>khaan</td>
-                                                    <td>emon</td>
+                                                    <th scope="row">{{$user->id}}</th>
+                                                    <td>{{$user->name}}</td>
+                                                    <td>{{$user->email}}</td>
                                                     <td>
 
+                                                        @if($user->role == "user")
+
                                                         <span class="badge badge-secondary">User</span>
-
+                                                        @elseif($user->role == "admin")
                                                         <span class="badge badge-danger">Admin</span>
-
+                                                        @elseif($user->role == "certified")
                                                         <span class="badge badge-success">Certified</span>
-
+                                                        @elseif($user->role == "banned")
                                                         <span class="badge badge-warning">Banned</span>
-
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#cng">Change Role</a>
-                                                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dlt">Delete</a>
+                                                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#{{$user->id}}">Delete</a>
                                                     </td>
                                                 </tr>
-
+                                                @endforeach
                                             </tbody>
+
                                         </table>
                                     </div>
                                 </div>

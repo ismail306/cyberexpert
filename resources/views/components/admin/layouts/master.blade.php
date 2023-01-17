@@ -8,7 +8,7 @@
     <!-- theme meta -->
     <meta name="theme-name" content="focus" />
     <title>
-        {{ $title ?? 'Admin | Reporter'}}
+        {{ $title ?? 'Admin | Cyberexpert'}}
     </title>
 
     <!-- ================= Favicon ================== -->

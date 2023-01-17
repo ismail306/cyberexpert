@@ -6,6 +6,7 @@ use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,12 +96,9 @@ Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
 
 
 //admin Route
-
-Route::get('/ismail', function () {
-    return view('admin/dashboard');
-})->name('ismail');
-
-
+Route::get('/superadmin', [AdminController::class, 'index'])->name('admin_dashboard');
+//user_delete
+Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete'])->name('super.user_delete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

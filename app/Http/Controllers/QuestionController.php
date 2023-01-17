@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\question;
 use App\Models\answer;
 use App\Models\User;
-
+use Session;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
