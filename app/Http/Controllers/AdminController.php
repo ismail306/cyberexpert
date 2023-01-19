@@ -49,7 +49,7 @@ class AdminController extends Controller
             return view('admin/dashboard');
         } else {
             Session::flash('dump', "Url not valid!");
-            return view('users/404');
+            return view('users/404'); 
         }
     }
 
