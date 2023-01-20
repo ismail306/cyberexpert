@@ -98,7 +98,7 @@
 
                                     <ul class="dropdown-menu" role="menu">
                                         <li class="nav-item">
-                                            <a href="#" class="btn" data-toggle="modal" data-target="#login">Sign In</a>
+                                            <a href="{{route('login')}}" class="btn">Sign In</a>
                                         </li>
 
                                         <li class="nav-item">
