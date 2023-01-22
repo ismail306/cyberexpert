@@ -39,33 +39,30 @@
                     <form class="omb_loginForm" method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <span class="input-group-addon pt-1 pr-1"><i class="fa fa-user"></i></span>
                             <input type="email" class="form-control" name="email" placeholder="email address">
                         </div>
                         <span class="help-block"></span>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <div class="input-group mt-2">
+                            <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
                             <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-lg m-3 btn-success " type="submit">Login</button>
+                        </div>
 
-
-                        <button class="btn btn-lg btn-primary btn-design btn-block text-lite" type="submit">Login</button>
                     </form>
                 </div>
             </div>
-            <div class="row omb_row-sm-offset-3">
-                <div class="col-xs-12 col-sm-3">
-                    <label class="checkbox">
-                        <input type="checkbox" value="remember-me">Remember Me
-                    </label>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <p class="omb_forgotPwd">
-                        <a href="{{ route('password.email') }}">Forgot password?</a>
-                    </p>
-                </div>
+
+
+            <div class="d-flex justify-content-center align-items-center">
+                <p class="omb_forgotPwd">
+                    <a href="{{ route('password.email') }}">Forgot password?</a>
+                </p>
             </div>
+
         </div>
 
 
