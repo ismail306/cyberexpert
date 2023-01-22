@@ -11,43 +11,47 @@
             <div class="modal-body">
 
                 <div>
-                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                    <h2 class="text-uppercase text-center mb-3">Create an account</h2>
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form3Example1cg" name="name" class="form-control form-control-lg" />
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form3Example1cg">Your Name</label>
+                            <input type="text" id="form3Example1cg" name="name" class="form-control form-control-lg" />
+
                         </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="email" name="email" id="form3Example3cg" class="form-control form-control-lg" />
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form3Example3cg">Your Email</label>
+                            <input type="email" name="email" id="form3Example3cg" class="form-control form-control-lg" />
+
                         </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form3Example4cg">Password</label>
+                            <input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
+
                         </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="password" name="password_confirmation" id="form3Example4cdg" class="form-control form-control-lg" />
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                            <input type="password" name="password_confirmation" id="form3Example4cdg" class="form-control form-control-lg" />
+
                         </div>
 
-                        <div class="form-check d-flex justify-content-center mb-5">
-                            <input class="form-check-input checkposition me-2" type="checkbox" value="" id="form2Example3cg" />
+                        <div class="form-check d-flex justify-content-center mb-2">
+                            <input class="form-check-input checkposition mb-1 mr-2" type="checkbox" value="" id="form2Example3cg" />
                             <label class="form-check-label" for="form2Example3g">
                                 I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
                             </label>
                         </div>
 
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-design btn-dark btn-block btn-lg gradient-custom-4 ">Register</button>
+                            <button type="submit" class="btn  btn-success btn-block btn-lg gradient-custom-4 ">Register</button>
                         </div>
 
-                        <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
+                        <p class="text-center text-muted mt-3 mb-0">Have already an account? <a href="{{route('login')}}" class="fw-bold text-body"><u>Login here</u></a></p>
 
                     </form>
 
@@ -56,7 +60,7 @@
             </div>
             <div class="modal-footer">
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-design btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
                 </div>
             </div>
@@ -76,7 +80,7 @@
 
                 <div class="contact-box ">
 
-                    <h2 class="text-uppercase text-center mb-5">Contact With Specialist</h2>
+                    <h2 class="text-uppercase text-center mb-2">Contact With Specialist</h2>
 
                     <form action="#" method="post">
                         <div class="form-group">
@@ -93,7 +97,7 @@
                             <textarea class="form-message" id="message" name="Message"></textarea>
                         </div>
 
-                        <button class="btn btn-primary btn-design" type="button"><i class="fa fa-paper-plane"></i> Send</button>
+                        <button class="btn btn-primary" type="button"><i class="fa fa-paper-plane"></i> Send</button>
 
                     </form>
                 </div>
@@ -101,7 +105,7 @@
             </div>
             <div class="modal-footer">
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-design btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
                 </div>
             </div>
@@ -127,13 +131,13 @@
 
                     <div class="contact-box ">
 
-                        <h2 class="text-uppercase text-center mb-5">Answer this Question</h2>
-                        @if(Auth::user())
+                        <h2 class="text-uppercase text-center mb-2">Answer this Question</h2>
+
 
                         <form action="{{ route('answer.store') }}" method="POST">
                             @csrf
 
-                            <input type="text" hidden name="user_pk" value="{{Auth::user()->id}}">
+                            <input type="text" hidden name="user_pk" value="{{isset(Auth::user()->id)?(Auth::user()->id) :''}}">
                             <input type="text" hidden id="question_id_value" name="question_id">
 
                             <div class="form-group text-dark">
@@ -142,16 +146,16 @@
                                 <textarea class="form-message" id="message" name="answer"></textarea>
                             </div>
 
-                            <button class="btn btn-primary btn-design" type="submit"><i class="fa fa-reply"></i> </button>
+                            <button class="btn btn-primary ml-3" type="submit"><i class="fa fa-reply"></i> Replay </button>
 
                         </form>
-                        @endif
+
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-design btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
                     </div>
                 </div>
@@ -178,7 +182,7 @@
 
                 <div class="contact-box ">
 
-                    <h2 class="text-uppercase text-center mb-5">Update this Answer</h2>
+                    <h2 class="text-uppercase text-center mb-2">Update this Answer</h2>
                     @if(Auth::user())
 
                     <form action="{{ route('answer.edit')}}" method="POST">
@@ -203,7 +207,7 @@
             </div>
             <div class="modal-footer">
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-design btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
                 </div>
             </div>

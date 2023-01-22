@@ -1,6 +1,6 @@
 <x-users.layouts.master>
     <main>
-        @if(Auth::user())
+
         <section class="section">
             <div class="container">
 
@@ -21,7 +21,7 @@
 
                     <div class="form-group mt-4">
                         <label for="title">Title</label>
-                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="100" placeholder="Write the title of your blog ...">{{ old('title') }}</textarea>
+                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="80" placeholder="Write the title of your blog ...">{{ old('title') }}</textarea>
                         @error('title')
                         <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                         @enderror
@@ -64,16 +64,6 @@
 
             </div>
         </section>
-        @else
-        <section class="section">
-            <div class="container">
-                <h1>Oops! You are not logged in.</h1>
-                <hr>
-                <p class="lead">Please login to publish a blog.</p>
-                <a href="#" class="btn btn-secondary btn-design" data-toggle="modal" data-target="#login">Login</a>
-            </div>
-
-            @endif
 
     </main>
 

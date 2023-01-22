@@ -25,7 +25,7 @@
                                     </a>
                                     <div class="card-body px-0 pb-1">
                                         <button type="button" class="btn btn-success ml-4">{{$lastBlog->category}}</button>
-                                        <h3 class="m-4"><a class="post-title" href="article.html">{{$lastBlog->title}}</a></h3>
+                                        <h3 class="m-4 post-title">{{$lastBlog->title}}</h3>
                                         <div>
                                             @php
                                             // Limit the description to 30 words
@@ -138,7 +138,7 @@
                                     <div class="card-body px-0 pb-0">
                                         <button type="button" class="btn btn-success ml-4">{{$blog->category}}</button>
 
-                                        <h4 class="px-4"><a class="post-title" href="article.html">{{$blog->title}}</a></h4>
+                                        <h4 class="px-4 post-title">{{$blog->title}}</h4>
                                         <div>
                                             @php
                                             // Limit the description to 30 words

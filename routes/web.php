@@ -31,18 +31,12 @@ Route::get('/specialist', function () {
 })->name('specialist');
 
 
-
-
-Route::get('/create_quesion', [QuestionController::class, 'index'])->name('question.create');
-Route::post('/create_quesion', [QuestionController::class, 'store'])->name('question.store');
+Route::post('/create_quesion', [QuestionController::class, 'store'])->middleware(['auth', 'verified'])->name('question.store');
 Route::get('/questionanswer', [QuestionController::class, 'question'])->name('questionanswer');
 Route::get('/delete_question/{id}', [QuestionController::class, 'delete'])->name('question.delete');
 
 
-
-
-Route::get('/create_answer', [AnswerController::class, 'index'])->name('answer.create');
-Route::post('/create_answer', [AnswerController::class, 'store'])->name('answer.store');
+Route::post('/create_answer', [AnswerController::class, 'store'])->middleware(['auth', 'verified'])->name('answer.store');
 Route::get('/delete_answer/{id}', [AnswerController::class, 'delete'])->name('answer.delete');
 Route::post('/edit_answer', [AnswerController::class, 'update'])->name('answer.edit');
 
@@ -89,9 +83,9 @@ Route::get('/brokenauthentication', function () {
 //blog Route
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog_create', [BlogController::class, 'create'])->name('blog.create');
+Route::get('/blog_create', [BlogController::class, 'create'])->middleware(['auth', 'verified'])->name('blog.create');
 Route::post('/blog_create', [BlogController::class, 'store'])->name('blog.store');
-Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
+
 
 
 

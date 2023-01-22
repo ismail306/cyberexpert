@@ -491,7 +491,7 @@ a[href^=tel] {
   box-shadow: none !important;
 }
 
-.btn-primary,
+
 .btn-dark {
   border: 0;
   border-radius: 3px;
@@ -510,14 +510,11 @@ a[href^=tel] {
   }
 }
 
-.btn-white.btn-primary {
+.btn-white{
   background: #fff;
-  color: #ffb600;
+  color: #060606;
 }
 
-.btn-primary {
-  background: transparent;
-}
 
 .btn-dark {
   background: #23282d;
@@ -1635,6 +1632,17 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .featured-tab.tab-services .nav.nav-tabs {
   margin-bottom: 20px;
 }
+
+/* blockbox */
+
+.service-box-title {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.service-box-title a {
+  color: #333;
+}
+
 
 /* Facts
 ================================================== */
@@ -3550,6 +3558,10 @@ body{
  	}
 }
 
+/* modal */
+.modal-header{
+  margin-top: 12px !important;
+}
 
 
 

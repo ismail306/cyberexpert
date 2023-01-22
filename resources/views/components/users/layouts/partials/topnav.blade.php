@@ -98,7 +98,7 @@
 
                                     <ul class="dropdown-menu" role="menu">
                                         <li class="nav-item">
-                                            <a href="{{route('login')}}" class="btn">Sign In</a>
+                                            <a href="{{route('login')}}" class="btn">LogIn</a>
                                         </li>
 
                                         <li class="nav-item">

@@ -297,11 +297,11 @@
                     @endphp
 
 
-                    <div class="ts-service-box d-flex ">
+                    <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
                             <img loading="lazy" src="/storage/images/blog_images/{{$blog->image }}" alt="service-icon" width="90" height="60" />
                         </div>
-                        <div class="ts-service-box-info">
+                        <div class="ts-service-box-info px-3">
                             <h3 class="service-box-title">
                                 {{$blog->title}}</a>
                             </h3>

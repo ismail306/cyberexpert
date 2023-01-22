@@ -14,12 +14,12 @@
 
             <!-- Forum List -->
             <div class="inner-main-body p-2 p-sm-3 collapse forum-content show">
-                @if(Auth::user())
+
 
                 <div class="card mb-2">
                     <form action="{{ route('question.store') }}" method="POST">
                         @csrf
-                        <input type="text" hidden name="user_pk" value="{{Auth::user()->id}}">
+                        <input type="text" hidden name="user_pk" value="{{isset(Auth::user()->id) ? Auth::user()->id : ''}}">
                         <div class="form-group">
                             <label for="question">
                                 <h2>What do you waant to know ?</h2>
@@ -32,11 +32,7 @@
 
                     </form>
                 </div>
-                @else
-                <h4>If you want to ask any question please <a href="#" class="text-info" data-toggle="modal" data-target="#login"> Sign In </a> first.</h4>
 
-
-                @endif
 
 
                 @foreach ($questions as $question)
