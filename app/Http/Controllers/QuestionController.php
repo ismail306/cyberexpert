@@ -26,15 +26,6 @@ class QuestionController extends Controller
         return view('users.questionanswer');
     }
 
-
-    public function index()
-    {
-
-
-        return view('users.questionanswer');
-    }
-
-
     public function store(Request $request)
     {
 

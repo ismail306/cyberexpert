@@ -81,10 +81,13 @@ Route::get('/brokenauthentication', function () {
 
 
 //blog Route
-
+Route::get('/blog/{id}/', [BlogController::class, 'readfull'])->name('blog.readfull');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog_create', [BlogController::class, 'create'])->middleware(['auth', 'verified'])->name('blog.create');
 Route::post('/blog_create', [BlogController::class, 'store'])->name('blog.store');
+
+
+
 
 
 

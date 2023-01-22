@@ -20,13 +20,6 @@ class BlogController extends Controller
         return view('users/blog');
     }
 
-    public function create()
-    {
-        return view('users/createblog');
-    }
-
-
-
 
     public function store(Request $request)
     {
@@ -51,10 +44,11 @@ class BlogController extends Controller
         return redirect()->route('blog')
             ->withMessage('Blog Successfully Created');
     }
-
-    public function show($id)
+    // read full blog
+    public function readfull($id)
     {
         $blog = blog::find($id);
-        return view('users/blogdetail', compact('blog'));
+        View()->share('blog', $blog);
+        return view('users/fullblog');
     }
 }
