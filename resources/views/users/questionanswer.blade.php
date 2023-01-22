@@ -22,12 +22,12 @@
                         <input type="text" hidden name="user_pk" value="{{isset(Auth::user()->id) ? Auth::user()->id : ''}}">
                         <div class="form-group">
                             <label for="question">
-                                <h2>What do you waant to know ?</h2>
+                                <h2>What do you want to know ?</h2>
                             </label>
                             <br>
                             <textarea name="question" class="form-question" rows="2" id="question"></textarea>
                             <br>
-                            <button type="submit" class="btn btn-dark">Post</button>
+                            <button type="submit" class="btn btn-primary">Post</button>
                         </div>
 
                     </form>
@@ -107,7 +107,7 @@
                             <a type="button" class="btn btn-outline-dark" href="#">
                                 <span><i class="far fa-comment ml-2"></i> {{$question->answers->count()}}</span>
                             </a>
-                            <a type="submit" onclick="answer(this)" class="btn btn-outline-dark answer" href="#" data-toggle="modal" data-id="{{$question->id}}" data-question="{{$question->question}}" data-target="#answer">
+                            <a type="submit" onclick="answer(this)" class="btn btn-outline-primary answer" href="#" data-toggle="modal" data-id="{{$question->id}}" data-question="{{$question->question}}" data-target="#answer">
                                 Answer
                             </a>
                         </div>

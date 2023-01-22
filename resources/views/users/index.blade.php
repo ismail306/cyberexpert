@@ -58,7 +58,7 @@
                                 determines how you achieve success.
                             </p>
                             <div data-animation-in="slideInLeft">
-                                <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">See MarketPlace</a>
+                                <a href="#" class="slider btn btn-primary border">Specialist</a>
 
                             </div>
                         </div>

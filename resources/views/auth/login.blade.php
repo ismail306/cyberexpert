@@ -5,22 +5,22 @@
 
 
         <div class="omb_login">
-            <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
+            <h3 class="omb_authTitle" data-toggle="modal" data-target="#signup">Login or <a href="#">Sign up</a></h3>
             <div class="row omb_row-sm-offset-3 omb_socialButtons">
                 <div class="col-xs-4 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+                    <a href="#" class="btn btn-block omb_btn-facebook">
                         <i class="fa fa-facebook visible-xs"></i>
                         <span class="hidden-xs">Facebook</span>
                     </a>
                 </div>
                 <div class="col-xs-4 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+                    <a href="#" class="btn btn-block omb_btn-twitter">
                         <i class="fa fa-twitter visible-xs"></i>
                         <span class="hidden-xs">Twitter</span>
                     </a>
                 </div>
                 <div class="col-xs-4 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block omb_btn-google">
+                    <a href="#" class="btn btn-block omb_btn-google">
                         <i class="fa fa-google-plus visible-xs"></i>
                         <span class="hidden-xs">Google+</span>
                     </a>
@@ -49,7 +49,7 @@
                             <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-lg m-3 btn-success " type="submit">Login</button>
+                            <button class="btn m-3 btn-success " type="submit">Login</button>
                         </div>
 
                     </form>
