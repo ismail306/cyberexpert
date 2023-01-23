@@ -6,27 +6,18 @@
             <div class="container">
 
 
-                <h1>Publish a new blog,</h1>
-                <hr>
+                <h1 class=" text-center">Update Your blog</h1>
 
                 <form class="mt-4" action="{{ route('blog.updating') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <input type="text" hidden name="user_id" value="{{isset(Auth::user()->id)?(Auth::user()->id) :''}}">
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <input type="text" name="category" class="form-control form-control-lg" id="category" aria-describedby="emailHelp" maxlength="15" value="{{$blog->category}}" placeholder="Enter the category of your article here ...">
-                        @error('category')
-                        <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
-
 
                     <input type="text" hidden name="id" value="{{$blog->id}}">
 
                     <div class="form-group mt-4">
                         <label for="title">Title</label>
-                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="80" placeholder="Write the title of your blog ...">{{$blog->title}}</textarea>
+                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="110" placeholder="Write the title of your blog ...">{{$blog->title}}</textarea>
                         @error('title')
                         <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                         @enderror

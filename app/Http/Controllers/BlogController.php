@@ -88,7 +88,7 @@ class BlogController extends Controller
         $blog = blog::find($request->id);
         $blog->title = $request->title;
         $blog->description = $request->description;
-        $blog->category = $request->category;
+
         $blog->save();
         return redirect()->route('blog.readfull', $request->id)
             ->withMessage('Blog Successfully Updated');

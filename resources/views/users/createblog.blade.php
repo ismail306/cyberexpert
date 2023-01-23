@@ -5,8 +5,8 @@
             <div class="container">
 
 
-                <h1>Publish a new blog,</h1>
-                <hr>
+                <h1 class=" text-center">Publish a new blog</h1>
+
 
                 <form class="mt-4" action="{{ route('blog.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -29,13 +29,6 @@
                         @enderror
                     </div>
 
-                    <br>
-
-                    <h1>Improve your blog quality,</h1>
-                    <hr>
-
-
-
                     <div class="form-group">
                         <label for="cover">Image</label>
                         <input type="file" name="image" class="form-control" id="image" aria-describedby="emailHelp">
@@ -52,8 +45,8 @@
 
 
                     <br>
-                    <button type="submit" class="btn btn-secondary btn-design">Publish</button>
-                    <button type="reset" class="btn btn-secondary btn-design">Discard All</button>
+                    <button type="submit" class="btn btn-success ml-3">Publish</button>
+                    <button type="reset" class="btn btn-danger">Discard All</button>
                 </form>
 
             </div>

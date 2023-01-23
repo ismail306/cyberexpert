@@ -299,7 +299,7 @@
                             <img loading="lazy" src="/storage/images/blog_images/{{$blog->image}}" alt="service-icon" width="90" height="60" />
                         </div>
                         <div>
-                            <h5 class="ml-2">
+                            <h5 class="ml-2 pt-0">
                                 <a href="{{route('blog.readfull', $blog->id)}}" class="blog-title ">{{$blog->title}}</a>
                             </h5>
 
