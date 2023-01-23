@@ -154,14 +154,13 @@
             <div class="row">
 
 
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                     <h3 class="service-box-title">Most Common Question</h3>
                     <br>
 
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
                             <img loading="lazy" src="user/images/icon-image/question.svg" alt="Question-icon" />
-
                             <img class="mt-2" loading="lazy" src="user/images/icon-image/reply.svg" alt="replay-icon" />
                         </div>
                         <div class="ts-service-box-info">
@@ -283,41 +282,27 @@
                 <!-- Blog -->
 
 
-                <div class="col-lg-6 mt-6 mt-lg-0 mb-4 mb-lg-0">
+                <div class="col-lg-4 mt-6 mt-lg-0 mb-4 mb-lg-0">
                     <h3 class="service-box-title">Blog</h3>
                     <br>
                     <?php $count = 0; ?>
                     @foreach ($blogs as $blog)
                     @php
                     $count++;
-                    if ($count > 4) {
+                    if ($count > 5) {
                     break;
                     }
 
                     @endphp
-
-
-                    <div class="ts-service-box d-flex mb-4">
+                    <div class="ts-service-box d-flex mb-3">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="/storage/images/blog_images/{{$blog->image }}" alt="service-icon" width="90" height="60" />
+                            <img loading="lazy" src="/storage/images/blog_images/{{$blog->image}}" alt="service-icon" width="90" height="60" />
                         </div>
-                        <div class="ts-service-box-info px-3">
-                            <h3 class="service-box-title">
-                                {{$blog->title}}</a>
-                            </h3>
-                            @php
-                            // Limit the description to 30 words
-                            $limitedDescription = str_limit($blog->description, 150);
-                            @endphp
-                            <div class="description pr-2">
-                                {{ $limitedDescription }}
-                                @if (strlen($blog->description) > 150)
-                                <a href="article.html" class="see-more text-info">See more</a>
-                                <div class="full-description" style="display: none;">
-                                    {{ $blog->description }}
-                                </div>
-                                @endif
-                            </div>
+                        <div>
+                            <h5 class="ml-2">
+                                <a href="{{route('blog.readfull', $blog->id)}}" class="blog-title ">{{$blog->title}}</a>
+                            </h5>
+
                         </div>
 
                     </div>

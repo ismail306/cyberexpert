@@ -86,7 +86,7 @@ Route::get('/blog/{id}/', [BlogController::class, 'readfull'])->name('blog.readf
 Route::get('/blog_create', [BlogController::class, 'create'])->middleware(['auth', 'verified'])->name('blog.create');
 Route::post('/blog_create', [BlogController::class, 'store'])->name('blog.store');
 
-Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->name('blog.update');
+Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->middleware(['auth', 'verified'])->name('blog.update');
 Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.updating');
 Route::get('/blog_delete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
 
@@ -103,9 +103,14 @@ Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete
 //change_role
 Route::patch('/superadmin/change_role', [AdminController::class, 'change_role'])->name('super.change_role');
 
-//404page route
+
 
 require __DIR__ . '/auth.php';
+
+//404page route
+Route::get('/404', function () {
+    return view('users/404');
+})->name('404');
 
 
 route::fallback(function () {

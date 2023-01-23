@@ -3,6 +3,11 @@
 
 
     <main>
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+        @endif
         <section class="section">
             <div class="container">
 
@@ -16,12 +21,12 @@
 
                             </div>
                             <p class="post-meta mb-2 mt-4">
-                                <span><i class="fas fa-calendar-alt"></i>{{ date('M j, Y', strtotime($blog->created_at)) }}</span>
+                                <span><i class="fas fa-calendar-alt"></i>{{ date('M j, Y', strtotime($blog->created_at))}}</span>
                             </p>
                             <h3 class="d-inline text-uppercase">
                                 {{$user->name}}
                                 @if($user->role=='admin')
-                                <span class="text-success ml-2"><i class="fas fa-user-check"></i></span>
+                                <span class="text-success ml-2"><i class="fas fa-user-shield"></i></span>
                                 @elseif($user->role=='user')
                                 <span class="text-primary ml-2"><i class="fas fa-user"></i></span>
                                 @endif
@@ -31,7 +36,7 @@
                             <div class="content text-left">
 
                                 <p>
-                                    {{$blog->description}}}
+                                    {{$blog->description}}
                                 </p>
                                 <hr>
 
@@ -40,17 +45,29 @@
 
 
 
-                        @if(Auth::id() == $blog->user_id)
+
                         <div class="mt-4">
                             <a href="{{route('blog.update',$blog->id)}}" class="btn btn-sm btn-outline-warning">Re-write Blog</a>
                             <a href="#" class="btn btn-sm btn-outline-danger">Remove Article</a>
 
                         </div>
-                        @endif
+
 
                     </div>
 
                     <div class="col-lg-4 mt-6 mt-lg-0 mb-4 mb-lg-0">
+
+                        <div class="widget mb-4">
+                            <a href="{{ route('blog.create')}}">
+                                <div class="widget-body col-lg-12 btn btn-sm cteate-blog-btn">
+                                    <div class="row justify-content-center ">
+                                        <i class="fa fa-solid fa-2x fa-plus mr-2"></i>
+                                        <span class="m-1">Create a new Blog</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
 
                         <?php $count = 0; ?>
                         @foreach ($blogs as $allblog)

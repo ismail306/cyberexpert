@@ -11,13 +11,7 @@
                 <form class="mt-4" action="{{ route('blog.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="text" hidden name="user_id" value="{{Auth::user()->id}}">
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <input type="text" name="category" class="form-control form-control-lg" id="category" aria-describedby="emailHelp" maxlength="15" value="{{ old('category') }}" placeholder="Enter the category of your article here ...">
-                        @error('category')
-                        <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
+
 
                     <div class="form-group mt-4">
                         <label for="title">Title</label>

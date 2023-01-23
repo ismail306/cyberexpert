@@ -7,6 +7,8 @@ use App\Models\blog;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
+
 
 class BlogController extends Controller
 {
@@ -44,7 +46,6 @@ class BlogController extends Controller
         $blog->image = $filename;
         $blog->title = $request->title;
         $blog->description = $request->description;
-        $blog->category = $request->category;
         $blog->user_id = $request->user_id;
         $blog->save();
         return redirect()->route('blog')
@@ -67,6 +68,15 @@ class BlogController extends Controller
     public function update($id)
     {
         $blog = blog::find($id);
+        // if blog user_id is not equal to auth user id then return back
+        if (isset(auth()->user()->id)) {
+            if ($blog->user_id != auth()->user()->id) {
+                Session::flash('dump', "You are not authorized to access this page!");
+                return redirect()->Route('404');
+            }
+        }
+
+
         View()->share('blog', $blog);
         return view('users/updateblog');
     }
@@ -79,9 +89,8 @@ class BlogController extends Controller
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->category = $request->category;
-
         $blog->save();
-        return redirect()->route('blog')
+        return redirect()->route('blog.readfull', $request->id)
             ->withMessage('Blog Successfully Updated');
     }
 

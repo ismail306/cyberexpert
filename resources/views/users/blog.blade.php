@@ -2,6 +2,11 @@
 
 
     <main>
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+        @endif
         <section class="section">
             <div class="container">
 
@@ -20,19 +25,19 @@
                                             <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$lastBlog->image }}" alt="Latest Blog" class="w-100">
                                         </div>
                                     </a>
-                                    <p class="post-meta mb-2 mt-1 ml-4">
-                                        <span><i class="fas fa-calendar-alt"></i>{{ date('M j, Y', strtotime($lastBlog->created_at)) }}</span>
+                                    <p class=" mb-0 mt-1 ml-4">
+                                        <span><i class="fas fa-calendar-alt pr-2"></i>{{ date('M j, Y', strtotime($lastBlog->created_at)) }}</span>
                                     </p>
                                     <div class="card-body px-0 pb-1">
-                                        <button type="button" class="btn btn-success ml-4">{{$lastBlog->category}}</button>
-                                        <h3 class="m-4 post-title">{{$lastBlog->title}}</h3>
+
+                                        <h3 class="mx-4 post-title">{{$lastBlog->title}}</h3>
                                         <div>
                                             @php
                                             // Limit the description to 30 words
                                             $limitedDescription = str_limit($lastBlog->description, 300);
                                             @endphp
 
-                                            <div class="description m-4">
+                                            <div class="description mx-4 mb-4">
                                                 {{ $limitedDescription }}
                                                 @if (strlen($lastBlog->description) > 300)
                                                 <a href="{{route('blog.readfull', $lastBlog->id)}}" class="see-more text-info">Read more</a>
@@ -133,12 +138,10 @@
                                             <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$blog->image }}" alt="Post Thumbnail" class="w-100">
                                         </div>
                                     </a>
-                                    <p class="post-meta ml-4 mb-2 mt-1">
-                                        <span><i class="fas fa-calendar-alt"></i>{{ date('M j, Y', strtotime($lastBlog->created_at)) }}</span>
+                                    <p class="ml-4 mb-0 mt-1">
+                                        <span><i class="fas fa-calendar-alt pr-2"></i>{{ date('M j, Y', strtotime($lastBlog->created_at)) }}</span>
                                     </p>
                                     <div class="card-body px-0 pb-0">
-                                        <button type="button" class="btn btn-success ml-4">{{$blog->category}}</button>
-
                                         <h4 class="px-4 post-title">{{$blog->title}}</h4>
                                         <div>
                                             @php
