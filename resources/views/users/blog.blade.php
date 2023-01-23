@@ -15,14 +15,14 @@
                             <div class="col-12 mb-4">
                                 <article class="card article-card">
                                     <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">{{$lastBlog->created_at->format('m/d/Y')}}</span>
-                                            </div>
-
+                                        <div class="card-image p-2">
 
                                             <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$lastBlog->image }}" alt="Latest Blog" class="w-100">
                                         </div>
                                     </a>
+                                    <p class="post-meta mb-2 mt-1 ml-4">
+                                        <span><i class="fas fa-calendar-alt"></i>{{ date('M j, Y', strtotime($lastBlog->created_at)) }}</span>
+                                    </p>
                                     <div class="card-body px-0 pb-1">
                                         <button type="button" class="btn btn-success ml-4">{{$lastBlog->category}}</button>
                                         <h3 class="m-4 post-title">{{$lastBlog->title}}</h3>
@@ -129,12 +129,13 @@
                             <div class="col-md-4 mb-4">
                                 <article class="card article-card article-card-sm h-100">
                                     <a href="article.html">
-                                        <div class="card-image">
-                                            <div class="post-info"> <span class="text-uppercase">{{$blog->created_at->format('m/d/Y')}}</span>
-                                            </div>
+                                        <div class="card-image p-1">
                                             <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$blog->image }}" alt="Post Thumbnail" class="w-100">
                                         </div>
                                     </a>
+                                    <p class="post-meta ml-4 mb-2 mt-1">
+                                        <span><i class="fas fa-calendar-alt"></i>{{ date('M j, Y', strtotime($lastBlog->created_at)) }}</span>
+                                    </p>
                                     <div class="card-body px-0 pb-0">
                                         <button type="button" class="btn btn-success ml-4">{{$blog->category}}</button>
 

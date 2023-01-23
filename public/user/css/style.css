@@ -519,6 +519,12 @@ a[href^=tel] {
 .btn-dark {
   background: #23282d;
 }
+.blog-title{
+  color: #060606 !important;
+}
+.blog-title:hover{
+  color: #248baf !important; ;
+}
 
 .btn-primary:hover,
 .btn-dark:hover,

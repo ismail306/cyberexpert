@@ -62,14 +62,6 @@
                                 </p>
 
 
-
-
-
-
-
-
-
-
                                 <div class="row"> @if(Auth::id() == $answer->user_pk)
                                     <a type="button" class="btn btn-outline-primary ml-2 update" data-toggle="modal" data-target="#update" data-answer="{{$answer->answer}}" data-id="{{$answer->id}}" onclick="update(this)">
                                         Update
