@@ -48,7 +48,9 @@
 
                         <div class="mt-4">
                             <a href="{{route('blog.update',$blog->id)}}" class="btn btn-sm btn-outline-warning">Re-write Blog</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger">Remove Article</a>
+
+
+                            
 
                         </div>
 

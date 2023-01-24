@@ -95,11 +95,5 @@ class BlogController extends Controller
     }
 
     // delete blog
-    public function delete($id)
-    {
-        $blog = blog::find($id);
-        $blog->delete();
-        return redirect()->route('blog')
-            ->withMessage('Blog Successfully Deleted');
-    }
+    
 }

@@ -69,7 +69,7 @@
 
 
 
-                                    <form action="{{ route('answer.delete', $answer->id) }}" method="GET" class="d-inline-block">
+                                    <form action="{{ route('answer.delete', $answer->id) }}" method="POST" class="d-inline-block">
                                         @csrf
                                         @method('DELETE')
 

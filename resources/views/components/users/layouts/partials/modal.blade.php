@@ -187,7 +187,7 @@
 
                     <form action="{{ route('answer.edit')}}" method="POST">
                         @csrf
-
+                        @method('PATCH')
 
                         <input type="text" hidden id="answer_id_value" name="id">
 

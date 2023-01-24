@@ -19,6 +19,38 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+
+
+// userprofile
+Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
+Route::get('/profilesetting', [UserController::class, 'setting'])->name('user.profileSetting');
+
+//admin Route
+Route::get('/superadmin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');
+Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete'])->name('super.user_delete');
+Route::patch('/superadmin/change_role', [AdminController::class, 'change_role'])->name('super.change_role');
+
+// QuestionRoute
+Route::post('/create_quesion', [QuestionController::class, 'store'])->middleware(['auth', 'verified'])->name('question.store');
+Route::get('/questionanswer', [QuestionController::class, 'question'])->name('questionanswer');
+Route::get('/delete_question/{id}', [QuestionController::class, 'delete'])->name('question.delete');
+
+// Answer Route
+Route::post('/createanswer', [AnswerController::class, 'store'])->middleware(['auth', 'verified'])->name('answer.store');
+Route::delete('/deleteanswer/{id}', [AnswerController::class, 'delete'])->name('answer.delete');
+Route::patch('/editanswer', [AnswerController::class, 'update'])->name('answer.edit');
+
+// Blog Route
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog/{id}/', [BlogController::class, 'readfull'])->name('blog.readfull');
+Route::get('/blogcreate', [BlogController::class, 'create'])->middleware(['auth', 'verified'])->name('blog.create');
+Route::post('/blogreating', [BlogController::class, 'store'])->name('blog.store');
+Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->middleware(['auth', 'verified'])->name('blog.update');
+Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.updating');
+Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
+
+
+
 Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 
 
@@ -31,18 +63,7 @@ Route::get('/specialist', function () {
 })->name('specialist');
 
 
-Route::post('/create_quesion', [QuestionController::class, 'store'])->middleware(['auth', 'verified'])->name('question.store');
-Route::get('/questionanswer', [QuestionController::class, 'question'])->name('questionanswer');
-Route::get('/delete_question/{id}', [QuestionController::class, 'delete'])->name('question.delete');
 
-
-Route::post('/create_answer', [AnswerController::class, 'store'])->middleware(['auth', 'verified'])->name('answer.store');
-Route::get('/delete_answer/{id}', [AnswerController::class, 'delete'])->name('answer.delete');
-Route::post('/edit_answer', [AnswerController::class, 'update'])->name('answer.edit');
-
-
-Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
-Route::get('/profile_setting', [UserController::class, 'setting'])->name('user.profileSetting');
 
 
 
@@ -80,28 +101,11 @@ Route::get('/brokenauthentication', function () {
 
 
 
-//blog Route
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog/{id}/', [BlogController::class, 'readfull'])->name('blog.readfull');
-Route::get('/blog_create', [BlogController::class, 'create'])->middleware(['auth', 'verified'])->name('blog.create');
-Route::post('/blog_create', [BlogController::class, 'store'])->name('blog.store');
-
-Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->middleware(['auth', 'verified'])->name('blog.update');
-Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.updating');
-Route::get('/blog_delete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
 
 
 
 
 
-
-
-//admin Route
-Route::get('/superadmin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');
-//user_delete
-Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete'])->name('super.user_delete');
-//change_role
-Route::patch('/superadmin/change_role', [AdminController::class, 'change_role'])->name('super.change_role');
 
 
 
