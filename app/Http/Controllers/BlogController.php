@@ -95,5 +95,19 @@ class BlogController extends Controller
     }
 
     // delete blog
-    
+    public function delete($id)
+    {
+
+        $blog = blog::find($id);
+        if (isset(auth()->user()->id)) {
+            if ($blog->user_id != auth()->user()->id) {
+                Session::flash('dump', "You are not authorized to access this page!");
+                return redirect()->Route('404');
+            } else {
+                $blog->delete();
+                return redirect()->route('blog')
+                    ->withMessage('Blog Successfully Deleted');
+            }
+        }
+    }
 }

@@ -50,7 +50,12 @@
                             <a href="{{route('blog.update',$blog->id)}}" class="btn btn-sm btn-outline-warning">Re-write Blog</a>
 
 
-                            
+                            <form action="{{ route('blog.delete', $blog->id)}}" method="POST" class="d-inline-block">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-sm  btn-outline-danger ml-2">Delete Blog</button>
+                            </form>
 
                         </div>
 
