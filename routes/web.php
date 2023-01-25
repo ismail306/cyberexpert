@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\XssController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +51,7 @@ Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.u
 Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
 
 
-
+// Landing Page Route
 Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 
 
@@ -64,18 +65,9 @@ Route::get('/specialist', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-Route::get('/xss', function () {
-    return view('users/learnethicalhacking/xss');
-})->name('xss');
+// Learn Ethical Hacking route
+// xss route
+Route::get('/', [IndexController::class, 'index'])->name('xss');
 
 Route::get('/reflectedxss', function () {
     return view('users/learnethicalhacking/reflectedXSS');
