@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class xss extends Model
+class reflectedxss extends Model
 {
     use HasFactory;
-    
 }

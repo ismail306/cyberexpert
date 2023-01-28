@@ -67,7 +67,7 @@ Route::get('/specialist', function () {
 
 // Learn Ethical Hacking route
 // xss route
-Route::get('/', [IndexController::class, 'index'])->name('xss');
+Route::get('/xss', [XssController::class, 'index'])->name('xss');
 
 Route::get('/reflectedxss', function () {
     return view('users/learnethicalhacking/reflectedXSS');
