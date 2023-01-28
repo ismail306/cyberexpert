@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\answer;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AnswerController extends Controller
 {
@@ -36,6 +37,12 @@ class AnswerController extends Controller
     public function delete($id)
     {
         $answer = answer::find($id);
+        if (isset(auth()->user()->id)) {
+            if ($answer->user_pk != auth()->user()->id) {
+                Session::flash('dump', "You are not authorized to access this page!");
+                return redirect()->Route('404');
+            }
+        }
         $answer->delete();
         return redirect()->Route('questionanswer');
     }
@@ -43,6 +50,12 @@ class AnswerController extends Controller
     public function update(Request $request)
     {
         $answer = answer::find($request->id);
+        if (isset(auth()->user()->id)) {
+            if ($answer->user_pk != auth()->user()->id) {
+                Session::flash('dump', "You are not authorized to access this page!");
+                return redirect()->Route('404');
+            }
+        }
         $answer->answer = $request->answer;
         $answer->save();
         return redirect()->Route('questionanswer');
