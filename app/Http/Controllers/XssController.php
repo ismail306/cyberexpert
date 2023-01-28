@@ -14,13 +14,10 @@ class XssController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     
+
 
     public function index()
     {
-        return view('users.learnethicalhacking.reflectedXSS');
+        return view('users.learnethicalhacking.xss');
     }
-
-
-
 }

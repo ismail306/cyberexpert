@@ -1,13 +1,11 @@
 <x-users.layouts.master>
 
-    <div class="container">
-
+    <div class="container mt-4">
 
         <div class="row">
+
             <div class="col-md-4">
                 <x-users.layouts.partials.sidebar />
-
-
 
             </div>
             <div class="col-md-8 card">
@@ -31,12 +29,6 @@
                 </h2>
                 <p>
                     Stored XSS generally occurs when user input is stored on the target server, such as in a database, in a message forum, visitor log, comment field, etc. And then a victim is able to retrieve the stored data from the web application without that data being made safe to render in the browser. With the advent of HTML5, and other browser technologies, we can envision the attack payload being permanently stored in the victim’s browser, such as an HTML5 database, and never being sent to the server at all.
-                </p>
-                <h2>
-                    DOM Based XSS (AKA Type-0)
-                </h2>
-                <p>
-                    As defined by Amit Klein, who published the first article about this issue [1], DOM Based XSS is a form of XSS where the entire tainted data flow from source to sink takes place in the browser, i.e., the source of the data is in the DOM, the sink is also in the DOM, and the data flow never leaves the browser. For example, the source (where malicious data is read) could be the URL of the page (e.g., document.location.href), or it could be an element of the HTML, and the sink is a sensitive method call that causes the execution of the malicious data (e.g., document.write).”
                 </p>
 
 

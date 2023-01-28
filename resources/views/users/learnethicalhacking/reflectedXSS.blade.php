@@ -1,6 +1,6 @@
 <x-users.layouts.master>
 
-    <div class="row container">
+    <div class="row container mt-4">
         <div class="col-md-4">
             <x-users.layouts.partials.sidebar />
 
