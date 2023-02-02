@@ -5,7 +5,7 @@
 
 
         <div class="omb_login">
-            <h3 class="omb_authTitle" data-toggle="modal" data-target="#signup">Login or <a href="#">Sign up</a></h3>
+            <h3 class="omb_authTitle" data-toggle="modal" data-target="#signup">Login or <a href="{{route('register')}}">Sign up</a></h3>
             <div class="row omb_row-sm-offset-3 omb_socialButtons">
                 <div class="col-xs-4 col-sm-2">
                     <a href="#" class="btn btn-block omb_btn-facebook">

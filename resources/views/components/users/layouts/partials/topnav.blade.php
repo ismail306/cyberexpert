@@ -102,7 +102,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="#" class="btn" data-toggle="modal" data-target="#signup">Sign Up</a>
+                                            <a href="{{route('register')}}" class="btn">Sign Up</a>
                                         </li>
 
                                     </ul>

@@ -32,7 +32,12 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
-
+        //vlidate
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
 
         $blog = new blog();
 
