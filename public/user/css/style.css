@@ -2593,15 +2593,7 @@ img.testimonial-thumb {
   background: #ff9800;
 }
 
-/* Contact Us
-================================================== */
-.map {
-  height: 450px;
-  z-index: 1;
-}
-.mapbg {
-  background-color: #121015 ;
-}
+
 
 .contact-info-box {
   margin-top: 20px;
@@ -3088,7 +3080,6 @@ label {
   margin-top: 30px;
   font-weight: 700;
 }
-/*# sourceMappingURL=style.css.map */
 
 
 

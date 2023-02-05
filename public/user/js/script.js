@@ -85,16 +85,6 @@ jQuery(function ($) {
 
 	$(document).ready(function () {
 
-		// navSearch show/hide
-		function navSearch() {
-			$('.nav-search').on('click', function () {
-				$('.search-block').fadeIn(350);
-			});
-			$('.search-close').on('click', function () {
-				$('.search-block').fadeOut(350);
-			});
-		}
-		navSearch();
 
 		// navbarDropdown
 		function navbarDropdown() {
@@ -270,3 +260,45 @@ jQuery(function ($) {
 
 
 });
+
+//register form
+
+const termsCheckbox = document.getElementById('termsCheckbox');
+const registerButton = document.getElementById('registerButton');
+registerButton.disabled = true;
+termsCheckbox.addEventListener('change', () => {
+	if (termsCheckbox.checked) {
+		registerButton.disabled = false;
+	} else {
+		registerButton.disabled = true;
+	}
+});
+
+function validateform() {
+	var name = document.forms["signinform"]["name"].value;
+	var email = document.forms["signinform"]["email"].value;
+	var pas1 = document.forms["signinform"]["password"].value;
+	var pas2 = document.forms["signinform"]["password_confirmation"].value;
+
+
+
+	console.log(name, email, pas1, pas2);
+	if (x == "") {
+		alert("Name must be filled out");
+		return false;
+	}
+	if (y == "") {
+
+		alert("Email must be filled out");
+		return false;
+	}
+	if (p1 == "" || p2 == "") {
+		alert("Password must be filled out");
+		return false;
+	}
+	if (p1 != p2) {
+		alert("Password must be Same");
+		return false;
+	}
+
+}

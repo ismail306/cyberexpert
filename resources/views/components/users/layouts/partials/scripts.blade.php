@@ -13,10 +13,7 @@
 <!-- shuffle -->
 <script src="/user/plugins/shuffle/shuffle.min.js" defer></script>
 
-<!-- Google Map API Key-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-<!-- Google Map Plugin-->
-<script src="/user/plugins/google-map/map.js" defer></script>
+
 
 <!-- Template custom -->
 <script src="/user/js/script.js"></script>

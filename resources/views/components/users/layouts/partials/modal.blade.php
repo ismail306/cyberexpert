@@ -72,9 +72,9 @@
                             <input type="text" hidden id="question_id_value" name="question_id">
 
                             <div class="form-group text-dark">
-                                <label class="text-dark" id="" for="message"></label>
+                                <label class="text-dark" for="message"></label>
                                 <br>
-                                <textarea class="form-message" id="message" name="answer"></textarea>
+                                <textarea class="form-message" id="answer" name="answer"></textarea>
                             </div>
 
                             <button class="btn btn-primary ml-3" type="submit"><i class="fa fa-reply"></i> Replay </button>
