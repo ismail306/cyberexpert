@@ -10,23 +10,26 @@
         <div class="col-md-8 card">
             <h1>Vulnerability: Reflected Cross Site Scripting (XSS)</h1>
 
-            <div class="xss">
+            <div class="xss pb-1">
 
 
-                <form action="/action_page.php">
+                <form action="{{route('reflectedxss.store')}}" method="post">
+                    @csrf
+
                     <label for="name">Whats your name ?</label><br>
                     <input type="text" id="name" name="name" value=""><br><br>
 
                     <input type="submit" value="Submit">
                 </form>
-
-                <br>
-                <br>
-
+                @if(isset($name))
+                <p class="mt-3" id="reflectedchecker" style="color:red">Hi {!!$name!!}</p>
+                @endif
+                <!-- print Authuser name -->
 
 
 
             </div>
+
 
 
 

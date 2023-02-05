@@ -8,6 +8,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\XssController;
+use App\Http\Controllers\ReflectedxssController;
+use App\Http\Controllers\StoredxssController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,18 +70,11 @@ Route::get('/specialist', function () {
 // Learn Ethical Hacking route
 // xss route
 Route::get('/xss', [XssController::class, 'index'])->name('xss');
+Route::get('/reflectedxss', [ReflectedxssController::class, 'index'])->name('reflectedxss');
+Route::post('/reflectedxss', [ReflectedxssController::class, 'store'])->middleware(['auth', 'verified'])->name('reflectedxss.store');
+Route::get('/storedxss', [StoredxssController::class, 'index'])->name('storedxss');
 
-Route::get('/reflectedxss', function () {
-    return view('users/learnethicalhacking/reflectedXSS');
-})->name('reflectedxss');
 
-Route::get('/storedxss', function () {
-    return view('users/learnethicalhacking/storedxss');
-})->name('storedxss');
-
-Route::get('/dombasedxss', function () {
-    return view('users/learnethicalhacking/dombasedxss');
-})->name('dombasedxss');
 
 Route::get('/sql', function () {
     return view('users/learnethicalhacking/sql');

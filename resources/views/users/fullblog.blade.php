@@ -44,7 +44,7 @@
                         </article>
 
 
-
+                        @if(isset(Auth::user()->id) && Auth::user()->id == $blog->user_id)
 
                         <div class="mt-4">
                             <a href="{{route('blog.update',$blog->id)}}" class="btn btn-sm btn-outline-warning">Re-write Blog</a>
@@ -58,9 +58,10 @@
                             </form>
 
                         </div>
-
+                        @endif
 
                     </div>
+
 
                     <div class="col-lg-4 mt-6 mt-lg-0 mb-4 mb-lg-0">
 

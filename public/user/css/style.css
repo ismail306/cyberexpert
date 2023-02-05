@@ -863,6 +863,7 @@ ul.top-info-box > li.nav-search i {
   border-radius: 0;
   border: 0;
   margin-bottom: 0;
+
 }
 
 .navbar-toggler {
@@ -2593,7 +2594,13 @@ img.testimonial-thumb {
   background: #ff9800;
 }
 
-
+.map {
+  height: 450px;
+  z-index: 1;
+}
+.mapbg {
+  background-color: #121015 ;
+}
 
 .contact-info-box {
   margin-top: 20px;
