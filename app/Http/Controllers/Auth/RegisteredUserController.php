@@ -37,12 +37,12 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            //password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character
-            'password' => ['required', 'string', 'min:8', 'confirmed', 'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'],
+            //password must be at least 8 characters long, contain at least one lowercase letter, one number
+            'password' => ['required', 'string', 'min:8'],
             //repeat password
-            'password_confirmation' => ['required', 'string', 'min:8', 'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'],
-            //should same password
-            'password' => 'same:password_confirmation',
+            'password_confirmation' => ['required', 'string', 'min:8', 'same:password'],
+
+
 
 
         ]);

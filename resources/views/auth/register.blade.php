@@ -12,27 +12,32 @@
 
                         <div class="form-outline input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-user"></i></span>
-                            <input type="text" name="name" id="name" class=" form-control" placeholder="your name" />
+                            <input type="text" required name="name" class=" form-control" placeholder="your name" />
+
 
                         </div>
 
                         <div class="form-outline mt-3 input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-envelope"></i></span>
-                            <input type="email" name="email" class="form-control" placeholder="mail" />
+                            <input type="email" required name="email" class="form-control" placeholder="mail" />
 
                         </div>
 
                         <div class="form-outline input-group mt-3 mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
-                            <input type="password" name="password" class="form-control" placeholder="password" />
+                            <input type="password" required name="password" class="form-control" placeholder="password" />
+
 
                         </div>
 
                         <div class="form-outline mt-3 mb-2 input-group">
 
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="repeat password" />
+                            <input type="password" required name="password_confirmation" class="form-control" placeholder="repeat password" />
 
+                        </div>
+                        <div>
+                            <p class="ml-3" id="passvalidation" style="color:red"></p>
                         </div>
 
                         <div class="form-check d-flex justify-content-center mb-2">

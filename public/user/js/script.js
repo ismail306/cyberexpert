@@ -282,22 +282,14 @@ function validateform() {
 
 
 
-	console.log(name, email, pas1, pas2);
-	if (x == "") {
-		alert("Name must be filled out");
-		return false;
-	}
-	if (y == "") {
+	console.log(name, email, pas1.length, pas2);
 
-		alert("Email must be filled out");
+	if (pas1 != pas2)  {
+		document.getElementById("passvalidation").innerHTML = "Password must be same";
 		return false;
-	}
-	if (p1 == "" || p2 == "") {
-		alert("Password must be filled out");
-		return false;
-	}
-	if (p1 != p2) {
-		alert("Password must be Same");
+	  }
+	if (pas1.length<8 || pas2.length<8) {
+		document.getElementById("passvalidation").innerHTML = "Password must be greater than or equal to 8 ";
 		return false;
 	}
 
