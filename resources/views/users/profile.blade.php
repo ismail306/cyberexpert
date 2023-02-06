@@ -10,46 +10,26 @@
                         <div class="profile-content-left profile-left-spacing pt-5 pb-3 px-3 px-xl-5">
                             <div class="card text-center widget-profile px-0 border-0">
                                 <div class="card-img mx-auto rounded-circle">
-                                    <img src="/FrontEnd/img/user/u6.jpg" alt="user image">
+                                    <img src="/user/images/users/profile.jpg" alt="user image" width="100px>
                                 </div>
 
-                                <div class="card-body">
-                                    <h4 class="py-2 text-dark">Albrecht Straub</h4>
-                                    <p>Albrecht.straub@gmail.com</p>
-                                    <a class="btn btn-primary btn-pill btn-lg my-4" href="#">Follow</a>
+                                <div class=" card-body">
+                                    <h4 class="py-2 text-dark">Albrecht Straub
+                                        <span class="text-success ml-2"><i class="fas fa-user-shield"></i></span>
+                                    </h4>
                                 </div>
                             </div>
 
+                            <div class="contact-info pt-2">
+                                <h4 class="text-dark mb-1">Contact Information</h4>
+                                <div class="">
+                                    <span><i class="fa fa-envelope pr-2"></i>ismail.63K@gmail.com </span>
+                                </div>
 
+                                <div>
+                                    <span><i class="fa fa-phone pr-2"> </i>01929074663</span>
 
-                            <hr class="w-100">
-
-                            <div class="contact-info pt-4">
-                                <h5 class="text-dark mb-1">Contact Information</h5>
-                                <p class="text-dark font-weight-medium pt-4 mb-2">Email address</p>
-                                <p>Albrecht.straub@gmail.com</p>
-                                <p class="text-dark font-weight-medium pt-4 mb-2">Phone Number</p>
-                                <p>+99 9539 2641 31</p>
-                                <p class="text-dark font-weight-medium pt-4 mb-2">Birthday</p>
-                                <p>Nov 15, 1990</p>
-                                <p class="text-dark font-weight-medium pt-4 mb-2">Social Profile</p>
-                                <p class="pb-3 social-button">
-                                    <a href="#" class="mb-1 btn btn-outline btn-twitter rounded-circle">
-                                        <i class="mdi mdi-twitter"></i>
-                                    </a>
-
-                                    <a href="#" class="mb-1 btn btn-outline btn-linkedin rounded-circle">
-                                        <i class="mdi mdi-linkedin"></i>
-                                    </a>
-
-                                    <a href="#" class="mb-1 btn btn-outline btn-facebook rounded-circle">
-                                        <i class="mdi mdi-facebook"></i>
-                                    </a>
-
-                                    <a href="#" class="mb-1 btn btn-outline btn-skype rounded-circle">
-                                        <i class="mdi mdi-skype"></i>
-                                    </a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
