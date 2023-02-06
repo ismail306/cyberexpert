@@ -12,7 +12,7 @@
 
                 <div class="row no-gutters-lg">
                     <div class="col-8">
-                        <h2 class="section-title">Latest Articles</h2>
+                        <h2 class="section-title">Latest Blog</h2>
                     </div>
                     @if($lastBlog != null)
                     <div class="col-lg-8 mb-5 mb-lg-0">
@@ -77,35 +77,19 @@
 
 
                                 <div class="col-lg-12 col-md-6">
-                                    <div class="widget">
-                                        <h2 class="section-title mb-3">Categories</h2>
-                                        <div class="widget-body">
-                                            <ul class="widget-list">
-                                                <li><a href="#!">computer<span class="ml-auto">(3)</span></a>
-                                                </li>
-                                                <li><a href="#!">cruises<span class="ml-auto">(2)</span></a>
-                                                </li>
-                                                <li><a href="#!">destination<span class="ml-auto">(1)</span></a>
-                                                </li>
-                                                <li><a href="#!">internet<span class="ml-auto">(4)</span></a>
-                                                </li>
-                                                <li><a href="#!">lifestyle<span class="ml-auto">(2)</span></a>
-                                                </li>
-                                                <li><a href="#!">news<span class="ml-auto">(5)</span></a>
-                                                </li>
-                                                <li><a href="#!">telephone<span class="ml-auto">(1)</span></a>
-                                                </li>
-                                                <li><a href="#!">tips<span class="ml-auto">(1)</span></a>
-                                                </li>
-                                                <li><a href="#!">travel<span class="ml-auto">(3)</span></a>
-                                                </li>
-                                                <li><a href="#!">website<span class="ml-auto">(4)</span></a>
-                                                </li>
-                                                <li><a href="#!">hugo<span class="ml-auto">(2)</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
+                                    <h3 class="ml-2 mt-4 pt-1 text-primary">Recommended</h3>
+                                    <?php $count = 0; ?> @foreach($blogs as $blog) @php $count++; if ($count> 5) {
+                                    break;
+                                    }
+
+                                    @endphp
+                                    <h5 class=" ml-2 mb-4 ">
+                                        <a href="{{route('blog.readfull', $blog->id)}}" class="blog-title ">{{$blog->title}}</a>
+
+                                    </h5>
+                                    @endforeach
+
                                 </div>
                             </div>
                         </div>

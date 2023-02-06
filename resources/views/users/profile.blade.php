@@ -59,11 +59,11 @@
                             <ul class="nav nav-tabs px-3 px-xl-5 nav-style-border" id="myTab" role="tablist">
 
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Be A Specialist</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+                                    <a class="nav-link active" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Update Profile</a>
                                 </li>
                             </ul>
 

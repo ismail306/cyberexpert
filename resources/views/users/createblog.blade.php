@@ -15,7 +15,7 @@
 
                     <div class="form-group mt-4">
                         <label for="title">Title</label>
-                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="80" placeholder="Write the title of your blog ...">{{ old('title') }}</textarea>
+                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="80" placeholder="Write the title of your blog ..."></textarea>
                         @error('title')
                         <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                         @enderror

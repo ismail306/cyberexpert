@@ -1,20 +1,4 @@
 <x-users.layouts.master>
-    <div id="banner-area" class="banner-area" style="background-image: url(user/images/news/banner.jpg)">
-        <div class="banner-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-
-                    </div>
-                    <!-- Col end -->
-                </div>
-                <!-- Row end -->
-            </div>
-            <!-- Container end -->
-        </div>
-        <!-- Banner text end -->
-    </div>
-    <!-- Banner area end -->
 
     <section id="main-container" class="main-container">
         <div class="container">
@@ -81,7 +65,7 @@
                 <div class="col-lg-8 mb-5 mb-lg-0 order-0 order-lg-1">
                     <div class="post">
                         <div class="post-media post-image">
-                            <img loading="lazy" src="user/images/news/news1.jpg" class="img-fluid" alt="post-image" />
+                            <img loading="lazy" src="/user/images/news/news1.jpg" class="img-fluid w-100" alt="post-image" />
                         </div>
 
                         <div class="post-body">

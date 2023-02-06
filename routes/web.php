@@ -24,9 +24,8 @@ use App\Http\Controllers\StoredxssController;
 
 
 
-// userprofile
+//userprofile
 Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
-Route::get('/profilesetting', [UserController::class, 'setting'])->name('user.profileSetting');
 
 //admin Route
 Route::get('/superadmin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');

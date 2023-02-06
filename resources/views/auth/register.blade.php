@@ -13,8 +13,6 @@
                         <div class="form-outline input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-user"></i></span>
                             <input type="text" required name="name" class=" form-control" placeholder="your name" />
-
-
                         </div>
 
                         <div class="form-outline mt-3 input-group mb-2">

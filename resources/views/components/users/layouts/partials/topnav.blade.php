@@ -22,9 +22,7 @@
                         <div id="navbar-collapse" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav mr-10">
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('cyberexpert')}}">Home</a>
-                                </li>
+
 
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Learn Ethical Hacking
@@ -76,9 +74,7 @@
                                         <li>
                                             <a href="{{route('user.profile')}}">Profile</a>
                                         </li>
-                                        <li>
-                                            <a href="{{route('user.profileSetting')}}">Setting</a>
-                                        </li>
+
                                         <li>
                                             <form method="POST" action="{{route('logout')}}">
                                                 @csrf

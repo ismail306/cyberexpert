@@ -34,6 +34,7 @@ class BlogController extends Controller
 
         //vlidate
         $request->validate([
+            
             'title' => 'required',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -46,7 +47,7 @@ class BlogController extends Controller
         $image = $request->file('image');
         $image_resize = Image::make($image->getRealPath());
         $image_resize->resize(1365, 720);
-        $image_resize->save(storage_path('/app/public/images/blog_images/' . $filename));
+        $image_resize->save(public_path('storage/images/blog_images/' . $filename));
 
         $blog->image = $filename;
         $blog->title = $request->title;
