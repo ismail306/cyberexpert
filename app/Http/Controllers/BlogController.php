@@ -48,7 +48,6 @@ class BlogController extends Controller
         $image_resize = Image::make($image->getRealPath());
         $image_resize->resize(1365, 720);
         $image_resize->save(public_path('storage/images/blog_images/' . $filename));
-
         $blog->image = $filename;
         $blog->title = $request->title;
         $blog->description = $request->description;
@@ -91,6 +90,13 @@ class BlogController extends Controller
 
     public function updating(Request $request)
     {
+        //vlidate
+        $request->validate([
+
+            'title' => 'required',
+            'description' => 'required',
+
+        ]);
         $blog = blog::find($request->id);
         $blog->title = $request->title;
         $blog->description = $request->description;

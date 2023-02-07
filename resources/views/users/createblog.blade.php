@@ -15,7 +15,7 @@
 
                     <div class="form-group mt-4">
                         <label for="title">Title</label>
-                        <textarea class="form-control" name="title" id="title" rows="2" maxlength="80" placeholder="Write the title of your blog ..."></textarea>
+                        <textarea class="form-control" required name="title" id="title" rows="2" maxlength="80" placeholder="Write the title of your blog ..."></textarea>
                         @error('title')
                         <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                         @enderror
@@ -23,7 +23,7 @@
 
                     <div class="form-group mt-4">
                         <label for="des">Description</label>
-                        <textarea class="form-control" name="description" id="editor" rows="5" placeholder="Start writing your blog ...">{{ old('description') }}</textarea>
+                        <textarea class="form-control" required name="description" id="editor" rows="5" placeholder="Start writing your blog ...">{{ old('description') }}</textarea>
                         @error('description')
                         <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                         @enderror
@@ -31,7 +31,7 @@
 
                     <div class="form-group">
                         <label for="cover">Image</label>
-                        <input type="file" name="image" class="form-control" id="image" aria-describedby="emailHelp">
+                        <input type="file" required name="image" class="form-control" id="image" aria-describedby="emailHelp">
                         @error('image')
                         <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                         @enderror
@@ -51,13 +51,6 @@
     </main>
 
 
-
-
-    <script>
-        ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
-            console.error(error);
-        });
-    </script>
 
     <!-- Character counter -->
     <script src="https://unpkg.com/short-and-sweet/dist/short-and-sweet.min.js"></script>

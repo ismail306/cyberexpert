@@ -13,25 +13,44 @@
                         <div class="form-outline input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-user"></i></span>
                             <input type="text" required name="name" class=" form-control" placeholder="Name" />
+                            @error('name')
+                            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div class="form-outline input-group mt-3 mb-2">
+                            <span class="input-group-addon pt-1 pr-1"><i class="fa fa-phone"></i></span>
+                            <input type="tel" class="form-control" required name="phone" pattern="[0-1]{2}[3,4,5,6,7,8,9]{1}[0-9]{8}" placeholder="01(3-9)xxxxxxxx">
+                            @error('phone')
+                            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-outline mt-3 input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-envelope"></i></span>
                             <input type="email" required name="email" class="form-control" placeholder="Email" />
+                            @error('email')
+                            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
+                            @enderror
 
                         </div>
 
                         <div class="form-outline input-group mt-3 mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
                             <input type="password" required name="password" class="form-control" placeholder="Password" />
-
-
+                            @error('password')
+                            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-outline mt-3 mb-2 input-group">
 
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
                             <input type="password" required name="password_confirmation" class="form-control" placeholder="Repeat password" />
+                            @error('password_confirmation')
+                            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
+                            @enderror
+
 
                         </div>
                         <div>

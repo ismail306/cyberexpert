@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            //password must be at least 8 characters long, contain at least one lowercase letter, one number
+            'phone' => ['required', 'string', 'max:11', 'unique:' . User::class],
             'password' => ['required', 'string', 'min:8'],
             //repeat password
             'password_confirmation' => ['required', 'string', 'min:8', 'same:password'],
@@ -51,6 +51,7 @@ class RegisteredUserController extends Controller
 
         $user = User::create([
             'name' => $request->name,
+            'phone' => $request->phone,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
