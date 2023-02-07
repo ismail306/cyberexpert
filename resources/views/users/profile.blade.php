@@ -87,25 +87,35 @@
                                     </header>
 
 
-                                    <form action="">
+                                    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+                                        @csrf
+                                        @method('put')
                                         <div class="form-group mb-4">
-                                            <label for="oldPassword">Old password</label>
-                                            <input type="password" class="form-control" id="oldPassword">
+                                            <label for="current_password" :value="__('Current Password')">Current password</label>
+                                            <input type="password" name="current_password" class="form-control" id="current_password">
+                                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2 text-danger" />
                                         </div>
 
                                         <div class="form-group mb-4">
-                                            <label for="newPassword">New password</label>
-                                            <input type="password" class="form-control" id="newPassword">
+                                            <label for="password">New password</label>
+                                            <input type="password" class="form-control" id="password" name="password">
+                                            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2 text-danger" />
                                         </div>
 
                                         <div class="form-group mb-4">
-                                            <label for="conPassword">Confirm password</label>
-                                            <input type="password" class="form-control" id="conPassword">
+                                            <label for="password_confirmation">Confirm password</label>
+                                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                                            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2 text-danger" />
                                         </div>
                                         <div class="d-flex justify-content-end mt-5">
                                             <button type="submit" class="btn  btn-success mb-2 btn-pill">Update
                                                 Password</button>
                                         </div>
+                                        @if (session('status') === 'password-updated')
+                                        <script>
+                                            alert('Password updated successfully');
+                                        </script>
+                                        @endif
                                     </form>
 
                                 </section>
@@ -119,23 +129,29 @@
                                     </header>
 
 
-                                    <form action="">
+                                    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+                                        @csrf
                                         <div class="form-group mb-4">
                                             <label for="oldPassword">Old password</label>
                                             <input type="password" class="form-control" id="oldPassword">
+                                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
                                         </div>
 
                                         <div class="form-group mb-4">
                                             <label for="newPassword">New password</label>
                                             <input type="password" class="form-control" id="newPassword">
+                                            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
                                         </div>
+
 
                                         <div class="form-group mb-4">
                                             <label for="conPassword">Confirm password</label>
                                             <input type="password" class="form-control" id="conPassword">
+                                            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
                                         </div>
                                         <div class="d-flex justify-content-end mt-5">
                                             <button type="submit" class="btn  btn-success mb-2 btn-pill">Submit</button>
+
                                         </div>
                                     </form>
 
