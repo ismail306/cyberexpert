@@ -15,19 +15,19 @@
         @method('put')
         <div class="form-group mb-4">
             <label for="current_password" :value="__('Current Password')">Current password</label>
-            <input type="password" name="current_password" class="form-control" id="current_password">
+            <input type="password" required name="current_password" class="form-control" id="current_password">
             <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2 text-danger" />
         </div>
 
         <div class="form-group mb-4">
             <label for="password">New password</label>
-            <input type="password" class="form-control" id="password" name="password">
+            <input type="password" required class="form-control" id="password" name="password">
             <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2 text-danger" />
         </div>
 
         <div class="form-group mb-4">
             <label for="password_confirmation">Confirm password</label>
-            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+            <input type="password" required class="form-control" id="password_confirmation" name="password_confirmation">
             <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2 text-danger" />
         </div>
         <div class="d-flex justify-content-end mt-5">
