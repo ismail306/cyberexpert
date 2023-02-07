@@ -12,4 +12,11 @@ class UserController extends Controller
 
         return view('users/profile');
     }
+
+
+
+
+    //store about,pro_pic,certificate
+
+
 }

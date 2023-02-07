@@ -7,23 +7,23 @@
 
             <div class="row omb_row-sm-offset-3">
                 <div class="col-xs-12 col-sm-6">
-                    <form method="POST" name='signinform' action="{{ route('register') }}" onsubmit="return validateform()">
+                    <form method="POST" name='signinform' onsubmit="return validateform()" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-outline input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-user"></i></span>
-                            <input type="text" required name="name" class=" form-control" placeholder="your name" />
+                            <input type="text" required name="name" class=" form-control" placeholder="Name" />
                         </div>
 
                         <div class="form-outline mt-3 input-group mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-envelope"></i></span>
-                            <input type="email" required name="email" class="form-control" placeholder="mail" />
+                            <input type="email" required name="email" class="form-control" placeholder="Email" />
 
                         </div>
 
                         <div class="form-outline input-group mt-3 mb-2">
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
-                            <input type="password" required name="password" class="form-control" placeholder="password" />
+                            <input type="password" required name="password" class="form-control" placeholder="Password" />
 
 
                         </div>
@@ -31,7 +31,7 @@
                         <div class="form-outline mt-3 mb-2 input-group">
 
                             <span class="input-group-addon pt-1 pr-1"><i class="fa fa-lock"></i></span>
-                            <input type="password" required name="password_confirmation" class="form-control" placeholder="repeat password" />
+                            <input type="password" required name="password_confirmation" class="form-control" placeholder="Repeat password" />
 
                         </div>
                         <div>

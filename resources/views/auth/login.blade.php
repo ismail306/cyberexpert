@@ -39,7 +39,7 @@
 
                         </div>
 
-                        <x-input-error :messages="$errors->get('email')" class="mt-4 text-danger" />
+                        <x-input-error :messages="$errors->get('email')" class="mt-4 ml-3 text-danger" />
 
 
                         <span class="help-block"></span>

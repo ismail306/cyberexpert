@@ -10,18 +10,15 @@
 
                     <div class="col-lg-7 col-xl-8">
                         <div class="profile-content-right profile-right-spacing py-5">
-                            <h2 class="text-center">Update Profile</h2>
+                            <h2 class="text-center">Submit Your Information</h2>
 
                             <div class="tab-content px-3 px-xl-5" id="myTabContent">
 
-
-                                <x-users.layouts.partials.updateinfo />
-
-                                <x-users.layouts.partials.updatepass />
-
+                                <x-users.layouts.partials.specialistapplication />
 
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

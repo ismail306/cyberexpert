@@ -40,10 +40,6 @@
 
                     </div>
 
-
-
-
-
                     <br>
                     <button type="submit" class="btn btn-success ml-3">Publish</button>
                     <button type="reset" class="btn btn-danger">Discard All</button>
@@ -56,12 +52,12 @@
 
 
 
+
     <script>
         ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
             console.error(error);
         });
     </script>
-
 
     <!-- Character counter -->
     <script src="https://unpkg.com/short-and-sweet/dist/short-and-sweet.min.js"></script>

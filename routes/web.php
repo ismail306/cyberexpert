@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
@@ -25,7 +26,16 @@ use App\Http\Controllers\StoredxssController;
 
 
 //userprofile
-Route::get('/profile', [UserController::class, 'index'])->name('user.profile');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('user.profile');
+    Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
+    Route::get('/profile/bespecialist', [ProfileController::class, 'applyindex'])->name('specialist.applications');
+    //stote specialist apply
+    Route::post('/profile/bespecialist', [ProfileController::class, 'store'])->name('specialistinfo.store');
+
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
 
 //admin Route
 Route::get('/superadmin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');

@@ -275,14 +275,9 @@ termsCheckbox.addEventListener('change', () => {
 });
 
 function validateform() {
-	var name = document.forms["signinform"]["name"].value;
-	var email = document.forms["signinform"]["email"].value;
+
 	var pas1 = document.forms["signinform"]["password"].value;
 	var pas2 = document.forms["signinform"]["password_confirmation"].value;
-
-
-
-	console.log(name, email, pas1.length, pas2);
 
 	if (pas1 != pas2)  {
 		document.getElementById("passvalidation").innerHTML = "Password must be same";
