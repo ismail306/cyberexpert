@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\blog;
 use Intervention\Image\Facades\Image;
 
 class ProfileController extends Controller
@@ -12,11 +13,15 @@ class ProfileController extends Controller
     {
         $users = User::find(auth()->user()->id);
         View()->share('users', $users);
+        //find blogs of the auth user by descending order with pagination
+        $blogs = blog::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->paginate(10);
+        View()->share('blogs', $blogs);
         return view('users/profile');
     }
     public function applyindex()
     {
-
+        $users = User::find(auth()->user()->id);
+        View()->share('users', $users);
         return view('users/specialistapply');
     }
 
@@ -46,11 +51,40 @@ class ProfileController extends Controller
         $user->email = $request->email;
         $user->phone = $request->phone;
 
-
-
-
-
         $user->save();
         return redirect()->back()->with('status', 'Profile Updated Successfully');
+    }
+
+    public function certificatestore(Request $request)
+    {
+
+        $request->validate([
+            'about' => 'nullable|string|max:75',
+            //certificate validation pdf or image only max size 2mb
+            'certificate' => 'required|mimes:pdf,jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $user = User::find(auth()->user()->id);
+    
+        //if file is pdf
+        if ($request->file('certificate')->extension() == 'pdf') {
+            $originalname = $request->file('certificate')->getClientOriginalName();
+            $filename =  date('Y-m-d') . '_' . time() . $originalname;
+            $certificate = $request->file('certificate');
+            $certificate->move(public_path('storage/images/certificates'), $filename);
+        }
+        //if file is image store without resizing
+        else {
+            $originalname = $request->file('certificate')->getClientOriginalName();
+            $filename =  date('Y-m-d') . '_' . time() . $originalname;
+            $certificate = $request->file('certificate');
+            $certificate->move(public_path('storage/images/certificates'), $filename);
+        }
+
+
+        $user->certificate = $filename;
+        $user->about = $request->about;
+        $user->save();
+        return redirect()->route('user.profile')->with('status', 'Certificate Uploaded Successfully');
     }
 }

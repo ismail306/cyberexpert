@@ -10,6 +10,11 @@
 
                     <div class="col-lg-7 col-xl-8">
                         <div class="profile-content-right profile-right-spacing py-5">
+                            @if(Session::has('status'))
+                            <div class="alert alert-success mx-4">
+                                {{ Session::get('status') }}
+                            </div>
+                            @endif
                             <h2 class="text-center">Update Profile</h2>
 
                             <div class="tab-content px-3 px-xl-5" id="myTabContent">

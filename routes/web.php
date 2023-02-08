@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
     Route::get('/profile/bespecialist', [ProfileController::class, 'applyindex'])->name('specialist.applications');
     //stote specialist apply
-    Route::post('/profile/bespecialist', [ProfileController::class, 'store'])->name('specialistinfo.store');
+    Route::post('/profile/bespecialist', [ProfileController::class, 'certificatestore'])->name('specialistinfo.store');
 
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

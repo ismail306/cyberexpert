@@ -25,10 +25,12 @@
                             </p>
                             <h3 class="d-inline text-uppercase">
                                 {{$user->name}}
-                                @if($user->role=='admin')
+                                @if($user->role=='certified')
                                 <span class="text-success ml-2"><i class="fas fa-user-shield"></i></span>
                                 @elseif($user->role=='user')
                                 <span class="text-primary ml-2"><i class="fas fa-user"></i></span>
+                                @elseif($users->role=='admin')
+                                <span class="text-warning ml-2"><i class="fas fa-user-circle"></i></span>
                                 @endif
                             </h3>
                             <h3 class="mt-4">{{$blog->title}}</h3>

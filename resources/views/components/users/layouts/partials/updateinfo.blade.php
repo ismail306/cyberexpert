@@ -1,9 +1,5 @@
 <section>
-    @if(Session::has('status'))
-    <div class="alert alert-success">
-        {{ Session::get('status') }}
-    </div>
-    @endif
+
     <header class="ml-3">
         <h3 class="text-lg font-medium text-gray-900">
             {{ __('Profile Information') }}
@@ -18,7 +14,7 @@
         @method('patch')
         <div class="form-group mb-4">
             <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" value="{{$users->name}}">
+            <input type="text" class="form-control" required name="name" value="{{$users->name}}">
             @error('name')
             <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
             @enderror
@@ -53,7 +49,7 @@
             <button type="submit" class="btn btn-success mb-2 btn-pill">Update
                 Profile</button>
 
-            <button type="reset" class="btn btn-danger mb-2 ml-3 btn-pill">Discard All</button>
+            <button type="reset" class="btn btn-danger mb-2 ml-3 btn-pill">Undo</button>
 
 
         </div>

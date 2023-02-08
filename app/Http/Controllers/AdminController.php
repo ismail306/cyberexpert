@@ -67,7 +67,7 @@ class AdminController extends Controller
         $user = User::find($request->id);
         $user->role = $request->role;
         $user->save();
-        return redirect()->Route('admin_dashboard');
+        return redirect()->Route('admin.dashboard');
     }
 
 

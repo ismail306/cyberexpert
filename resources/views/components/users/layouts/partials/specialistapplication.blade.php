@@ -1,30 +1,24 @@
 <section>
     <header class="ml-3">
         <h3 class="text-lg font-medium text-gray-900">
-            {{ __('Apply To Be A specialist') }}
+            {{ __('Become a certified cyber security specialist') }}
         </h3>
     </header>
 
 
-    <form method="post" action="{{ route('specialistinfo.store') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('specialistinfo.store') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
         @csrf
         <div class="form-group mt-4">
             <label for="about">About </label>
-            <textarea class="form-control" required name="about" id="about" rows="2" maxlength="75" placeholder="About Yourself ..."></textarea>
+            @if(isset($users->about))
+            <textarea class="form-control" name="about" id="about" rows="2" maxlength="75" placeholder="">{{$users->about}}</textarea>
+            @else
+            <textarea class="form-control" name="about" id="about" rows="2" maxlength="75" placeholder="About Yourself ..."></textarea>
+            @endif
+
             @error('about')
             <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
             @enderror
-        </div>
-
-        <div class="form-group">
-            <label for="profile_pic">Image</label>
-            <input type="file" name="profile_pic" required class="form-control" id="profile_pic" aria-describedby="emailHelp">
-            @error('profile_pic')
-            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
-            @enderror
-            <small id="emailHelp" class="form-text text-muted">The ideal ratio of primary image is 1:1, The
-                image will be crop to fit if it is not maintain the exact ratio.</small>
-
         </div>
 
         <div class="form-group">
