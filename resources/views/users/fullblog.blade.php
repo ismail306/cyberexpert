@@ -1,5 +1,7 @@
 <x-users.layouts.master>
-
+<x-slot:title>
+        Real Full Blog
+    </x-slot>
 
 
     <main>

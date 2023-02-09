@@ -1,5 +1,7 @@
 <x-users.layouts.master>
-
+<x-slot:title>
+        Reflected XSS
+    </x-slot>
     <div class="row container mt-4">
         <div class="col-md-4">
             <x-users.layouts.partials.sidebar />

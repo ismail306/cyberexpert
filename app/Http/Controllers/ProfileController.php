@@ -42,7 +42,7 @@ class ProfileController extends Controller
             $filename =  date('Y-m-d') . '_' . time() . $originalname;
             $profile_pic = $request->file('profile_pic');
             $image_resize = Image::make($profile_pic->getRealPath());
-            $image_resize->resize(500, 500);
+            $image_resize->fit(200, 200);
             $image_resize->save(public_path('storage/images/profile_pics/' . $filename));
             $user->profile_pic = $filename;
         }
@@ -65,7 +65,7 @@ class ProfileController extends Controller
         ]);
 
         $user = User::find(auth()->user()->id);
-    
+
         //if file is pdf
         if ($request->file('certificate')->extension() == 'pdf') {
             $originalname = $request->file('certificate')->getClientOriginalName();

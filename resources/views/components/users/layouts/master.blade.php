@@ -5,7 +5,10 @@
     <!-- Basic Page Needs
 ================================================== -->
     <meta charset="utf-8" />
-    <title>CyberExpert</title>
+
+    <title>
+        {{ $title ?? 'CyberExpert'}}
+    </title>
 
     <!-- Mobile Specific Metas
 ================================================== -->

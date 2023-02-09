@@ -1,6 +1,8 @@
 <x-users.layouts.master>
 
-
+<x-slot:title>
+        404
+    </x-slot>
 
     <div>
         <main>

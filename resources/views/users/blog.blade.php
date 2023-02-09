@@ -1,5 +1,7 @@
 <x-users.layouts.master>
-
+<x-slot:title>
+        CyberExpert | Blog
+    </x-slot>
 
     <main>
         @if(session()->has('message'))

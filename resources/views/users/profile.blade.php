@@ -1,6 +1,8 @@
 <x-users.layouts.master>
 
-
+<x-slot:title>
+        Profile
+    </x-slot>
     <div class="content-wrapper">
         <div class="content">
 
