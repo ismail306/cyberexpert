@@ -6,6 +6,7 @@ use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\XssController;
@@ -61,14 +62,15 @@ Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->middleware(['
 Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.updating');
 Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
 
+//news Route
+Route::get('/news', [NewsController::class, 'index'])->name('news');
+//store news
+Route::post('/news', [NewsController::class, 'storenews'])->name('news.store');
+
 
 // Landing Page Route
 Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 
-
-Route::get('/news', function () {
-    return view('users/news');
-})->name('news');
 
 Route::get('/specialist', function () {
     return view('securityspecialist/specialist');

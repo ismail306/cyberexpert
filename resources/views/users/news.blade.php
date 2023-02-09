@@ -7,6 +7,28 @@
                 <div class="row">
                     <div class="col-lg-4 order-1 order-lg-0">
                         <div class="sidebar sidebar-left">
+
+                            <div class="card mb-2">
+                                <form action="{{ route('news.store') }}" method="POST" onsubmit="return validateNewsForm()">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="news">
+                                            <h2>What do you want to know ?</h2>
+                                        </label>
+
+                                        <div>
+
+                                            <textarea name="url" required class="form-question" rows="2" id="url" placeholder="Enter your url"></textarea>
+
+                                            @error('url')
+                                            <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Post</button>
+                                    </div>
+
+                                </form>
+                            </div>
                             <div class="widget recent-posts">
                                 <h3 class="widget-title">Recent Posts</h3>
                                 <ul class="list-unstyled">

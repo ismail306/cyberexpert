@@ -2,7 +2,7 @@
     <br>
     <br>
     <x-slot:title>
-        Q & A Forum
+        Q&A | Forum
         </x-slot>
 
         <div class="container">

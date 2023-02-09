@@ -11,7 +11,7 @@
         <div class="form-group mt-4">
             <label for="about">About </label>
             @if(isset($users->about))
-            <textarea class="form-control" name="about" id="about" rows="2" maxlength="75" placeholder="">{{$users->about}}</textarea>
+            <textarea class="form-control" name="about" required id="about" rows="2" maxlength="75" placeholder="">{{$users->about}}</textarea>
             @else
             <textarea class="form-control" name="about" id="about" rows="2" maxlength="75" placeholder="About Yourself ..."></textarea>
             @endif

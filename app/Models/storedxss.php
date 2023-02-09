@@ -9,3 +9,5 @@ class storedxss extends Model
 {
     use HasFactory;
 }
+
+

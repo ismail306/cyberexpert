@@ -289,3 +289,12 @@ function validateform() {
 	}
 
 }
+
+function validateNewsForm() {
+    var x = document.getElementById("url").value;
+    if (x === "") {
+      alert("Text area must be filled out");
+      return false;
+    }
+    return true;
+  }

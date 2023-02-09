@@ -335,101 +335,31 @@
                 <!--/ Title row end -->
 
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 mb-4">
+                    @foreach($news as $eachnews)
+                    <div class="col-lg-3 col-md-6 py-3  card">
                         <div class="latest-post">
                             <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="" src="user/images/news/swapno.jpg" alt="img" height="150px" width="250px" />
+                                <a href="{{$eachnews->url}}" class="latest-post-img">
+                                    <img loading="lazy" class="" src="{{$eachnews->image_url}}" alt="img" height="150px" width="250px" onerror="this.onerror=null;this.src='/user/images/news/news1.jpg';" />
                                 </a>
                             </div>
                             <div class="post-body">
                                 <h4 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Three arrested for hacking Shawpno’s system</a>
+                                    <a href="{{$eachnews->url}}" class="d-inline-block">{{$eachnews->title}}</a>
                                 </h4>
-                                <div class="latest-post-meta">
-                                    <span class="post-item-date">
-                                        <i class="fa fa-clock-o"></i> 8 August 2021, 03:20 PM
-                                    </span>
-                                </div>
                             </div>
                         </div>
                         <!-- Latest post end -->
                     </div>
                     <!-- 1st post col end -->
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="latest-post">
-                            <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="" src="user/images/news/android.jpg" alt="img" height="150px" width="250px" />
-                                </a>
-                            </div>
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation
-                                        Facility Expansion Project Named</a>
-                                </h4>
-                                <div class="latest-post-meta">
-                                    <span class="post-item-date">
-                                        <i class="fa fa-clock-o"></i> June
-                                        17, 2017
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Latest post end -->
-                    </div>
-                    <!-- 2nd post col end -->
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="latest-post">
-                            <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="" src="user/images/news/android.jpg" alt="img" height="150px" width="250px" />
-                                </a>
-                            </div>
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation
-                                        Facility Expansion Project Named</a>
-                                </h4>
-                                <div class="latest-post-meta">
-                                    <span class="post-item-date">
-                                        <i class="fa fa-clock-o"></i> June
-                                        17, 2017
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Latest post end -->
-                    </div>
-                    <!-- 3rd post col end -->
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="latest-post">
-                            <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="" src="user/images/news/android.jpg" alt="img" height="150px" width="250px" />
-                                </a>
-                            </div>
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Google Plans To Launch Privacy Sandbox In Android 13 Starting 2023 /</a>
-                                </h4>
-                                <div class="latest-post-meta">
-                                    <span class="post-item-date">
-                                        <i class="fa fa-clock-o"></i>November 16, 2022
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Latest post end -->
-                    </div>
-                    <!-- 4th post col end -->
+                    @endforeach
                 </div>
-                <!--/ Content row end -->
+
+
+
 
                 <div class="general-btn text-center mt-4">
-                    <a class="btn btn-primary newsbtn" href="news-left-sidebar.html">See All News</a>
+                    <a class="btn btn-primary newsbtn" href="{{route('news')}}">See All News</a>
                 </div>
             </div>
             <!--/ Container end -->
@@ -506,25 +436,16 @@
 
         </section>
 
-
-
-
-
-
-
-
-
         </div>
         <!-- Body inner end -->
-
-        <script>
+        <!-- <script>
             function toggleDescription() {
                 // Get the full description element
                 var fullDescriptionElement = document.querySelector('.full-description');
                 // Toggle the display of the full description
                 fullDescriptionElement.style.display = fullDescriptionElement.style.display === 'none' ? 'block' : 'none';
             }
-        </script>
+        </script> -->
 
 
 </x-users.layouts.master>

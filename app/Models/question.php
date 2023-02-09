@@ -10,8 +10,6 @@ class question extends Model
     use HasFactory;
     protected $table = 'questions';
 
-
-
     protected $fillable = [
         'question',
         'user_pk',
