@@ -336,13 +336,14 @@
 
                 <div class="row">
                     @foreach($news as $eachnews)
-                    <div class="col-lg-3 col-md-6 py-3  card">
+                    <div class="col-lg-3 col-md-6 py-2 pl-2 pr-1 card">
                         <div class="latest-post">
                             <div class="latest-post-media">
                                 <a href="{{$eachnews->url}}" class="latest-post-img">
-                                    <img loading="lazy" class="" src="{{$eachnews->image_url}}" alt="img" height="150px" width="250px" onerror="this.onerror=null;this.src='/user/images/news/news1.jpg';" />
+                                    <img loading="lazy" class="" src="{{$eachnews->image_url}}" alt="img" height="150px" width="270px" onerror="this.onerror=null;this.src='/user/images/news/news1.jpg';" />
                                 </a>
                             </div>
+
                             <div class="post-body">
                                 <h4 class="post-title">
                                     <a href="{{$eachnews->url}}" class="d-inline-block">{{$eachnews->title}}</a>

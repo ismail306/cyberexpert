@@ -41,7 +41,8 @@ class NewsController extends Controller
             $image = $imageNode->nodeValue;
         }
 
-
+        //title max 15 words
+        $title = implode(' ', array_slice(explode(' ', $title), 0, 15));
 
         //store the news
         $news = new news();
