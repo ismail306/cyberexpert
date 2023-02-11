@@ -59,9 +59,11 @@
 
 
             <div class="d-flex justify-content-center align-items-center">
+                @if (Route::has('password.request'))
                 <p class="omb_forgotPwd">
-                    <a href="{{ route('password.email') }}">Forgot password?</a>
+                    <a href="{{ route('password.request') }}">Forgot password?</a>
                 </p>
+                @endif
             </div>
 
         </div>

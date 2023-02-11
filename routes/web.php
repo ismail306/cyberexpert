@@ -65,7 +65,7 @@ Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware
 //news Route
 Route::get('/news', [NewsController::class, 'index'])->name('news');
 //store news
-Route::post('/news', [NewsController::class, 'storenews'])->name('news.store');
+Route::post('/news', [NewsController::class, 'storenews'])->middleware(['auth', 'verified'])->name('news.store');
 
 
 // Landing Page Route

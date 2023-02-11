@@ -19,6 +19,7 @@ class NewsController extends Controller
     {
         $validatedData = $request->validate([
             'url' => 'required|url',
+
         ]);
 
         //Extract the link information
