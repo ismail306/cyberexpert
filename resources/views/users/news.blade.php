@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-lg-5 order-1 order-lg-0">
                         <div class="sidebar sidebar-left">
-
+                            @if(isset(Auth::user()->role)?(Auth::user()->role == 'admin'||(Auth::user()->role == 'certified')):'')
                             <div class="card mb-3">
                                 <form action="{{ route('news.store') }}" method="POST" onsubmit="return validateNewsForm()">
                                     @csrf
@@ -19,9 +19,9 @@
                                             <h2>Share News Link...</h2>
                                         </label>
 
-                                        <div>
+                                        <div class="pr-3">
 
-                                            <textarea name="url" required class="form-question" rows="2" id="url" placeholder="Enter your url"></textarea>
+                                            <textarea name="url" required class="form-control " rows="1" id="url" placeholder="Enter your url"></textarea>
 
                                             @error('url')
                                             <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
@@ -32,25 +32,46 @@
 
                                 </form>
                             </div>
+                            @endif
 
-
+                            @php
+                            $count = 0;
+                            @endphp
                             <div class="widget recent-posts">
                                 <h3 class="widget-title">Recent Posts</h3>
                                 <ul class="list-unstyled">
                                     @foreach ($news as $recentnews)
-                                    <li class="d-flex align-items-center">
+                                    @php
+                                    $count++;
+                                    if($count <3){ continue; } @endphp <li class="d-flex align-items-center">
                                         <div class="posts-thumb">
-                                            <a href="#"><img loading="lazy" alt="img" src="{{$recentnews->image_url}}" /></a>
+                                            <a href="{{$recentnews->url}}"><img loading="lazy" alt="img" src="{{$recentnews->image_url}}" onerror="this.onerror=null;this.src='/user/images/news/news1.jpg';" /></a>
                                         </div>
 
-                                        <h4 class="entry-title">
-                                            <a href="#">{{$recentnews->title}}</a>
-                                        </h4>
+                                        <h5 class="entry-title">
+                                            <a href="{{$recentnews->url}}">{{$recentnews->title}}</a>
+                                        </h5>
 
-                                    </li>
-                                    @endforeach
+                                        </li>
+                                        @endforeach
 
                                 </ul>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <nav class="mt-4">
+
+                                                <nav class="mb-md-50">
+
+
+                                                    <ul class="pagination justify-content-center">
+                                                        {{$news-> links()}}
+                                                    </ul>
+                                                </nav>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Recent post end -->
 
@@ -66,7 +87,9 @@
                         @foreach ($lastNews as $item)
                         <div class="post">
                             <div class="post-media post-image img-9-16">
-                                <img loading="lazy" src="{{$item->image_url}}" class=" w-100" alt=" post-image" />
+                                <a href="{{$item->url}}">
+                                    <img loading="lazy" src="{{$item->image_url}}" onerror="this.onerror=null;this.src='/user/images/news/news1.jpg';" class=" w-100" alt=" post-image" />
+                                </a>
                             </div>
 
                             <div class="post-body">
@@ -84,7 +107,7 @@
 
                                     </div>
                                     <h2 class="entry-title">
-                                        <a href="news-single.html">{{$item->title}}</a>
+                                        <a href="{{$item->url}}">{{$item->title}}</a>
                                     </h2>
                                 </div>
                                 <!-- header end -->
@@ -94,22 +117,7 @@
                         <!-- 1st post end -->
 
                         @endforeach
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-12">
-                                    <nav class="mt-4">
 
-                                        <nav class="mb-md-50">
-
-
-                                            <ul class="pagination justify-content-center">
-                                                {{$news-> links()}}
-                                            </ul>
-                                        </nav>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- Content Col end -->
                 </div>
