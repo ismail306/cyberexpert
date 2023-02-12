@@ -8,7 +8,7 @@
         <section id="main-container" class="main-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 order-1 order-lg-0">
+                    <div class="col-lg-5 order-0 order-lg-0">
                         <div class="sidebar sidebar-left">
                             @if(isset(Auth::user()->role)?(Auth::user()->role == 'admin'||(Auth::user()->role == 'certified')):'')
                             <div class="card mb-3">
@@ -27,7 +27,7 @@
                                             <small id="emailHelp" class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
-                                        <button type="submit" class="btn btn-success">Post</button>
+                                        <button type="submit" class="btn btn-success">Share</button>
                                     </div>
 
                                 </form>
@@ -82,7 +82,7 @@
                     </div>
                     <!-- Sidebar Col end -->
 
-                    <div class="col-lg-7 mb-3 mb-lg-0 order-0 order-lg-1">
+                    <div class="col-lg-7 mb-3 mb-lg-1 order-1 order-lg-1">
 
                         @foreach ($lastNews as $item)
                         <div class="post">
