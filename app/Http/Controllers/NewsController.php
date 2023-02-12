@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\news;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Http\Request;
 
 
@@ -10,7 +11,11 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = news::orderBy('created_at', 'desc')->paginate(10);
+        //last two news
+        $lastNews = news::orderBy('id', 'desc')->take(2)->get();
+        //all news except last two news
+        $news = news::orderBy('id', 'desc')->paginate(10);
+        View()->share('lastNews', $lastNews);
         return view('users.news', compact('news'));
     }
 

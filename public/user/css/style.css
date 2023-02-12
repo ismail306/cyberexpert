@@ -2276,7 +2276,7 @@ img.testimonial-thumb {
 /*-- Banner --*/
 .banner-area {
   position: relative;
-  min-height: 500px;
+  min-height: 350px;
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
@@ -3567,6 +3567,22 @@ body{
   margin-top: 12px !important;
 }
 
+/* image sizing */
+.img-9-16 {
+  padding-bottom: 56.25%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-9-16 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 

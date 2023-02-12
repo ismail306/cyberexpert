@@ -2,10 +2,10 @@
 
     <div class="container padding-bottom-3x mb-2 mt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                <div class="forgot">
+            <div class="col-lg-8 col-md-10 border border-dark rounded mb-5">
+                <div class="forgot pt-3 ">
 
-                    <h2>Forgot your password?</h2>
+                    <h2 class="text-center">Forgot your password?</h2>
                     <p>Change your password in three easy steps. This will help you to secure your password!</p>
                     <ol class="list-unstyled">
                         <li><span class="text-primary text-medium">1. </span>Enter your email address below.</li>
@@ -14,7 +14,7 @@
                     </ol>
 
                 </div>
-                <x-auth-session-status class="mb-4" :status="session('status')" />
+
 
                 <form class="card mt-4" action="{{ route('password.email') }}" method="POST">
                     @csrf
@@ -27,10 +27,17 @@
                         @error('email')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
+                        @if (session('status'))
+                        <div class="alert alert-success ml-2">
+                            {{ session('status') }}
+                        </div>
+                        @endif
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success" type="submit">Get New Password</button>
-                        <button class="btn btn-danger" type="submit">Back to Login</button>
+                        <button class="btn btn-danger text-dark" type="submit">
+                            <a class="text-white" href="{{ route('login') }}">Back to Login</a>
+                        </button>
                     </div>
                 </form>
             </div>
