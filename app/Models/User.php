@@ -51,7 +51,7 @@ class User extends Authenticatable
 
     public function blogs()
     {
-        return $this->hasMany(blog::class, 'owner_id');
+        return $this->hasMany(blog::class, 'user_id');
     }
 
     public function answers()
@@ -62,5 +62,15 @@ class User extends Authenticatable
     public function questions()
     {
         return $this->hasMany(question::class, 'user_pk');
+    }
+
+    public function react()
+    {
+        return $this->hasMany(react::class, 'user_id');
+    }
+
+    public function news()
+    {
+        return $this->hasMany(news::class, 'user_id');
     }
 }

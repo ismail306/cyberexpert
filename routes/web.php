@@ -6,6 +6,7 @@ use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ReactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
@@ -61,6 +62,12 @@ Route::post('/blogreating', [BlogController::class, 'store'])->name('blog.store'
 Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->middleware(['auth', 'verified'])->name('blog.update');
 Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.updating');
 Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
+
+//react route
+// Blog Reacts
+Route::post('like/', [ReactController::class, 'like'])->name('blog.like');
+Route::post('dislike/', [ReactController::class, 'dislike'])->name('blog.dislike');
+
 
 //news Route
 Route::get('/news', [NewsController::class, 'index'])->name('news');

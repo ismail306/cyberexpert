@@ -22,10 +22,7 @@ class NewsController extends Controller
     //store news with link
     public function storenews(Request $request)
     {
-        if (auth()->user()->role != 'admin' || auth()->user()->role != 'certified') {
-            return redirect()->back()->with('status', 'You are not allowed to add news');
-        } else {
-
+        if (auth()->user()->role == 'admin' || auth()->user()->role == 'certified') {
             //validate
             $validatedData = $request->validate([
                 'url' => 'required|url',
@@ -63,6 +60,8 @@ class NewsController extends Controller
             $news->user_id = auth()->user()->id;
             $news->save();
             return redirect()->back()->with('status', 'News Added Successfully');
+        } else {
+            return redirect()->back()->with('status', 'You are not authorized to add news');
         }
     }
 }

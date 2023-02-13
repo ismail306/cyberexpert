@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\blog;
+use App\Models\react;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use App\Models\User;
@@ -64,6 +65,12 @@ class BlogController extends Controller
         // find username from user table using user_id of blog table
         $user = User::find($blog->user_id);
         View()->share('user', $user);
+        // //reacts for this blog
+        // $react = react::where('blog_id', $id)->get();
+        // //counting reacts
+        // $total_react = count($react);
+        // View()->share('total_react', $total_react);
+
 
         $blogs = blog::orderBy('created_at', 'desc')->paginate(10);
         View()->share('blogs', $blogs);

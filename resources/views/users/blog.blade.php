@@ -42,7 +42,7 @@
                                                 <div class="description mx-4 mb-4">
                                                     {{ $limitedDescription }}
                                                     @if (strlen($lastBlog->description) > 300)
-                                                    <a href="{{route('blog.readfull', $lastBlog->id)}}" class="see-more text-info">Read more</a>
+                                                    <a href="{{route('blog.readfull', $lastBlog->id)}}" class="see-more text-info">Read Full Blog</a>
                                                     <div class="full-description" style="display: none;">
                                                         {{ $lastBlog->description }}
                                                     </div>
@@ -138,7 +138,7 @@
                                                 <div class="description px-4">
                                                     {{ $limitedDescription }}
                                                     @if (strlen($blog->description) > 200)
-                                                    <a href="{{route('blog.readfull',$blog->id)}}" class="see-more text-info">Read more</a>
+                                                    <a href="{{route('blog.readfull',$blog->id)}}" class="see-more text-info">Read Full Blog</a>
                                                     <div class="full-description" style="display: none;">
                                                         {{ $blog->description }}
                                                     </div>
