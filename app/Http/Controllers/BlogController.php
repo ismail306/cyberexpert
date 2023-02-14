@@ -61,18 +61,25 @@ class BlogController extends Controller
     public function readfull($id)
     {
         $blog = blog::find($id);
-        View()->share('blog', $blog);
         // find username from user table using user_id of blog table
         $user = User::find($blog->user_id);
-        View()->share('user', $user);
-        // //reacts for this blog
-        // $react = react::where('blog_id', $id)->get();
-        // //counting reacts
-        // $total_react = count($react);
-        // View()->share('total_react', $total_react);
-
+        //find reacts for this blog
+        $react = react::where('blog_id', $id)->get();
+        //counting reacts
+        $total_react = count($react);
+        //if i reacted to this blog
+        if(isset(auth()->user()->id)){
+            $i_reacted = react::where('blog_id', $id)->where('user_id', auth()->user()->id)->first();
+        }else{
+            $i_reacted = null;
+        }
 
         $blogs = blog::orderBy('created_at', 'desc')->paginate(10);
+
+        View()->share('blog', $blog);
+        View()->share('i_reacted', $i_reacted);
+        View()->share('user', $user);
+        View()->share('total_react', $total_react);
         View()->share('blogs', $blogs);
         return view('users/fullblog');
     }

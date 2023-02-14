@@ -33,9 +33,7 @@
 
                                     <div class="float-right  d-flex">
                                         @if(Auth::user())
-
-
-                                        @if(isset($my_react)?($my_react):'')
+                                        @if(isset($i_reacted)?($i_reacted):'')
                                         <a id="like"><i class="fa fa-2x fa-star text-primary"></i></a>
                                         @else
                                         <a id="like"><i class="fa fa-2x fa-star text-muted"></i></a>
@@ -59,7 +57,7 @@
                                     </div>
                                     @if(Auth::user())
 
-                                    <input type="text" name="user_id" id="user_id" value="{{ Auth::user()->username }}" hidden>
+                                    <input type="text" name="user_id" id="user_id" value="{{ Auth::user()->id }} " hidden>
                                     <input type="text" name="blog_id" id="blog_id" value="{{ $blog->id }}" hidden>
 
 
@@ -82,10 +80,11 @@
                                                 let user_id = document.getElementById('user_id').value;
                                                 let blog_id = document.getElementById('blog_id').value;
 
+
                                                 $.ajax({
 
-                                                    type: "post",
-                                                    url: "/like",
+                                                    method: "post",
+                                                    url: "{{route('blog.like')}}",
                                                     data: {
                                                         user_id: user_id,
                                                         blog_id: blog_id,
@@ -105,15 +104,15 @@
                                                 // if dislike
 
                                                 document.getElementById('like').innerHTML =
-                                                    '<i class="fa fa-2x fa-star text-primary"></i>'
+                                                    '<i class="fa fa-2x fa-star text-muted"></i>'
 
                                                 let user_id = document.getElementById('user_id').value;
                                                 let blog_id = document.getElementById('blog_id').value;
 
                                                 $.ajax({
 
-                                                    type: "post",
-                                                    url: "/dislike",
+                                                    method: "post",
+                                                    url: "{{route('blog.dislike')}}",
                                                     data: {
                                                         user_id: user_id,
                                                         blog_id: blog_id,
@@ -237,5 +236,13 @@
             </section>
         </main>
 
+        <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> -->
+        <script>
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        </script>
 
 </x-users.layouts.master>

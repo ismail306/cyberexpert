@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class react extends Model
 {
     use HasFactory;
+    protected $table = 'reacts';
     protected $fillable = [
         'user_id',
         'blog_id',
