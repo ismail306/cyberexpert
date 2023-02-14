@@ -65,7 +65,7 @@ Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware
 
 //react route
 // Blog Reacts
-Route::post('/blog/like', [ReactController::class, 'like'])->name('blog.like');
+Route::post('/blog/like', [ReactController::class, 'like'])->middleware(['auth', 'verified'])->name('blog.like');
 Route::post('/blog/dislike', [ReactController::class, 'dislike'])->name('blog.dislike');
 
 
