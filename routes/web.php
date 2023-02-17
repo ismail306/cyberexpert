@@ -13,7 +13,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\XssController;
 use App\Http\Controllers\ReflectedxssController;
 use App\Http\Controllers\StoredxssController;
-
+use App\Http\Controllers\GoogleAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,8 +63,7 @@ Route::get('/blogupdate/{id}', [BlogController::class, 'update'])->middleware(['
 Route::patch('/blogupdating', [BlogController::class, 'updating'])->name('blog.updating');
 Route::delete('/blogdelete/{id}', [BlogController::class, 'delete'])->middleware(['auth', 'verified'])->name('blog.delete');
 
-//react route
-// Blog Reacts
+//Blog react route
 Route::post('/blog/like', [ReactController::class, 'like'])->middleware(['auth', 'verified'])->name('blog.like');
 Route::post('/blog/dislike', [ReactController::class, 'dislike'])->name('blog.dislike');
 
@@ -78,6 +77,9 @@ Route::post('/news', [NewsController::class, 'storenews'])->middleware(['auth', 
 // Landing Page Route
 Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 
+// Google Auth Route
+Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
+Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
 Route::get('/specialist', function () {
     return view('securityspecialist/specialist');

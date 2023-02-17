@@ -6,16 +6,11 @@
 
         <div class="omb_login">
             <h3 class="omb_authTitle" data-toggle="modal" data-target="#signup">Login or <a href="{{route('register')}}">Sign up</a></h3>
-            <!-- <div class="row omb_row-sm-offset-3 omb_socialButtons">
-                <div class="col-xs-6 col-sm-3">
-                    <a href="#" class="btn btn-block omb_btn-facebook">
-                        <i class="fa fa-facebook visible-xs"></i>
-                        <span class="hidden-xs">Facebook</span>
-                    </a>
-                </div>
+            <div class="row omb_row-sm-offset-3 omb_socialButtons">
 
-                <div class="col-xs-6 col-sm-3">
-                    <a href="#" class="btn btn-block omb_btn-google">
+
+                <div class="col-xs-12 col-sm-6">
+                    <a href="{{route('google-auth')}}" class="btn btn-block omb_btn-google">
                         <i class="fa fa-google-plus visible-xs"></i>
                         <span class="hidden-xs">Google+</span>
                     </a>
@@ -25,9 +20,9 @@
             <div class="row omb_row-sm-offset-3 omb_loginOr">
                 <div class="col-xs-12 col-sm-6">
                     <hr class="omb_hrOr">
-                    <span class="omb_spanOr">or</span>
+                    <span class="omb_spanOr">OR</span>
                 </div>
-            </div> -->
+            </div>
 
             <div class="row omb_row-sm-offset-3">
                 <div class="col-xs-12 col-sm-6">
