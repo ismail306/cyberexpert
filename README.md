@@ -18,4 +18,4 @@ This is a platform designed to help individuals learn about cyber security and e
 -   Option to hire certified specialists for problem-solving
 -   News section for certified specialists to share updates on cyber security
 
-#Update Coming Soon... .. .
+# Update Coming Soon... .. .
