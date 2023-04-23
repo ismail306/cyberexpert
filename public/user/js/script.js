@@ -298,3 +298,21 @@ function validateNewsForm() {
     }
     return true;
   }
+
+
+  $(document).ready(function() {
+    $('#summernote').summernote({
+        lang: 'fr-FR',
+        imageTitle: {
+          specificAltField: true,
+        },
+        popover: {
+            image: [
+                ['image', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+                ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                ['remove', ['removeMedia']],
+                ['custom', ['imageTitle']],
+            ],
+        },
+    });
+});

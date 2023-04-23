@@ -13,7 +13,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\XssController;
 use App\Http\Controllers\ReflectedxssController;
 use App\Http\Controllers\StoredxssController;
+use App\Http\Controllers\SqlController;
 use App\Http\Controllers\GoogleAuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -94,11 +96,13 @@ Route::get('/reflectedxss', [ReflectedxssController::class, 'index'])->name('ref
 Route::post('/reflectedxss', [ReflectedxssController::class, 'store'])->middleware(['auth', 'verified'])->name('reflectedxss.store');
 Route::get('/storedxss', [StoredxssController::class, 'index'])->name('storedxss');
 
+//SQL route
+Route::get('/sql', [SqlController::class, 'index'])->name('sql');
+Route::get('/execute-query', [SqlController::class, 'execute'])->name('execute-query');
+Route::get('/seed-database', [SqlController::class, 'seedDatabase'])->name('seed-database');
 
 
-Route::get('/sql', function () {
-    return view('users/learnethicalhacking/sql');
-})->name('sql');
+
 
 Route::get('/brokenauthentication', function () {
     return view('users/learnethicalhacking/brokauth');

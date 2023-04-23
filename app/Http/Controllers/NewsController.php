@@ -61,7 +61,7 @@ class NewsController extends Controller
             $news->save();
             return redirect()->back()->with('status', 'News Added Successfully');
         } else {
-            return redirect()->back()->with('status', 'You are not authorized to add news');
+            return redirect()->back()->with('status',    'You are not authorized to add news');
         }
     }
 }

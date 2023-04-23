@@ -24,7 +24,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-group mt-4">
+                        <div class="form-group mt-4" id="summernote">
                             <label for="des">Description</label>
                             <textarea class="form-control" required name="description" id="editor" rows="5" placeholder="Start writing your blog ...">{{ old('description') }}</textarea>
                             @error('description')
@@ -56,10 +56,13 @@
 
 
         <!-- Character counter -->
-        <script src="https://unpkg.com/short-and-sweet/dist/short-and-sweet.min.js"></script>
+        <!-- <script src="https://unpkg.com/short-and-sweet/dist/short-and-sweet.min.js"></script> -->
+        <script src="/user/js/short-and-sweet.min.js"></script>
         <script>
             shortAndSweet("textarea, input");
         </script>
-
+        <!-- <script src="/user/js/editor/summernote.js"></script>
+        <script src="/user/js/editor/summernote.min.js"></script>
+        <script src="/user/js/editor/summernote-image-title.js"></script> -->
 
 </x-users.layouts.master>

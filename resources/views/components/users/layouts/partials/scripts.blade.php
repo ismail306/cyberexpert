@@ -13,7 +13,8 @@
 <!-- shuffle -->
 <script src="/user/plugins/shuffle/shuffle.min.js" defer></script>
 
-
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote.js'></script> -->
 
 <!-- Template custom -->
 <script src="/user/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote.js"></script>

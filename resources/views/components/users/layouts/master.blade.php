@@ -41,7 +41,7 @@
     <!-- Template styles-->
     <link rel="stylesheet" href="/user/css/style.css" />
 
-
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote.css'>
 
 
 
