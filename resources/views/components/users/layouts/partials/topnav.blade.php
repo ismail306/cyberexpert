@@ -15,7 +15,7 @@
                         </button>
                         <div class="logo col-lg-2 text-center text-lg-left mb-2 mb-md-5 mb-lg-0">
                             <a class="d-block" href="{{route('cyberexpert')}}">
-                                <img loading="lazy" src="/user/images/logo.png" alt="Cybere3xpert" />
+                                <img loading="lazy" src="{{asset('user/images/logo.png')}}" alt="Cybere3xpert" />
                             </a>
                         </div>
 

@@ -87,7 +87,8 @@
                         <div class="latest-post">
                             <div class="latest-post-media">
                                 <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="img-fluid" src="user/images/learn/SQL.jpg" alt="img" />
+                                    <img loading="lazy" class="img-fluid" src="{{asset('user/images/learn/SQL.jpg')}}" alt="img" />
+
                                 </a>
                             </div>
                             <div class="post-body">
@@ -105,7 +106,7 @@
                         <div class="latest-post">
                             <div class="latest-post-media">
                                 <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="img-fluid" src="user/images/learn/XSS.png" alt="img" />
+                                    <img loading="lazy" class="img-fluid" src="{{asset('/user/images/learn/XSS.png')}}" alt="img" />
                                 </a>
                             </div>
                             <div class="post-body">
@@ -123,7 +124,7 @@
                         <div class="latest-post">
                             <div class="latest-post-media">
                                 <a href="news-single.html" class="latest-post-img">
-                                    <img loading="lazy" class="img-fluid" src="user/images/learn/broken.jpg" alt="img" />
+                                    <img loading="lazy" class="img-fluid" src="{{asset('user/images/learn/broken.jpg')}}" alt="img" />
                                 </a>
                             </div>
                             <div class="post-body">

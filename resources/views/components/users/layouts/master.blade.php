@@ -26,20 +26,21 @@
     <!-- CSS
 ================================================== -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/user/plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{asset('user/plugins/bootstrap/bootstrap.min.css')}}" />
+
     <!-- FontAwesome -->
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="user/plugins/font-awesome/css/font-awesome.min.css" /> -->
-    <link rel="stylesheet" href="/user/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="{{asset('user/plugins/fontawesome/css/all.min.css')}}" />
     <!-- Animation -->
-    <link rel="stylesheet" href="/user/plugins/animate-css/animate.css" />
+    <link rel="stylesheet" href="{{asset('user/plugins/animate-css/animate.css')}}" />
     <!-- slick Carousel -->
-    <link rel="stylesheet" href="/user/plugins/slick/slick.css" />
-    <link rel="stylesheet" href="/user/plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="{{asset('user/plugins/slick/slick.css')}}" />
+    <link rel="stylesheet" href="{{asset('user/plugins/slick/slick-theme.css')}}" />
     <!-- Colorbox -->
-    <link rel="stylesheet" href="/user/plugins/colorbox/colorbox.css" />
+    <link rel="stylesheet" href="{{asset('/user/plugins/colorbox/colorbox.css')}}" />
     <!-- Template styles-->
-    <link rel="stylesheet" href="/user/css/style.css" />
+    <link rel="stylesheet" href="{{asset('/user/css/style.css')}}" />
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote.css'>
 

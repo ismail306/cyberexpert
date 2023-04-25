@@ -4,7 +4,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-7 col-md-6 footer-widget footer-about">
                     <h3 class="widget-title">About Us</h3>
-                    <img loading="lazy" width="200px" class="footer-logo" src="/user/images/logo.png" alt="cyber3xpert" />
+                    <img loading="lazy" width="200px" class="footer-logo" src="{{asset('user/images/logo.png')}}" alt="cyber3xpert" />
                     <p>
                         A Cyber Security Solution
 
