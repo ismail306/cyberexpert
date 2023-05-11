@@ -15,6 +15,8 @@
                 <li><a href="#"><i class="fa fa-solid fa-question"></i> Question</a></li>
                 <!-- reply -->
                 <li><a href="#"><i class="fa fa-solid fa-reply"></i> Reply</a></li>
+                <!-- User Request -->
+                <li><a href="#"><i class="fas fa-solid fa-certificate"></i> User Request</a></li>
                 <!-- News -->
                 <li><a href="#"><i class="fas fa-solid fa-newspaper"></i> News</a></li>
 

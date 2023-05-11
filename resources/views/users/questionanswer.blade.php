@@ -47,47 +47,41 @@
 
 
 
-
                                 <div class="media-body">
                                     <h6 class="mt-1">{{$question->question}}</h6>
 
-
                                     @foreach($question->answers as $answer)
-
-
-                                    <p><i class="fa fa-reply" aria-hidden="true"></i> {{$answer->answer}} </p>
-
-
-                                    <p class="text-dark">
-
-                                        <b> {{$answer->created_at->diffForHumans();}}</b>
-
-                                    </p>
-
-
-                                    <div class="row"> @if(Auth::id() == $answer->user_pk)
-                                        <a type="button" class="btn btn-outline-primary ml-2 update" data-toggle="modal" data-target="#update" data-answer="{{$answer->answer}}" data-id="{{$answer->id}}" onclick="update(this)">
-                                            Update
-                                        </a>
-
-
-
-                                        <form action="{{ route('answer.delete', $answer->id) }}" method="POST" class="d-inline-block">
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit" class="btn btn-outline-danger ml-2">Delete</button>
-                                        </form>
+                                    <div class="answer">
+                                        @if(strlen($answer->answer) > 200)
+                                        <p><i class="fa fa-reply" aria-hidden="true"></i>
+                                            <span class="short-answer">{{substr($answer->answer,0,200)}}...</span>
+                                            <span class="full-answer d-none">{{$answer->answer}}</span>
+                                            <a class="read-more" href="#">Read more</a>
+                                        </p>
+                                        @else
+                                        <p><i class="fa fa-reply" aria-hidden="true"></i> {{$answer->answer}} </p>
                                         @endif
+                                        <p class="text-dark">
+                                            <b>{{$answer->created_at->diffForHumans();}}</b>
+                                        </p>
+                                        <div class="row">
+                                            @if(Auth::id() == $answer->user_pk)
+                                            <a type="button" class="btn btn-outline-primary ml-2 update" data-toggle="modal" data-target="#update" data-answer="{{$answer->answer}}" data-id="{{$answer->id}}" onclick="update(this)">
+                                                Update
+                                            </a>
+                                            <form action="{{ route('answer.delete', $answer->id) }}" method="POST" class="d-inline-block">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-outline-danger ml-2">Delete</button>
+                                            </form>
+                                            @endif
+                                        </div>
                                     </div>
-
-
                                     @endforeach
                                 </div>
 
 
                             </div>
-
 
 
 
@@ -154,6 +148,30 @@
 
 
             }
+        </script>
+
+
+        <script>
+            const readMoreLinks = document.querySelectorAll('.read-more');
+
+            readMoreLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    const shortAnswer = e.target.previousElementSibling;
+                    const fullAnswer = shortAnswer.nextElementSibling;
+                    const linkText = e.target.textContent;
+
+                    if (fullAnswer.classList.contains('d-none')) {
+                        fullAnswer.classList.remove('d-none');
+                        shortAnswer.classList.add('d-none');
+                        e.target.textContent = 'Show less';
+                    } else {
+                        fullAnswer.classList.add('d-none');
+                        shortAnswer.classList.remove('d-none');
+                        e.target.textContent = 'Read more';
+                    }
+                });
+            });
         </script>
 
         <script>
