@@ -206,7 +206,7 @@
                             </div>
 
                             <div class="mt-4">
-                                fsd
+
                             </div>
                             <!-- /# card -->
                         </div>

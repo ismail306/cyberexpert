@@ -39,7 +39,6 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'phone' => ['required', 'string', 'max:11', 'unique:' . User::class],
             'password' => ['required', 'string', 'min:8'],
-            //repeat password
             'password_confirmation' => ['required', 'string', 'min:8', 'same:password'],
 
 

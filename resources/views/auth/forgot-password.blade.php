@@ -2,7 +2,7 @@
 
     <div class="container padding-bottom-3x mb-2 mt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 border border-dark rounded mb-5">
+            <div class=" card col-lg-8 col-md-10 border border-dark rounded mb-5">
                 <div class="forgot pt-3 ">
 
                     <h2 class="text-center">Forgot your password?</h2>
@@ -16,7 +16,7 @@
                 </div>
 
 
-                <form class="card mt-4" action="{{ route('password.email') }}" method="POST">
+                <form class=" mt-4" action="{{ route('password.email') }}" method="POST">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">

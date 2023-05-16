@@ -54,7 +54,7 @@
 
 
 
-    <div>
+    <div class="body-margin">
         {{ $slot }}
     </div>
 

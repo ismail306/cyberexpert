@@ -1,9 +1,21 @@
 <x-users.layouts.master>
+
+    <style>
+        .card {
+            width: auto;
+            margin: 50px auto;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .omb_loginForm {
+            padding: 10px;
+        }
+    </style>
     <div class="container bootstrap snippets bootdey">
 
 
-        <div class="omb_login">
-            <h3 class="omb_authTitle">Create an account</h3>
+        <div class=" card omb_login">
+            <h3 class="  omb_authTitle">Create an account</h3>
 
             <div class="row omb_row-sm-offset-3">
                 <div class="col-xs-12 col-sm-6">
