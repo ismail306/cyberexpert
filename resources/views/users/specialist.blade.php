@@ -15,7 +15,7 @@
 
 
             <div class="row">
-
+                @foreach($specialists as $specialist)
                 <div class="col-md-4">
                     <div class="card user-card">
                         <div class="card-header">
@@ -25,7 +25,7 @@
                             <div class="user-image">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
                             </div>
-                            <h6 class="f-w-600 m-t-5 m-b-5">Alessa Robert</h6>
+                            <h6 class="f-w-600 m-t-5 m-b-5">{{$specialist->users->name}}</h6>
                             <p>Web pentester</p>
 
                             <hr>
@@ -53,6 +53,8 @@
                         </div>
                     </div>
                 </div>
+
+                @endforeach
 
                 <div class="col-md-4">
                     <div class="card user-card">

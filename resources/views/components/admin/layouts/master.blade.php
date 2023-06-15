@@ -25,29 +25,30 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="user/images/favicon.svg" />
     <!-- Styles -->
-    <link rel="stylesheet" href="user/plugins/fontawesome/css/all.min.css" />
-    <link href="/admin/css/lib/themify-icons.css" rel="stylesheet">
-    <link href="/admin/css/lib/menubar/sidebar.css" rel="stylesheet">
-    <link href="/admin/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="/admin/css/lib/helper.css" rel="stylesheet">
-    <link href="/admin/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('user/plugins/fontawesome/css/all.min.css')}}" />
+    <link href="{{asset('/admin/css/lib/themify-icons.css')}}" rel="stylesheet">
+    <link href="{{asset('/admin/css/lib/menubar/sidebar.css')}}" rel="stylesheet">
+    <link href="{{asset('/admin/css/lib/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('/admin/css/lib/helper.css')}}" rel="stylesheet">
+    <link href="{{asset('/admin/css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
-
+    <x-admin.layouts.partials.navbar />
+    <x-admin.layouts.partials.sidebar />
     {{ $slot }}
 
-
+    <x-admin.layouts.partials.footer />
     <!-- jquery vendor -->
-    <script src="/admin/js/lib/jquery.min.js"></script>
+    <script src="{{asset('/admin/js/lib/jquery.min.js')}}"></script>
 
     <!-- nano scroller -->
-    <script src="/admin/js/lib/menubar/sidebar.js"></script>
+    <script src="{{asset('/admin/js/lib/menubar/sidebar.js')}}"></script>
 
     <!-- sidebar -->
 
-    <script src="/admin/js/lib/bootstrap.min.js"></script>
-    <script src="/admin/js/scripts.js"></script>
+    <script src="{{asset('/admin/js/lib/bootstrap.min.js')}}"></script>
+    <script src="{{asset('/admin/js/scripts.js')}}"></script>
     <!-- bootstrap -->
 
 

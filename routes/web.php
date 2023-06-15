@@ -15,6 +15,10 @@ use App\Http\Controllers\ReflectedxssController;
 use App\Http\Controllers\StoredxssController;
 use App\Http\Controllers\SqlController;
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\SpecialistController;
+use App\Http\Middleware\AdminMiddleware;
+use App\Models\Certificate;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,17 +38,24 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('user.profile');
     Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
     Route::get('/profile/bespecialist', [ProfileController::class, 'applyindex'])->name('specialist.applications');
-    //stote specialist apply
-    Route::post('/profile/bespecialist', [ProfileController::class, 'certificatestore'])->name('specialistinfo.store');
-
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //stote specialist apply
+    Route::post('/profile/bespecialist', [CertificateController::class, 'certificatestore'])->name('specialistinfo.store');
 });
 
 
 //admin Route
-Route::get('/superadmin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');
-Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete'])->name('super.user_delete');
-Route::patch('/superadmin/change_role', [AdminController::class, 'change_role'])->name('super.change_role');
+Route::get('/superadmin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.login');
+Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () {
+
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/superadmin/user_delete/{id}', [AdminController::class, 'user_delete'])->name('super.user_delete');
+    Route::patch('/superadmin/change_role', [AdminController::class, 'change_role'])->name('super.change_role');
+    Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/certiifiedrequest', [CertificateController::class, 'index'])->name('certificate.request');
+    Route::get('/certiifiedrequest/review', [CertificateController::class, 'changeStatus'])->name('certificate.review');
+});
 
 // QuestionRoute
 Route::post('/create_quesion', [QuestionController::class, 'store'])->middleware(['auth', 'verified'])->name('question.store');
@@ -83,9 +94,7 @@ Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
-Route::get('/specialist', function () {
-    return view('securityspecialist/specialist');
-})->name('specialist');
+Route::get('/specialist',  [SpecialistController::class, 'index'])->name('specialist');
 
 
 

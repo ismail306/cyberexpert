@@ -3,9 +3,9 @@
         <div class="card text-center widget-profile px-0 border-0">
             <div class="card-img mx-auto">
                 @if(isset($users->profile_pic))
-                <img src="/storage/images/profile_pics/{{$users->profile_pic}}" class="rounded-circle" alt="user image" width="100px">
+                <img src="{{asset('/storage/images/profile_pics/' . $users->profile_pic)}}" class="rounded-circle" alt="user image" width="100px">
                 @else
-                <img src="/user/images/users/profile.jpg" class="rounded-circle" alt="user image" width="100px">
+                <img src="{{asset('/user/images/users/profile.jpg')}}" class="rounded-circle" alt="user image" width="100px">
                 @endif
             </div>
 

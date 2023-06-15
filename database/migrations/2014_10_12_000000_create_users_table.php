@@ -24,8 +24,6 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->string('profile_pic')->nullable();
             $table->string('about')->nullable();
-
-            $table->string('certificate')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
