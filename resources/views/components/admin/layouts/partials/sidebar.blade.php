@@ -20,7 +20,13 @@
                 <!-- News -->
                 <li><a href="#"><i class="fas fa-solid fa-newspaper"></i> News</a></li>
 
-                <li><a><i class="ti-close"></i> Logout</a></li>
+                <li>
+                    <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                        <button type="submit" class=" custom-li py-3 text-lite dropdown-item"> <i class="ti-close"></i>Logout</button>
+                    </form>
+                </li>
+
             </ul>
         </div>
     </div>

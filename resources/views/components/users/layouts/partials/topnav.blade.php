@@ -36,11 +36,11 @@
                                             <i class="fas fa-user mx-1"></i>{{(Auth::user()->name);}}
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{route('user.profile')}}">Profile</a>
+                                            <a class="dropdown-item" href="{{route('user.profile')}}"><i class="fas fa-user mr-2"></i>Profile</a>
                                             <div class="dropdown-divider"></div>
                                             <form method="POST" action="{{route('logout')}}">
                                                 @csrf
-                                                <button type="submit" class="dropdown-item">Logout</button>
+                                                <button type="submit" class="dropdown-item"> <i class=" fas fa-sharp fa-light fa-power-off mr-1"></i> Logout</button>
                                             </form>
                                         </div>
                                     </li>

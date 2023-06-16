@@ -4512,3 +4512,17 @@ h6.h1 {
     display: inline-block !important;
   }
 }
+.custom-li{
+ color: #bdbdc7 !important;
+
+}
+
+.custom-li:hover{
+ color: #fff !important;
+ background: #6D85FB !important;
+}
+.customlogout{
+  color: red !important;
+  padding-left: 0%;
+
+}
