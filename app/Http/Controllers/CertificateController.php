@@ -54,4 +54,12 @@ class CertificateController extends Controller
 
         return redirect()->route('certificate.request')->with('status', 'Request Updated Successfully');
     }
+
+
+    public function specialist()
+    {
+        $specialists = Certificate::where('status', 'approved')->with('user')->paginate(6);
+
+        return view('users.specialist', compact('specialists'));
+    }
 }

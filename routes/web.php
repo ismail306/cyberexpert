@@ -94,7 +94,7 @@ Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
-Route::get('/specialist',  [SpecialistController::class, 'index'])->name('specialist');
+Route::get('/specialist',  [CertificateController::class, 'specialist'])->name('specialist');
 
 
 
