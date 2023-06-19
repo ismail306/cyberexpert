@@ -11,7 +11,7 @@
 
                 <li><a href="{{route('admin.users')}}"><i class="fa fa-users"></i> Users</a></li>
                 <!-- blog-->
-                <li><a href="#"> <i class="fa fa-file"></i> Blog</a></li>
+                <li><a href="{{route('admin.blogs')}}"> <i class="fa fa-file"></i> Blog</a></li>
                 <li><a href="#"><i class="fa fa-solid fa-question"></i> Question</a></li>
                 <!-- reply -->
                 <li><a href="#"><i class="fa fa-solid fa-reply"></i> Reply</a></li>

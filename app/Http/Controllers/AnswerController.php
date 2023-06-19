@@ -2,6 +2,7 @@
 
 
 namespace App\Http\Controllers;
+
 use App\Models\answer;
 
 use Illuminate\Http\Request;
@@ -59,5 +60,14 @@ class AnswerController extends Controller
         $answer->answer = $request->answer;
         $answer->save();
         return redirect()->Route('questionanswer');
+    }
+
+
+    public function adminanswer()
+    {
+        $answers = answer::paginate(25);
+        dd($answers);
+        View()->share('answers', $answers);
+        return view('admin/answer');
     }
 }

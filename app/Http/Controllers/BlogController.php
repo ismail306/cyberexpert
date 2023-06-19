@@ -68,9 +68,9 @@ class BlogController extends Controller
         //counting reacts
         $total_react = count($react);
         //if i reacted to this blog
-        if(isset(auth()->user()->id)){
+        if (isset(auth()->user()->id)) {
             $i_reacted = react::where('blog_id', $id)->where('user_id', auth()->user()->id)->first();
-        }else{
+        } else {
             $i_reacted = null;
         }
 
@@ -135,5 +135,21 @@ class BlogController extends Controller
                     ->withMessage('Blog Successfully Deleted');
             }
         }
+    }
+
+    public function adminblog()
+    {
+        //get  all blog with user paginate 25
+        $blogs = blog::with('user')->paginate(25);
+        View()->share('blogs', $blogs);
+        return view('admin/blog');
+    }
+
+    public function admin_blog_delete(Request $request)
+    {
+        $blog = blog::find($request->id);
+        $blog->delete();
+        return redirect()->route('admin.blogs')
+            ->withMessage('Blog Successfully Deleted');
     }
 }

@@ -23,7 +23,11 @@
                         </div>
                         <div class="card-block">
                             <div class="user-image">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
+                                @if(isset($specialist->user->profile_pic))
+                                <img src="{{asset('/storage/images/profile_pics/' . $specialist->user->profile_pic)}}" class="rounded-circle" alt="user image" width="100px">
+                                @else
+                                <img src="{{asset('/user/images/users/profile.jpg')}}" class="rounded-circle" alt="user image" width="100px">
+                                @endif
                             </div>
                             <h6 class="f-w-600 m-t-5 m-b-5">{{$specialist->user->name}}</h6>
                             <p>{{$specialist->about}}</p>
@@ -56,5 +60,5 @@
                 @endforeach
             </div>
         </div>
-        
+
 </x-users.layouts.master>

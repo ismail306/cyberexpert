@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
     Route::get('/profile/bespecialist', [ProfileController::class, 'applyindex'])->name('specialist.applications');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
+    Route::get('/specialist',  [CertificateController::class, 'specialist'])->name('specialist');
     //stote specialist apply
     Route::post('/profile/bespecialist', [CertificateController::class, 'certificatestore'])->name('specialistinfo.store');
 });
@@ -55,6 +55,12 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
     Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/certiifiedrequest', [CertificateController::class, 'index'])->name('certificate.request');
     Route::get('/certiifiedrequest/review', [CertificateController::class, 'changeStatus'])->name('certificate.review');
+
+    Route::get('/blogs', [BlogController::class, 'adminblog'])->name('admin.blogs');
+    Route::get('/blog_delete/{id}', [BlogController::class, 'admin_blog_delete'])->name('super.blog_delete');
+
+    Route::get('/answers', [AnswerController::class, 'adminanswer'])->name('admin.answers');
+    Route::get('/blog_delete/{id}', [AnswerController::class, 'admin_answer_delete'])->name('super.answer_delete');
 });
 
 // QuestionRoute
@@ -94,7 +100,6 @@ Route::get('/', [IndexController::class, 'index'])->name('cyberexpert');
 Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
-Route::get('/specialist',  [CertificateController::class, 'specialist'])->name('specialist');
 
 
 

@@ -24,7 +24,8 @@
                                         <a href="article.html">
                                             <div class="card-image p-2">
 
-                                                <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$lastBlog->image }}" alt="Latest Blog" class="w-100">
+                                                <img src="{{ asset('/storage/images/blog_images/'.$lastBlog->image) }}" alt="Latest Blog" class="w-100">
+
                                             </div>
                                         </a>
                                         <p class=" mb-0 mt-1 ml-4">
@@ -121,7 +122,7 @@
                                     <article class="card article-card article-card-sm h-100">
                                         <a href="article.html">
                                             <div class="card-image p-1">
-                                                <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$blog->image }}" alt="Post Thumbnail" class="w-100">
+                                                <img loading="lazy" decoding="async" src="{{ asset('/storage/images/blog_images/'.$blog->image) }}" alt="Post Thumbnail" class="w-100">
                                             </div>
                                         </a>
                                         <p class="ml-4 mb-0 mt-1">
@@ -152,12 +153,6 @@
                                 </div>
 
                                 @endforeach
-
-
-
-
-
-
 
                             </div>
                         </div>
