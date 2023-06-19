@@ -14,7 +14,7 @@
                 <li><a href="{{route('admin.blogs')}}"> <i class="fa fa-file"></i> Blog</a></li>
                 <li><a href="#"><i class="fa fa-solid fa-question"></i> Question</a></li>
                 <!-- reply -->
-                <li><a href="#"><i class="fa fa-solid fa-reply"></i> Reply</a></li>
+                <li><a href="{{route('admin.answers')}}"><i class="fa fa-solid fa-reply"></i> Reply</a></li>
                 <!-- User Request -->
                 <li><a href="{{route('certificate.request')}}"><i class="fas fa-solid fa-certificate"></i> User Request</a></li>
                 <!-- News -->

@@ -66,8 +66,14 @@ class AnswerController extends Controller
     public function adminanswer()
     {
         $answers = answer::paginate(25);
-        dd($answers);
+
         View()->share('answers', $answers);
         return view('admin/answer');
+    }
+    public function admin_answer_delete($id)
+    {
+        $answer = answer::find($id);
+        $answer->delete();
+        return redirect()->Route('admin.answers')->withMessage('Answer Successfully Deleted');
     }
 }
