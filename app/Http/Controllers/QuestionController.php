@@ -49,4 +49,18 @@ class QuestionController extends Controller
         $question->delete();
         return redirect()->Route('questionanswer');
     }
+
+    public function adminquestion()
+    {
+        $questions = question::paginate(25);
+
+        View()->share('questions', $questions);
+        return view('admin/question');
+    }
+    public function admin_question_delete($id)
+    {
+        $question = question::find($id);
+        $question->delete();
+        return redirect()->Route('admin.questions')->withMessage('Answer Successfully Deleted');
+    }
 }

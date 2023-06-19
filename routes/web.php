@@ -61,6 +61,9 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
 
     Route::get('/answers', [AnswerController::class, 'adminanswer'])->name('admin.answers');
     Route::get('/blog_delete/{id}', [AnswerController::class, 'admin_answer_delete'])->name('super.answer_delete');
+
+    Route::get('/questions', [QuestionController::class, 'adminquestion'])->name('admin.questions');
+    Route::get('/question_delete/{id}', [QuestionController::class, 'admin_question_delete'])->name('super.questions_delete');
 });
 
 // QuestionRoute
