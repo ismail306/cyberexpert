@@ -64,4 +64,20 @@ class NewsController extends Controller
             return redirect()->back()->with('status',    'You are not authorized to add news');
         }
     }
+
+
+
+    public function adminnews()
+    {
+        $news = news::paginate(25);
+
+        View()->share('news', $news);
+        return view('admin/news');
+    }
+    public function admin_news_delete($id)
+    {
+        $news = news::find($id);
+        $news->delete();
+        return redirect()->Route('admin.news')->withMessage('News Successfully Deleted');
+    }
 }

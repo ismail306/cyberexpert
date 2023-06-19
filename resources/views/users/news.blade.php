@@ -2,7 +2,8 @@
     <x-slot:title>
         News
         </x-slot>
-        <div id="banner-area" class="banner-area" style="background-image:url(/user/images/news/news1.jpg)">
+        <div id="banner-area" class="banner-area " style="background-image:url({{ asset('/user/images/news/news1.jpg') }})">
+
 
         </div><!-- Banner area end -->
         <section id="main-container" class="main-container">

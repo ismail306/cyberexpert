@@ -18,7 +18,7 @@
                 <!-- User Request -->
                 <li><a href="{{route('certificate.request')}}"><i class="fas fa-solid fa-certificate"></i> User Request</a></li>
                 <!-- News -->
-                <li><a href="#"><i class="fas fa-solid fa-newspaper"></i> News</a></li>
+                <li><a href="{{route('admin.news')}}"><i class="fas fa-solid fa-newspaper"></i> News</a></li>
 
                 <li>
                     <form method="POST" action="{{route('logout')}}">
