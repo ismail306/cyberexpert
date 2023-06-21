@@ -23,7 +23,7 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="{{route('xss')}}">XSS</a></li>
                                             <li><a href="{{route('sql')}}">SQL Injection</a></li>
-                                            <li><a href="{{route('brokenauthentication')}}">Broken Authentication</a></li>
+                                            <li><a href="{{route('brokauthindex')}}">Broken Authentication</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="{{route('specialist')}}">Hire Specialist</a></li>

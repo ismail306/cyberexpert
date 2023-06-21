@@ -12,6 +12,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\XssController;
 use App\Http\Controllers\ReflectedxssController;
+use App\Http\Controllers\BrokenauthenticationController;
 use App\Http\Controllers\StoredxssController;
 use App\Http\Controllers\SqlController;
 use App\Http\Controllers\GoogleAuthController;
@@ -42,6 +43,20 @@ Route::middleware('auth')->group(function () {
     Route::get('/specialist',  [CertificateController::class, 'specialist'])->name('specialist');
     //stote specialist apply
     Route::post('/profile/bespecialist', [CertificateController::class, 'certificatestore'])->name('specialistinfo.store');
+
+    Route::get('/brokenauthlogin', [BrokenauthenticationController::class, 'index'])->name('brokauthindex');
+    Route::post('/brokenauthlogin', [BrokenauthenticationController::class, 'login'])->name('brokauthlogin');
+    Route::get('/brokauthwelcome', [BrokenauthenticationController::class, 'welcome'])->name('brokauthwelcome');
+
+    Route::get('/xss', [XssController::class, 'index'])->name('xss');
+    Route::get('/reflectedxss', [ReflectedxssController::class, 'index'])->name('reflectedxss');
+    Route::post('/reflectedxss', [ReflectedxssController::class, 'store'])->middleware(['auth', 'verified'])->name('reflectedxss.store');
+    Route::get('/storedxss', [StoredxssController::class, 'index'])->name('storedxss');
+
+    //SQL route
+    Route::get('/sql', [SqlController::class, 'index'])->name('sql');
+    Route::get('/execute-query', [SqlController::class, 'execute'])->name('execute-query');
+    Route::get('/seed-database', [SqlController::class, 'seedDatabase'])->name('seed-database');
 });
 
 
@@ -111,22 +126,9 @@ Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoog
 
 // Learn Ethical Hacking route
 // xss route
-Route::get('/xss', [XssController::class, 'index'])->name('xss');
-Route::get('/reflectedxss', [ReflectedxssController::class, 'index'])->name('reflectedxss');
-Route::post('/reflectedxss', [ReflectedxssController::class, 'store'])->middleware(['auth', 'verified'])->name('reflectedxss.store');
-Route::get('/storedxss', [StoredxssController::class, 'index'])->name('storedxss');
-
-//SQL route
-Route::get('/sql', [SqlController::class, 'index'])->name('sql');
-Route::get('/execute-query', [SqlController::class, 'execute'])->name('execute-query');
-Route::get('/seed-database', [SqlController::class, 'seedDatabase'])->name('seed-database');
 
 
 
-
-Route::get('/brokenauthentication', function () {
-    return view('users/learnethicalhacking/brokauth');
-})->name('brokenauthentication');
 
 
 
