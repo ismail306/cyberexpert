@@ -52,6 +52,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/reflectedxss', [ReflectedxssController::class, 'index'])->name('reflectedxss');
     Route::post('/reflectedxss', [ReflectedxssController::class, 'store'])->middleware(['auth', 'verified'])->name('reflectedxss.store');
     Route::get('/storedxss', [StoredxssController::class, 'index'])->name('storedxss');
+    Route::post('/storedxss', [StoredxssController::class, 'store'])->name('storedxss.store');
+    Route::get('/storedxss/reset', [StoredxssController::class, 'reset'])->name('storedxss.reset');
 
     //SQL route
     Route::get('/sql', [SqlController::class, 'index'])->name('sql');

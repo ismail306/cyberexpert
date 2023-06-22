@@ -20,15 +20,7 @@ class ReflectedxssController extends Controller
         $request->validate([
             'name' => 'required',
         ]);
-
-        $reflectedxss = new reflectedxss([
-            'name' => $request->get('name'),
-        ]);
-        $reflectedxss->save();
-
-        // get last inserted name
-        $reflectedxss = reflectedxss::latest()->first();
-        $name = $reflectedxss->name;
+        $name = $request->name;
 
         return view('users.learnethicalhacking.reflectedXSS', compact('name'));
     }

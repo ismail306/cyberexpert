@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::connection('mysql2')->create('reflectedxss', function (Blueprint $table) {
+        Schema::connection('mysql2')->create('storedxss', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('storedxss');
     }
 };
