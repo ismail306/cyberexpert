@@ -60,7 +60,7 @@
                                     determines how you achieve success.
                                 </p>
                                 <div data-animation-in="slideInLeft">
-                                    <a href="#" class="slider btn btn-primary border">Specialist</a>
+                                    <a href="{{route('specialist')}}" class="slider btn btn-primary border">Specialist</a>
 
                                 </div>
                             </div>
@@ -86,14 +86,14 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="latest-post">
                             <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
+                                <a href="{{route('sql')}}" class="latest-post-img">
                                     <img loading="lazy" class="img-fluid" src="{{asset('user/images/learn/SQL.jpg')}}" alt="img" />
 
                                 </a>
                             </div>
                             <div class="post-body">
                                 <h4 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Sql Injection</a>
+                                    <a href="{{route('sql')}}" class="d-inline-block">Sql Injection</a>
                                 </h4>
 
                             </div>
@@ -105,13 +105,13 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="latest-post">
                             <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
+                                <a href="{{route('xss')}}" class="latest-post-img">
                                     <img loading="lazy" class="img-fluid" src="{{asset('/user/images/learn/XSS.png')}}" alt="img" />
                                 </a>
                             </div>
                             <div class="post-body">
                                 <h3 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Cross Site Scripting (XSS)</a>
+                                    <a href="n{{route('xss')}}" class="d-inline-block">Cross Site Scripting (XSS)</a>
                                 </h3>
 
                             </div>
@@ -123,13 +123,13 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="latest-post">
                             <div class="latest-post-media">
-                                <a href="news-single.html" class="latest-post-img">
+                                <a href="{{route('brokauthindex')}}" class="latest-post-img">
                                     <img loading="lazy" class="img-fluid" src="{{asset('user/images/learn/broken.jpg')}}" alt="img" />
                                 </a>
                             </div>
                             <div class="post-body">
                                 <h3 class="post-title">
-                                    <a href="news-single.html" class="d-inline-block">Broken Authentication</a>
+                                    <a href="{{route('brokauthindex')}}" class="d-inline-block">Broken Authentication</a>
                                 </h3>
 
                             </div>
@@ -395,7 +395,7 @@
                             </div>
                             <div class="ts-facts-content">
                                 <h2 class="ts-facts-num">
-                                    <span class="counterUp" data-count="647">0</span>
+                                    <span class="counterUp" data-count="{{$certified}}">0</span>
                                 </h2>
                                 <h3 class="ts-facts-title">
                                     Specialist

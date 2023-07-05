@@ -12,7 +12,7 @@ class StoredxssController extends Controller
     public function index()
     {
         $storedxss = storedxss::all();
-        return view('users.learnethicalhacking.storedXSS', compact('storedxss'));
+        return view('users.learnethicalhacking.storedxss', compact('storedxss'));
     }
 
     public function store(Request $request)

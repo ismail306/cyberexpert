@@ -18,7 +18,7 @@ class CertificateController extends Controller
     public function certificatestore(Request $request)
     {
         $request->validate([
-            'about' => 'nullable|string|max:75',
+            'about' => 'required|string|max:75',
             'certificate' => 'required|mimes:pdf,jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -42,9 +42,19 @@ class CertificateController extends Controller
     public function changeStatus(Request $request)
     {
 
+        //get certificates compare to  user_id and request id
+        $certificate = Certificate::where('user_id', $request->id)->first();
 
-        $certificate = Certificate::find($request->id);
+        //validate
+        if ($request->status == 'rejected') {
+            $request->validate([
+                'message' => 'required|string|max:200',
+
+            ]);
+            $certificate->message = $request->message;
+        }
         $certificate->status = $request->status;
+
         if ($request->status == 'approved') {
             $user = User::find($certificate->user_id);
             $user->role = 'certified';

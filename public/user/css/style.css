@@ -3595,3 +3595,15 @@ body{
   margin-top: 25px;
 
 }
+
+.btn-custom{
+  background-color: #1a202c;
+  color: #fff;
+  border: 1px solid #1a202c;
+}
+
+.btn-custom:hover{
+  background-color: #1a202c;
+  color: #fff;
+  border: 1px solid #fff;
+}

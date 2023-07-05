@@ -95,7 +95,8 @@
                                                         <form action="{{route('certificate.review')}}" method="post">
                                                             @method('GET')
                                                             @csrf
-                                                            <input type="text" name="id" hidden value="{{$certificate->user->id}}">
+
+
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
 
@@ -109,15 +110,27 @@
                                                                     <p>Name: {{$certificate->user->name}} </p>
                                                                     <p>Email: {{$certificate->user->email}}</p>
 
-                                                                    <div class="form-group text-success">
-                                                                        <label for="exampleFormControlSelect1">Request Wiill Rejected </label>
+                                                                    <div class="form-group text-danger">
+
+                                                                        <input hidden type="text" name="id" value="{{$certificate->user->id}}">
                                                                         <input hidden type="text" name="status" value="rejected">
+
+
+                                                                        <div>
+                                                                            <label for="exampleFormControlSelect1">Reason for Reject Request : </label>
+                                                                            <br>
+                                                                            <textarea type="text" id="message" name="message" value="">
+                                                                        </textarea>
+                                                                        </div>
+                                                                        @error('message')
+                                                                        <span class="text-danger">{{$message}}</span>
+                                                                        @enderror
 
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="submit" class="btn btn-primary">Save
+                                                                    <button type="submit" onclick="validateForm()" class="btn btn-primary">Save
                                                                         changes</button>
                                                                 </div>
                                                             </div>
@@ -175,6 +188,14 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function validateForm() {
+            var message = document.getElementById("message").value;
+            if (message.trim() === "") {
+                alert("Please enter a message.");
+                return false;
+            }
+        }
+    </script>
 
 </x-admin.layouts.master>

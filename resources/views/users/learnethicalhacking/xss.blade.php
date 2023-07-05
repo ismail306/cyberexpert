@@ -9,11 +9,11 @@
 
 
 
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-4 col-lg-4 mt-4">
                     <x-users.layouts.partials.sidebar />
 
                 </div>
-                <div class="col-md-8 col-lg-8 card">
+                <div class="col-md-8 col-lg-8 card mt-4">
                     <h1>Types of XSS</h1>
                     <h2>
                         Background

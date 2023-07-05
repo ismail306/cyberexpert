@@ -78,6 +78,7 @@ class AdminController extends Controller
             $certificate->save();
         } else {
             $certificate = Certificate::where('user_id', $request->id)->first();
+
             $certificate->status = 'rejected';
             $certificate->save();
         }

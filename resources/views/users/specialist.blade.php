@@ -44,13 +44,13 @@
                             <div class="bg-c-blue counter-block m-t-10 p-20">
                                 <div class="row">
 
-                                    <div class="col-8 ">
+                                    <div class="col-12 ">
                                         <i class="fa fa-phone"> {{$specialist->user->phone}}</i>
 
                                     </div>
-                                    <div class="col-4">
+                                    <!-- <div class="col-4">
                                         <a href="" data-toggle="modal" data-target="#contact"><i class="fa fa-paper-plane"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 

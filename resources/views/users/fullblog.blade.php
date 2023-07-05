@@ -19,7 +19,7 @@
                             <article>
 
                                 <div class="card-image">
-                                    <img loading="lazy" decoding="async" src="/storage/images/blog_images/{{$blog->image}}" alt="Post Thumbnail" class="w-100">
+                                    <img loading="lazy" decoding="async" src="{{asset('storage/images/blog_images/'.$blog->image)}}" alt="Post Thumbnail" class="w-100">
 
                                 </div>
                                 <div class=" post-meta mb-2 mt-3">
@@ -141,7 +141,7 @@
                                     <span class="text-success ml-2"><i class="fas fa-user-shield"></i></span>
                                     @elseif($user->role=='user')
                                     <span class="text-primary ml-2"><i class="fas fa-user"></i></span>
-                                    @elseif($users->role=='admin')
+                                    @elseif($user->role=='admin')
                                     <span class="text-warning ml-2"><i class="fas fa-user-circle"></i></span>
                                     @endif
                                 </h3>
@@ -196,7 +196,7 @@
 
                             <div class="ts-service-box d-flex mb-4">
                                 <div class="ts-service-box-img p-1">
-                                    <img loading="lazy" src="/storage/images/blog_images/{{$allblog->image }}" alt="service-icon" width="90" height="60" />
+                                    <img loading="lazy" src="{{asset('storage/images/blog_images/'.$allblog->image) }}" alt="service-icon" width="90" height="60" />
                                 </div>
                                 <div>
                                     <h5 class="ml-2 mt-1">

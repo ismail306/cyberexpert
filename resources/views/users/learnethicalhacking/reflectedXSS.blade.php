@@ -5,13 +5,13 @@
         <div class="container">
 
             <div class="row  text-center mt-4">
-                <div class="col-md-4">
+                <div class="col-md-4 mt-4">
                     <x-users.layouts.partials.sidebar />
 
 
 
                 </div>
-                <div class="col-md-8 card">
+                <div class="col-md-8 card mt-4">
                     <h1>Vulnerability: Reflected Cross Site Scripting (XSS)</h1>
 
                     <div class="xss pb-1 rounded mb-3">
